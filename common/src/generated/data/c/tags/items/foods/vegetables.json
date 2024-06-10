@@ -1,0 +1,20 @@
+{
+  "values": [
+    {
+      "id": "#c:foods/vegetables/carrots",
+      "required": false
+    },
+    {
+      "id": "#c:foods/vegetables/kelps",
+      "required": false
+    },
+    {
+      "id": "#c:foods/vegetables/potatoes",
+      "required": false
+    },
+    {
+      "id": "#c:foods/vegetables/melon_slices",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 100,
+  "experience": 1.0,
+  "ingredient": {
+    "item": "more_food:raw_bacon"
+  },
+  "result": {
+    "count": 1,
+    "id": "more_food:cooked_bacon"
+  }
+}

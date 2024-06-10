@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "more_food",
+  "version": "${version}",
+  "name": "More Food",
+  "description": "This mod adds more food to Minecraft.",
+  "authors": [
+    "Volwert123",
+    "moritz_htk"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/more-food-xd",
+    "issues": "https://github.com/Volwert123/more-food/issues",
+    "sources": "https://github.com/Volwert123/more-food"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.volwert123.more_food.fabric.MoreFoodFabric"
+    ],
+    "client": [
+      "net.volwert123.more_food.fabric.client.MoreFoodFabricClient"
+    ]
+  },
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.20.6",
+    "architectury": ">=12.1.3"
+  },
+  "custom": {
+    "catalogue": {
+      "icon": {
+        "item": "morefood:cooked_carrot"
+      }
+    },
+    "modmenu": {
+      "update_checker": true,
+      "links": {
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/more-food-xd",
+        "modmenu.github_releases": "https://github.com/Volwert123/more-food/releases",
+        "modmenu.modrinth": "https://modrinth.com/mod/more-food-xd"
+      }
+    }
+  }
+}
