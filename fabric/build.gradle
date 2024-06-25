@@ -62,12 +62,3 @@ components.java {
         skip()
     }
 }
-
-publishing {
-    publications {
-        mavenFabric(MavenPublication) {
-            artifactId = archives_base_name + "-" + project.name
-            from components.java
-        }
-    }
-}

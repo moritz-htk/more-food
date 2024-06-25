@@ -16,8 +16,8 @@ import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
 import net.volwert123.more_food.registry.MFItems;
 
 public class MFLootTableModifiers {
-    private static final ResourceKey<LootTable> GRASS_BLOCK_KEY = ResourceKey.create(Registries.LOOT_TABLE, new ResourceLocation("minecraft", "blocks/short_grass"));
-    private static final ResourceKey<LootTable> FERN_BLOCK_KEY = ResourceKey.create(Registries.LOOT_TABLE, new ResourceLocation("minecraft", "blocks/fern"));
+    private static final ResourceKey<LootTable> GRASS_BLOCK_KEY = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.withDefaultNamespace("blocks/short_grass"));
+    private static final ResourceKey<LootTable> FERN_BLOCK_KEY = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.withDefaultNamespace("blocks/fern"));
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((key, tableBuilder, source) -> {

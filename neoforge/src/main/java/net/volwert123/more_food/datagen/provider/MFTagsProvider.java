@@ -70,7 +70,7 @@ public class MFTagsProvider {
         }
 
         private static TagKey<Item> registerKey(String path) {
-            return TagKey.create(Registries.ITEM, new ResourceLocation("c", path));
+            return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath("c", path));
         }
     }
 
