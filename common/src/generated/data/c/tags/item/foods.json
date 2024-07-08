@@ -9,11 +9,11 @@
     "more_food:cooked_egg",
     "more_food:cooked_bacon_egg",
     {
-      "id": "#c:foods/pies",
+      "id": "#c:foods/pie",
       "required": false
     },
     {
-      "id": "#c:foods/sushis",
+      "id": "#c:foods/sushi",
       "required": false
     }
   ]
