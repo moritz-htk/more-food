@@ -22,20 +22,20 @@ import java.util.concurrent.CompletableFuture;
 
 public class MFTagsProvider {
     public static class Items extends TagsProvider<Item> {
-        public static final TagKey<Item> FOODS_VEGETABLES_CARROTS = registerKey("foods/vegetables/carrots");
+        public static final TagKey<Item> FOODS_VEGETABLES_CARROT = registerKey("foods/vegetables/carrot");
         public static final TagKey<Item> PIECES = registerKey("pieces");
-        public static final TagKey<Item> FOODS_PIES = registerKey("foods/pies");
-        public static final TagKey<Item> FOODS_FRUITS_APPLES = registerKey("foods/fruits/apples");
-        public static final TagKey<Item> FOODS_VEGETABLES_KELPS = registerKey("foods/vegetables/kelps");
-        public static final TagKey<Item> FOODS_VEGETABLES_POTATOES = registerKey("foods/vegetables/potatoes");
-        public static final TagKey<Item> FOODS_COOKED_MEATS_COOKED_RABBITS = registerKey("foods/cooked_meats/cooked_rabbits");
-        public static final TagKey<Item> FOODS_VEGETABLES_MELON_SLICES = registerKey("foods/vegetables/melon_slices");
-        public static final TagKey<Item> FOODS_COOKED_MEATS_COOKED_CHICKENS = registerKey("foods/cooked_meats/cooked_chickens");
-        public static final TagKey<Item> FOODS_COOKED_MEATS_COOKED_MUTTONS = registerKey("foods/cooked_meats/cooked_muttons");
-        public static final TagKey<Item> FOODS_COOKED_MEATS_COOKED_PORKCHOPS = registerKey("foods/cooked_meats/cooked_porkchops");
-        public static final TagKey<Item> FOODS_COOKED_MEATS_COOKED_BEEFS = registerKey("foods/cooked_meats/cooked_beefs");
+        public static final TagKey<Item> FOODS_PIE = registerKey("foods/pie");
+        public static final TagKey<Item> FOODS_FRUITS_APPLE = registerKey("foods/fruits/apple");
+        public static final TagKey<Item> FOODS_VEGETABLES_KELP = registerKey("foods/vegetables/kelp");
+        public static final TagKey<Item> FOODS_VEGETABLES_POTATO = registerKey("foods/vegetables/potato");
+        public static final TagKey<Item> FOODS_COOKED_MEATS_COOKED_RABBIT = registerKey("foods/cooked_meats/cooked_rabbit");
+        public static final TagKey<Item> FOODS_VEGETABLES_MELON_SLICE = registerKey("foods/vegetables/melon_slice");
+        public static final TagKey<Item> FOODS_COOKED_MEATS_COOKED_CHICKEN = registerKey("foods/cooked_meats/cooked_chicken");
+        public static final TagKey<Item> FOODS_COOKED_MEATS_COOKED_MUTTON = registerKey("foods/cooked_meats/cooked_mutton");
+        public static final TagKey<Item> FOODS_COOKED_MEATS_COOKED_PORKCHOP = registerKey("foods/cooked_meats/cooked_porkchop");
+        public static final TagKey<Item> FOODS_COOKED_MEATS_COOKED_BEEF = registerKey("foods/cooked_meats/cooked_beef");
         public static final TagKey<Item> CROPS_RICE = registerKey("crops/rice");
-        public static final TagKey<Item> FOODS_SUSHIS = registerKey("foods/sushis");
+        public static final TagKey<Item> FOODS_SUSHI = registerKey("foods/sushi");
 
         public Items(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, @Nullable ExistingFileHelper existingFileHelper) {
             super(output, Registries.ITEM, registries, MoreFood.MOD_ID, existingFileHelper);
@@ -43,30 +43,30 @@ public class MFTagsProvider {
 
         @Override
         protected void addTags(HolderLookup.@NotNull Provider provider) {
-            tag(Tags.Items.FOODS_VEGETABLES).addOptionalTag(FOODS_VEGETABLES_CARROTS).addOptionalTag(FOODS_VEGETABLES_KELPS).addOptionalTag(FOODS_VEGETABLES_POTATOES).addOptionalTag(FOODS_VEGETABLES_MELON_SLICES);
-            tag(FOODS_VEGETABLES_CARROTS).add(MFItems.IRON_CARROT.getKey()).add(MFItems.DIAMOND_CARROT.getKey()).add(MFItems.EMERALD_CARROT.getKey()).add(MFItems.COOKED_CARROT.getKey());
-            tag(PIECES).add(MFItems.CARROT_PIECES.getKey()).add(MFItems.APPLE_PIECES.getKey()).add(MFItems.KELP_PIECES.getKey()).add(MFItems.POTATO_PIECES.getKey()).add(MFItems.PHANTOM_PIECES.getKey()).add(MFItems.PUFFERFISH_PIECES.getKey()).add(MFItems.BAMBOO_PIECES.getKey());
-            tag(Tags.Items.FOODS_SOUPS).add(MFItems.CARROT_SOUP.getKey()).add(MFItems.APPLE_SOUP.getKey()).add(MFItems.KELP_SOUP.getKey()).add(MFItems.POTATO_SOUP.getKey()).add(MFItems.PHANTOM_SOUP.getKey()).add(MFItems.PUMPKING_SOUP.getKey()).add(MFItems.BAMBOO_SOUP.getKey());
-            tag(Tags.Items.FOODS_BREADS).add(MFItems.CARROT_BREAD.getKey()).add(MFItems.APPLE_BREAD.getKey()).add(MFItems.POTATO_BREAD.getKey()).add(MFItems.PUMPKING_BREAD.getKey());
-            tag(FOODS_PIES).add(MFItems.CARROT_PIE.getKey()).add(MFItems.APPLE_PIE.getKey());
-            tag(Tags.Items.FOODS_FRUITS).addOptionalTag(FOODS_FRUITS_APPLES);
-            tag(FOODS_FRUITS_APPLES).add(MFItems.IRON_APPLE.getKey()).add(MFItems.DIAMOND_APPLE.getKey()).add(MFItems.EMERALD_APPLE.getKey()).add(MFItems.COOKED_APPLE.getKey());
-            tag(FOODS_VEGETABLES_KELPS).add(MFItems.IRON_KELP.getKey()).add(MFItems.GOLDEN_KELP.getKey()).add(MFItems.DIAMOND_KELP.getKey()).add(MFItems.EMERALD_KELP.getKey());
-            tag(FOODS_VEGETABLES_POTATOES).add(MFItems.IRON_POTATO.getKey()).add(MFItems.GOLDEN_POTATO.getKey()).add(MFItems.DIAMOND_POTATO.getKey()).add(MFItems.EMERALD_POTATO.getKey());
-            tag(Tags.Items.FOODS_FOOD_POISONING).add(MFItems.PUFFERFISH_SOUP.getKey());
-            tag(Tags.Items.FOODS_COOKED_MEATS).add(MFItems.COOKED_PHANTOM.getKey()).add(MFItems.COOKED_BACON.getKey()).addOptionalTag(FOODS_COOKED_MEATS_COOKED_RABBITS).addOptionalTag(FOODS_COOKED_MEATS_COOKED_CHICKENS).addOptionalTag(FOODS_COOKED_MEATS_COOKED_MUTTONS).addOptionalTag(FOODS_COOKED_MEATS_COOKED_PORKCHOPS).addOptionalTag(FOODS_COOKED_MEATS_COOKED_BEEFS);
-            tag(FOODS_COOKED_MEATS_COOKED_RABBITS).add(MFItems.IRON_COOKED_RABBIT.getKey()).add(MFItems.GOLDEN_COOKED_RABBIT.getKey()).add(MFItems.DIAMOND_COOKED_RABBIT.getKey()).add(MFItems.EMERALD_COOKED_RABBIT.getKey());
-            tag(FOODS_VEGETABLES_MELON_SLICES).add(MFItems.IRON_MELON_SLICE.getKey()).add(MFItems.GOLDEN_MELON_SLICE.getKey()).add(MFItems.DIAMOND_MELON_SLICE.getKey()).add(MFItems.EMERALD_MELON_SLICE.getKey());
-            tag(FOODS_COOKED_MEATS_COOKED_CHICKENS).add(MFItems.IRON_COOKED_CHICKEN.getKey()).add(MFItems.GOLDEN_COOKED_CHICKEN.getKey()).add(MFItems.DIAMOND_COOKED_CHICKEN.getKey()).add(MFItems.EMERALD_COOKED_CHICKEN.getKey());
-            tag(FOODS_COOKED_MEATS_COOKED_MUTTONS).add(MFItems.IRON_COOKED_MUTTON.getKey()).add(MFItems.GOLDEN_COOKED_MUTTON.getKey()).add(MFItems.DIAMOND_COOKED_MUTTON.getKey()).add(MFItems.EMERALD_COOKED_MUTTON.getKey());
-            tag(FOODS_COOKED_MEATS_COOKED_PORKCHOPS).add(MFItems.IRON_COOKED_PORKCHOP.getKey()).add(MFItems.GOLDEN_COOKED_PORKCHOP.getKey()).add(MFItems.DIAMOND_COOKED_PORKCHOP.getKey()).add(MFItems.EMERALD_COOKED_PORKCHOP.getKey());
-            tag(FOODS_COOKED_MEATS_COOKED_BEEFS).add(MFItems.IRON_COOKED_BEEF.getKey()).add(MFItems.GOLDEN_COOKED_BEEF.getKey()).add(MFItems.DIAMOND_COOKED_BEEF.getKey()).add(MFItems.EMERALD_COOKED_BEEF.getKey());
+            tag(Tags.Items.FOODS_VEGETABLE).addOptionalTag(FOODS_VEGETABLES_CARROT).addOptionalTag(FOODS_VEGETABLES_KELP).addOptionalTag(FOODS_VEGETABLES_POTATO).addOptionalTag(FOODS_VEGETABLES_MELON_SLICE);
+            tag(FOODS_VEGETABLES_CARROT).add(TagEntry.element(MFItems.IRON_CARROT.getId())).add(TagEntry.element(MFItems.DIAMOND_CARROT.getId())).add(TagEntry.element(MFItems.EMERALD_CARROT.getId())).add(TagEntry.element(MFItems.COOKED_CARROT.getId()));
+            tag(PIECES).add(TagEntry.element(MFItems.CARROT_PIECES.getId())).add(TagEntry.element(MFItems.APPLE_PIECES.getId())).add(TagEntry.element(MFItems.KELP_PIECES.getId())).add(TagEntry.element(MFItems.POTATO_PIECES.getId())).add(TagEntry.element(MFItems.PHANTOM_PIECES.getId())).add(TagEntry.element(MFItems.PUFFERFISH_PIECES.getId())).add(TagEntry.element(MFItems.BAMBOO_PIECES.getId()));
+            tag(Tags.Items.FOODS_SOUP).add(TagEntry.element(MFItems.CARROT_SOUP.getId())).add(TagEntry.element(MFItems.APPLE_SOUP.getId())).add(TagEntry.element(MFItems.KELP_SOUP.getId())).add(TagEntry.element(MFItems.POTATO_SOUP.getId())).add(TagEntry.element(MFItems.PHANTOM_SOUP.getId())).add(TagEntry.element(MFItems.PUMPKING_SOUP.getId())).add(TagEntry.element(MFItems.BAMBOO_SOUP.getId()));
+            tag(Tags.Items.FOODS_BREAD).add(TagEntry.element(MFItems.CARROT_BREAD.getId())).add(TagEntry.element(MFItems.APPLE_BREAD.getId())).add(TagEntry.element(MFItems.POTATO_BREAD.getId())).add(TagEntry.element(MFItems.PUMPKING_BREAD.getId()));
+            tag(FOODS_PIE).add(TagEntry.element(MFItems.CARROT_PIE.getId())).add(TagEntry.element(MFItems.APPLE_PIE.getId()));
+            tag(Tags.Items.FOODS_FRUIT).addOptionalTag(FOODS_FRUITS_APPLE);
+            tag(FOODS_FRUITS_APPLE).add(TagEntry.element(MFItems.IRON_APPLE.getId())).add(TagEntry.element(MFItems.DIAMOND_APPLE.getId())).add(TagEntry.element(MFItems.EMERALD_APPLE.getId())).add(TagEntry.element(MFItems.COOKED_APPLE.getId()));
+            tag(FOODS_VEGETABLES_KELP).add(TagEntry.element(MFItems.IRON_KELP.getId())).add(TagEntry.element(MFItems.GOLDEN_KELP.getId())).add(TagEntry.element(MFItems.DIAMOND_KELP.getId())).add(TagEntry.element(MFItems.EMERALD_KELP.getId()));
+            tag(FOODS_VEGETABLES_POTATO).add(TagEntry.element(MFItems.IRON_POTATO.getId())).add(TagEntry.element(MFItems.GOLDEN_POTATO.getId())).add(TagEntry.element(MFItems.DIAMOND_POTATO.getId())).add(TagEntry.element(MFItems.EMERALD_POTATO.getId()));
+            tag(Tags.Items.FOODS_FOOD_POISONING).add(TagEntry.element(MFItems.PUFFERFISH_SOUP.getId()));
+            tag(Tags.Items.FOODS_COOKED_MEAT).add(TagEntry.element(MFItems.COOKED_PHANTOM.getId())).add(TagEntry.element(MFItems.COOKED_BACON.getId())).addOptionalTag(FOODS_COOKED_MEATS_COOKED_RABBIT).addOptionalTag(FOODS_COOKED_MEATS_COOKED_CHICKEN).addOptionalTag(FOODS_COOKED_MEATS_COOKED_MUTTON).addOptionalTag(FOODS_COOKED_MEATS_COOKED_PORKCHOP).addOptionalTag(FOODS_COOKED_MEATS_COOKED_BEEF);
+            tag(FOODS_COOKED_MEATS_COOKED_RABBIT).add(TagEntry.element(MFItems.IRON_COOKED_RABBIT.getId())).add(TagEntry.element(MFItems.GOLDEN_COOKED_RABBIT.getId())).add(TagEntry.element(MFItems.DIAMOND_COOKED_RABBIT.getId())).add(TagEntry.element(MFItems.EMERALD_COOKED_RABBIT.getId()));
+            tag(FOODS_VEGETABLES_MELON_SLICE).add(TagEntry.element(MFItems.IRON_MELON_SLICE.getId())).add(TagEntry.element(MFItems.GOLDEN_MELON_SLICE.getId())).add(TagEntry.element(MFItems.DIAMOND_MELON_SLICE.getId())).add(TagEntry.element(MFItems.EMERALD_MELON_SLICE.getId()));
+            tag(FOODS_COOKED_MEATS_COOKED_CHICKEN).add(TagEntry.element(MFItems.IRON_COOKED_CHICKEN.getId())).add(TagEntry.element(MFItems.GOLDEN_COOKED_CHICKEN.getId())).add(TagEntry.element(MFItems.DIAMOND_COOKED_CHICKEN.getId())).add(TagEntry.element(MFItems.EMERALD_COOKED_CHICKEN.getId()));
+            tag(FOODS_COOKED_MEATS_COOKED_MUTTON).add(TagEntry.element(MFItems.IRON_COOKED_MUTTON.getId())).add(TagEntry.element(MFItems.GOLDEN_COOKED_MUTTON.getId())).add(TagEntry.element(MFItems.DIAMOND_COOKED_MUTTON.getId())).add(TagEntry.element(MFItems.EMERALD_COOKED_MUTTON.getId()));
+            tag(FOODS_COOKED_MEATS_COOKED_PORKCHOP).add(TagEntry.element(MFItems.IRON_COOKED_PORKCHOP.getId())).add(TagEntry.element(MFItems.GOLDEN_COOKED_PORKCHOP.getId())).add(TagEntry.element(MFItems.DIAMOND_COOKED_PORKCHOP.getId())).add(TagEntry.element(MFItems.EMERALD_COOKED_PORKCHOP.getId()));
+            tag(FOODS_COOKED_MEATS_COOKED_BEEF).add(TagEntry.element(MFItems.IRON_COOKED_BEEF.getId())).add(TagEntry.element(MFItems.GOLDEN_COOKED_BEEF.getId())).add(TagEntry.element(MFItems.DIAMOND_COOKED_BEEF.getId())).add(TagEntry.element(MFItems.EMERALD_COOKED_BEEF.getId()));
             tag(Tags.Items.CROPS).addOptionalTag(CROPS_RICE);
-            tag(CROPS_RICE).add(MFItems.RICE.getKey());
-            tag(Tags.Items.FOODS).add(MFItems.RICE_CHICKEN_BOWL.getKey()).add(MFItems.RICE_SALMON_BOWL.getKey()).add(MFItems.RICE_COD_BOWL.getKey()).add(MFItems.RICE_VEGETABLE_BOWL.getKey()).add(MFItems.RICE_PUDDING.getKey()).add(MFItems.RICE_HONEY_PUDDING.getKey()).add(MFItems.COOKED_EGG.getKey()).add(MFItems.COOKED_BACON_EGG.getKey()).addOptionalTag(FOODS_PIES).addOptionalTag(FOODS_SUSHIS);
-            tag(FOODS_SUSHIS).add(MFItems.SUSHI_BAMBOO.getKey()).add(MFItems.SUSHI_CARROT.getKey()).add(MFItems.SUSHI_BEETROOT.getKey()).add(MFItems.SUSHI_SALMON.getKey());
-            tag(Tags.Items.FOODS_RAW_MEATS).add(MFItems.RAW_BACON.getKey());
-            tag(Tags.Items.FOODS_CANDIES).add(MFItems.CHOCOLATE.getKey()).add(MFItems.CHOCOLATE_BAR.getKey());
+            tag(CROPS_RICE).add(TagEntry.element(MFItems.RICE.getId()));
+            tag(Tags.Items.FOODS).add(TagEntry.element(MFItems.RICE_CHICKEN_BOWL.getId())).add(TagEntry.element(MFItems.RICE_SALMON_BOWL.getId())).add(TagEntry.element(MFItems.RICE_COD_BOWL.getId())).add(TagEntry.element(MFItems.RICE_VEGETABLE_BOWL.getId())).add(TagEntry.element(MFItems.RICE_PUDDING.getId())).add(TagEntry.element(MFItems.RICE_HONEY_PUDDING.getId())).add(TagEntry.element(MFItems.COOKED_EGG.getId())).add(TagEntry.element(MFItems.COOKED_BACON_EGG.getId())).addOptionalTag(FOODS_PIE).addOptionalTag(FOODS_SUSHI);
+            tag(FOODS_SUSHI).add(TagEntry.element(MFItems.SUSHI_BAMBOO.getId())).add(TagEntry.element(MFItems.SUSHI_CARROT.getId())).add(TagEntry.element(MFItems.SUSHI_BEETROOT.getId())).add(TagEntry.element(MFItems.SUSHI_SALMON.getId()));
+            tag(Tags.Items.FOODS_RAW_MEAT).add(TagEntry.element(MFItems.RAW_BACON.getId()));
+            tag(Tags.Items.FOODS_CANDY).add(TagEntry.element(MFItems.CHOCOLATE.getId())).add(TagEntry.element(MFItems.CHOCOLATE_BAR.getId()));
         }
 
         private static TagKey<Item> registerKey(String path) {

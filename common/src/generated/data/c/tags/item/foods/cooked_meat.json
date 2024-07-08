@@ -3,23 +3,23 @@
     "more_food:cooked_phantom",
     "more_food:cooked_bacon",
     {
-      "id": "#c:foods/cooked_meats/cooked_rabbits",
+      "id": "#c:foods/cooked_meats/cooked_rabbit",
       "required": false
     },
     {
-      "id": "#c:foods/cooked_meats/cooked_chickens",
+      "id": "#c:foods/cooked_meats/cooked_chicken",
       "required": false
     },
     {
-      "id": "#c:foods/cooked_meats/cooked_muttons",
+      "id": "#c:foods/cooked_meats/cooked_mutton",
       "required": false
     },
     {
-      "id": "#c:foods/cooked_meats/cooked_porkchops",
+      "id": "#c:foods/cooked_meats/cooked_porkchop",
       "required": false
     },
     {
-      "id": "#c:foods/cooked_meats/cooked_beefs",
+      "id": "#c:foods/cooked_meats/cooked_beef",
       "required": false
     }
   ]

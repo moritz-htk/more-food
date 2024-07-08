@@ -1,7 +1,7 @@
 package net.volwert123.more_food.fabric.loot;
 
-import net.fabricmc.fabric.api.loot.v2.FabricLootTableBuilder;
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.loot.v3.FabricLootTableBuilder;
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -20,7 +20,7 @@ public class MFLootTableModifiers {
     private static final ResourceKey<LootTable> FERN_BLOCK_KEY = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.withDefaultNamespace("blocks/fern"));
 
     public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register((key, tableBuilder, source) -> {
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
             addLoot(key, GRASS_BLOCK_KEY, tableBuilder, MFItems.RICE.get(), ConstantValue.exactly(1));
             addLoot(key, FERN_BLOCK_KEY, tableBuilder, MFItems.RICE.get(), ConstantValue.exactly(1));
         });
