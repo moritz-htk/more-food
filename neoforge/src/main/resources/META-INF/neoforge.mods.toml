@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[3,)"
+loaderVersion="[4,)"
 license="MIT"
 issueTrackerURL="https://github.com/Volwert123/more-food/issues"
 
@@ -7,6 +7,7 @@ issueTrackerURL="https://github.com/Volwert123/more-food/issues"
     modId="more_food"
     version="${version}"
     displayName="More Food"
+    updateJSONURL="https://api.modrinth.com/updates/more-food-xd/forge_updates.json?neoforge=only"
     displayURL="https://www.curseforge.com/minecraft/mc-mods/more-food-xd"
     logoFile="icon.png"
     authors="Volwert123, moritz_htk"
@@ -29,7 +30,7 @@ issueTrackerURL="https://github.com/Volwert123/more-food/issues"
 [[dependencies.more_food]]
     modId="architectury"
     type="required"
-    versionRange="[13.0.2,)"
+    versionRange="[13.0.3,)"
     ordering="AFTER"
     side="BOTH"
 
