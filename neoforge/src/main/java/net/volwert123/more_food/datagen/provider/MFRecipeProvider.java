@@ -66,6 +66,7 @@ public class MFRecipeProvider extends RecipeProvider implements IConditionBuilde
         // Pufferfish Recipes
         createPiecesRecipe(MFItems.PUFFERFISH_PIECES.get(), Items.PUFFERFISH).save(output, createOutputLocation(MFItems.PUFFERFISH_PIECES.get()));
         createSoupRecipe(MFItems.PUFFERFISH_SOUP.get(), Items.PUFFERFISH, MFItems.PUFFERFISH_PIECES.get()).save(output, createOutputLocation(MFItems.PUFFERFISH_SOUP.get()));
+        createCookingRecipes(MFItems.COOKED_PUFFERFISH.get(), Items.PUFFERFISH, output);
 
         // Pumpkin Recipes
         createSoupRecipe(MFItems.PUMPKING_SOUP.get(), Items.PUMPKIN, Items.PUMPKIN_SEEDS).save(output, createOutputLocation(MFItems.PUMPKING_SOUP.get()));
