@@ -58,9 +58,9 @@ public class MFItems {
     public static final RegistrySupplier<Item> PHANTOM_SOUP = ITEMS.register("phantom_soup", () -> new MFSoupItem(registerItemProperties(), registerFoodValues(6, 3f)));
 
     // Pufferfish Items
+    public static final RegistrySupplier<Item> COOKED_PUFFERFISH = ITEMS.register("cooked_pufferfish", () -> new Item(registerItemProperties().food(registerFoodValues(5, 2.5f))));
     public static final RegistrySupplier<Item> PUFFERFISH_PIECES = ITEMS.register("pufferfish_pieces", () -> new Item(registerItemProperties()));
     public static final RegistrySupplier<Item> PUFFERFISH_SOUP = ITEMS.register("pufferfish_soup", () -> new MFPufferfishSoupItem(registerItemProperties(), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> COOKED_PUFFERFISH = ITEMS.register("cooked_pufferfish", () -> new Item(registerItemProperties().food(registerFoodValues(5, 2.5f))));
 
     // Pumpkin Items
     public static final RegistrySupplier<Item> PUMPKING_SOUP = ITEMS.register("pumpking_soup", () -> new MFSoupItem(registerItemProperties(), registerFoodValues(6, 3f)));
@@ -122,10 +122,8 @@ public class MFItems {
     public static final RegistrySupplier<Item> SUSHI_BEETROOT = ITEMS.register("sushi_beetroot", () -> new Item(registerItemProperties().food(registerFoodValues(5, 2.5f))));
     public static final RegistrySupplier<Item> SUSHI_SALMON = ITEMS.register("sushi_salmon", () -> new Item(registerItemProperties().food(registerFoodValues(5, 2.5f))));
 
-    // Egg Items
+    // Egg & Bacon Items
     public static final RegistrySupplier<Item> COOKED_EGG = ITEMS.register("cooked_egg", () -> new Item(registerItemProperties().food(registerFoodValues(3, 1.5f))));
-
-    // Bacon Items
     public static final RegistrySupplier<Item> RAW_BACON = ITEMS.register("raw_bacon", () -> new Item(registerItemProperties().food(registerFoodValues(2,1f))));
     public static final RegistrySupplier<Item> COOKED_BACON = ITEMS.register("cooked_bacon", () -> new Item(registerItemProperties().food(registerFoodValues(5,2.5f))));
     public static final RegistrySupplier<Item> COOKED_BACON_EGG = ITEMS.register("cooked_bacon_egg", () -> new Item(registerItemProperties().food(registerFoodValues(7, 3.5f))));
@@ -134,7 +132,7 @@ public class MFItems {
     public static final RegistrySupplier<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(registerItemProperties().food(registerFoodValues(6,3f))));
     public static final RegistrySupplier<Item> CHOCOLATE_BAR = ITEMS.register("chocolate_bar", () -> new Item(registerItemProperties().food(registerFoodValues(8,4f))));
 
-    // Sweet Berries
+    // Sweet Berries Items
     public static final RegistrySupplier<Item> CHOCOLATE_SWEET_BERRIES = ITEMS.register("chocolate_sweet_berries", () -> new Item(registerItemProperties().food(registerFoodValues(6, 3f))));
 
     public static Item.Properties registerItemProperties() {
