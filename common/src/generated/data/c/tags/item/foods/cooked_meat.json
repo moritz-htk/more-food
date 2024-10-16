@@ -1,26 +1,11 @@
 {
   "values": [
     "more_food:cooked_phantom",
-    "more_food:cooked_bacon",
-    {
-      "id": "#c:foods/cooked_meats/cooked_rabbit",
-      "required": false
-    },
-    {
-      "id": "#c:foods/cooked_meats/cooked_chicken",
-      "required": false
-    },
-    {
-      "id": "#c:foods/cooked_meats/cooked_mutton",
-      "required": false
-    },
-    {
-      "id": "#c:foods/cooked_meats/cooked_porkchop",
-      "required": false
-    },
-    {
-      "id": "#c:foods/cooked_meats/cooked_beef",
-      "required": false
-    }
+    "#c:foods/cooked_meat/cooked_rabbit",
+    "#c:foods/cooked_meat/cooked_chicken",
+    "#c:foods/cooked_meat/cooked_mutton",
+    "#c:foods/cooked_meat/cooked_porkchop",
+    "#c:foods/cooked_meat/cooked_beef",
+    "#c:foods/cooked_meat/cooked_bacon"
   ]
 }
