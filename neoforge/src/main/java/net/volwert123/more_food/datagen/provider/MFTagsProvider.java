@@ -48,6 +48,7 @@ public class MFTagsProvider {
             addEggAndBaconTags();
             addChocolateTags();
             addSweetBerriesTags();
+            addSereneSeasonCropTags();
         }
 
         private void addCarrotTags() {
@@ -216,6 +217,10 @@ public class MFTagsProvider {
         private void addSweetBerriesTags() {
             tag(Tags.Items.FOODS).add(TagEntry.element(MFItems.CHOCOLATE_SWEET_BERRIES.getId()));
         }
+
+        private void addSereneSeasonCropTags() {
+            tag(MFTags.Items.SERENE_SEASON_SUMMER_CROPS).add(TagEntry.element(MFItems.RICE.getId()));
+        }
     }
 
     public static class Blocks extends TagsProvider<Block> {
@@ -226,6 +231,8 @@ public class MFTagsProvider {
         @Override
         protected void addTags(HolderLookup.@NotNull Provider provider) {
             tag(BlockTags.CROPS).add(TagEntry.element(MFBlocks.RICE_CROP.getId()));
+            tag(BlockTags.MAINTAINS_FARMLAND).add(TagEntry.element(MFBlocks.RICE_CROP.getId()));
+            tag(MFTags.Blocks.SERENE_SEASON_SUMMER_CROPS).add(TagEntry.element(MFBlocks.RICE_CROP.getId()));
         }
     }
 }
