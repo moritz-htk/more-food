@@ -4,7 +4,7 @@ run/
 bin/
 output/
 classes/
-common/src/generated/.cache/
+common/src/main/generated/.cache/
 
 .idea/
 *.ipr
