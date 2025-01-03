@@ -135,11 +135,11 @@ public class MFItems {
     // Sweet Berries Items
     public static final RegistrySupplier<Item> CHOCOLATE_SWEET_BERRIES = ITEMS.register("chocolate_sweet_berries", () -> new Item(registerItemProperties().food(registerFoodValues(6, 3f))));
 
-    public static Item.Properties registerItemProperties() {
+    private static Item.Properties registerItemProperties() {
         return new Item.Properties().arch$tab(MFCreativeTabs.MORE_FOOD_MAIN);
     }
 
-    public static FoodProperties registerFoodValues(int nutrition, float saturation) {
+    private static FoodProperties registerFoodValues(int nutrition, float saturation) {
         return new FoodProperties.Builder().nutrition(nutrition).saturationModifier(saturation).build();
     }
 }
