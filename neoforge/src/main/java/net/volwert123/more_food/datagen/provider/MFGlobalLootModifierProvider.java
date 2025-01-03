@@ -12,9 +12,9 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
-import net.volwert123.more_food.MoreFood;
+import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.neoforge.loot.MFAddItemModifier;
-import net.volwert123.more_food.registry.MFItems;
+import net.volwert123.more_food.common.registry.MFItems;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;

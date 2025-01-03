@@ -8,8 +8,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-import net.volwert123.more_food.MoreFood;
-import net.volwert123.more_food.registry.MFItems;
+import net.volwert123.more_food.common.MoreFood;
+import net.volwert123.more_food.common.registry.MFItems;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;

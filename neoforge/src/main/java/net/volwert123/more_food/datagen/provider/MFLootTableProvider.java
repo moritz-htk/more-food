@@ -18,10 +18,10 @@ import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.volwert123.more_food.MoreFood;
-import net.volwert123.more_food.block.MFRiceCropBlock;
-import net.volwert123.more_food.registry.MFBlocks;
-import net.volwert123.more_food.registry.MFItems;
+import net.volwert123.more_food.common.MoreFood;
+import net.volwert123.more_food.common.block.MFRiceCropBlock;
+import net.volwert123.more_food.common.registry.MFBlocks;
+import net.volwert123.more_food.common.registry.MFItems;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;

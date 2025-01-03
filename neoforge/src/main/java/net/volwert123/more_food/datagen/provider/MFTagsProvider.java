@@ -11,10 +11,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.volwert123.more_food.MoreFood;
-import net.volwert123.more_food.registry.MFBlocks;
-import net.volwert123.more_food.registry.MFItems;
-import net.volwert123.more_food.registry.MFTags;
+import net.volwert123.more_food.common.MoreFood;
+import net.volwert123.more_food.common.registry.MFBlocks;
+import net.volwert123.more_food.common.registry.MFItems;
+import net.volwert123.more_food.common.registry.MFTags;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;

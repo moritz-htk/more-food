@@ -2,8 +2,8 @@ package net.volwert123.more_food.datagen.provider.lang;
 
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
-import net.volwert123.more_food.MoreFood;
-import net.volwert123.more_food.registry.MFItems;
+import net.volwert123.more_food.common.MoreFood;
+import net.volwert123.more_food.common.registry.MFItems;
 
 public class MFEnglishLanguageProvider extends LanguageProvider {
     public MFEnglishLanguageProvider(PackOutput output) {

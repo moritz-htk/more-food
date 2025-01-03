@@ -1,4 +1,4 @@
-package net.volwert123.more_food.registry;
+package net.volwert123.more_food.common.registry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;

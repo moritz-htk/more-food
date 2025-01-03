@@ -7,7 +7,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
-import net.volwert123.more_food.MoreFood;
+import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.datagen.provider.*;
 import net.volwert123.more_food.datagen.provider.lang.*;
 
