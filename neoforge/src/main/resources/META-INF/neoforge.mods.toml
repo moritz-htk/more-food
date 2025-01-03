@@ -16,21 +16,21 @@ issueTrackerURL="https://github.com/Volwert123/more-food/issues"
 [[dependencies.more_food]]
     modId="neoforge"
     type="required"
-    versionRange="[21.0,)"
+    versionRange="[21.1,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.more_food]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21,)"
+    versionRange="[1.21.1,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.more_food]]
     modId="architectury"
     type="required"
-    versionRange="[13.0.3,)"
+    versionRange="[13.0.8,)"
     ordering="AFTER"
     side="BOTH"
 
