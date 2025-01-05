@@ -4,7 +4,7 @@ import com.mojang.serialization.MapCodec;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
-import net.volwert123.more_food.MoreFood;
+import net.volwert123.more_food.common.MoreFood;
 
 import java.util.function.Supplier;
 

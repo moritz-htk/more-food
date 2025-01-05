@@ -13,7 +13,7 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
-import net.volwert123.more_food.registry.MFItems;
+import net.volwert123.more_food.common.registry.MFItems;
 
 public class MFLootTableModifiers {
     private static final ResourceKey<LootTable> GRASS_BLOCK_KEY = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.withDefaultNamespace("blocks/short_grass"));

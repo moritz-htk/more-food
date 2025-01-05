@@ -14,20 +14,22 @@
     "sources": "https://github.com/Volwert123/more-food"
   },
   "license": "MIT",
-  "icon": "icon.png",
+  "icon": "assets/more_food/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.volwert123.more_food.fabric.MoreFoodFabric"
+      "net.volwert123.more_food.fabric.MFFabric"
     ],
     "client": [
-      "net.volwert123.more_food.fabric.client.MoreFoodFabricClient"
+      "net.volwert123.more_food.fabric.client.MFFabricClient"
     ]
   },
   "depends": {
-    "fabric": "*",
-    "minecraft": ">=1.21",
-    "architectury": ">=13.0.6"
+    "fabricloader": ">=0.16.9",
+    "minecraft": ">=1.21.1",
+    "java": ">=21",
+    "fabric-api": "*",
+    "architectury": ">=13.0.8"
   },
   "custom": {
     "catalogue": {

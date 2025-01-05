@@ -9,28 +9,28 @@ issueTrackerURL="https://github.com/Volwert123/more-food/issues"
     displayName="More Food"
     updateJSONURL="https://api.modrinth.com/updates/more-food-xd/forge_updates.json?neoforge=only"
     displayURL="https://www.curseforge.com/minecraft/mc-mods/more-food-xd"
-    logoFile="icon.png"
+    logoFile="assets/more_food/icon.png"
     authors="Volwert123, moritz_htk"
     description='''This mod adds more food to Minecraft.'''
 
 [[dependencies.more_food]]
     modId="neoforge"
     type="required"
-    versionRange="[21.0,)"
+    versionRange="[21.1,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.more_food]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21,)"
+    versionRange="[1.21.1,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.more_food]]
     modId="architectury"
     type="required"
-    versionRange="[13.0.3,)"
+    versionRange="[13.0.8,)"
     ordering="AFTER"
     side="BOTH"
 

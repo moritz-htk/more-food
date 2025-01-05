@@ -7,9 +7,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.volwert123.more_food.MoreFood;
-import net.volwert123.more_food.block.MFRiceCropBlock;
-import net.volwert123.more_food.registry.MFBlocks;
+import net.volwert123.more_food.common.MoreFood;
+import net.volwert123.more_food.common.block.MFRiceCropBlock;
+import net.volwert123.more_food.common.registry.MFBlocks;
 
 import java.util.function.Function;
 
