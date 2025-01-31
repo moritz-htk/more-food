@@ -2,6 +2,21 @@ plugins {
     id 'dev.architectury.loom' version '1.7-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+    id 'me.shedaniel.unified-publishing' version '0.1.13' apply false
+}
+
+def localPropertiesFile = file('local.properties')
+if (localPropertiesFile.exists()) {
+    Properties localProperties = new Properties()
+    localPropertiesFile.withInputStream {
+        stream -> localProperties.load(stream)
+    }
+    localProperties.each {
+        key, value -> project.ext.set(key, value)
+    }
+} else {
+    project.ext.set('curseforgeApiKey', System.getenv('CURSEFORGE_API_KEY') ?: '')
+    project.ext.set('modrinthApiKey', System.getenv('MODRINTH_API_KEY') ?: '')
 }
 
 architectury {

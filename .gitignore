@@ -14,6 +14,7 @@ common/src/main/generated/.cache/
 .metadata
 .settings
 .vscode
+local.properties
 
 .classpath
 .project

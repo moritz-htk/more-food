@@ -1,5 +1,6 @@
 plugins {
     id 'com.github.johnrengelman.shadow'
+    id 'me.shedaniel.unified-publishing'
 }
 
 architectury {
@@ -50,4 +51,42 @@ shadowJar {
 
 remapJar {
     input.set shadowJar.archiveFile
+}
+
+unifiedPublishing {
+    project {
+        displayName = "${project.minecraft_version} Fabric / More Food Mod ${project.version}"
+        version = "${project.version}"
+        releaseType = 'release'
+        gameVersions = ["${project.minecraft_version}"]
+        gameLoaders = ['fabric']
+        changelog = project(':').file('changelog.md').text
+
+        mainPublication tasks.remapJar
+
+        relations {
+            depends {
+                curseforge = 'architectury-api'
+                modrinth = 'architectury-api'
+            }
+            depends {
+                curseforge = 'fabric-api'
+                modrinth = 'fabric-api'
+            }
+        }
+
+        if (curseforgeApiKey != null) {
+            curseforge {
+                token = curseforgeApiKey
+                id = '874343'
+            }
+        }
+
+        if (modrinthApiKey != null) {
+            modrinth {
+                token = modrinthApiKey
+                id = 'kReQ7M8K'
+            }
+        }
+    }
 }
