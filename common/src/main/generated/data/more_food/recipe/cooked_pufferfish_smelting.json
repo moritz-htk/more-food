@@ -3,9 +3,7 @@
   "category": "food",
   "cookingtime": 200,
   "experience": 1.0,
-  "ingredient": {
-    "item": "minecraft:pufferfish"
-  },
+  "ingredient": "minecraft:pufferfish",
   "result": {
     "count": 1,
     "id": "more_food:cooked_pufferfish"

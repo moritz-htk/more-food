@@ -10,25 +10,21 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagEntry;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.registry.MFBlocks;
 import net.volwert123.more_food.common.registry.MFItems;
 import net.volwert123.more_food.common.registry.MFTags;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-@SuppressWarnings("unchecked")
 public class MFTagsProvider {
     public static class Items extends TagsProvider<Item> {
-        public Items(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, @Nullable ExistingFileHelper existingFileHelper) {
-            super(output, Registries.ITEM, registries, MoreFood.MOD_ID, existingFileHelper);
+        public Items(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+            super(output, Registries.ITEM, registries, MoreFood.MOD_ID);
         }
 
         @Override
@@ -56,7 +52,7 @@ public class MFTagsProvider {
         }
 
         private void addCarrotTags() {
-            tag(Tags.Items.FOODS_VEGETABLE).addTags(MFTags.Items.FOODS_VEGETABLES_CARROT);
+            tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_CARROT);
             tag(MFTags.Items.FOODS_VEGETABLES_CARROT).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("carrot")),
                     MFItems.IRON_CARROT.getKey(),
@@ -70,7 +66,7 @@ public class MFTagsProvider {
         }
 
         private void addAppleTags() {
-            tag(Tags.Items.FOODS_FRUIT).addTags(MFTags.Items.FOODS_FRUITS_APPLE);
+            tag(Tags.Items.FOODS_FRUIT).addTag(MFTags.Items.FOODS_FRUITS_APPLE);
             tag(MFTags.Items.FOODS_FRUITS_APPLE).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("apple")),
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("golden_apple")),
@@ -86,7 +82,7 @@ public class MFTagsProvider {
         }
 
         private void addKelpTags() {
-            tag(Tags.Items.FOODS_VEGETABLE).addTags(MFTags.Items.FOODS_VEGETABLES_KELP);
+            tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_KELP);
             tag(MFTags.Items.FOODS_VEGETABLES_KELP).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("dried_kelp")),
                     MFItems.IRON_KELP.getKey(),
@@ -99,7 +95,7 @@ public class MFTagsProvider {
         }
 
         private void addPotatoTags() {
-            tag(Tags.Items.FOODS_VEGETABLE).addTags(MFTags.Items.FOODS_VEGETABLES_POTATO);
+            tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_POTATO);
             tag(MFTags.Items.FOODS_VEGETABLES_POTATO).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("potato")),
                     MFItems.IRON_POTATO.getKey(),
@@ -133,7 +129,7 @@ public class MFTagsProvider {
         }
 
         private void addCookedRabbitTags() {
-            tag(Tags.Items.FOODS_COOKED_MEAT).addTags(MFTags.Items.FOODS_COOKED_RABBIT);
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_RABBIT);
             tag(MFTags.Items.FOODS_COOKED_RABBIT).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_rabbit")),
                     MFItems.IRON_COOKED_RABBIT.getKey(),
@@ -144,7 +140,7 @@ public class MFTagsProvider {
         }
 
         private void addMelonSliceTags() {
-            tag(Tags.Items.FOODS_FRUIT).addTags(MFTags.Items.FOODS_FRUITS_MELON_SLICE);
+            tag(Tags.Items.FOODS_FRUIT).addTag(MFTags.Items.FOODS_FRUITS_MELON_SLICE);
             tag(MFTags.Items.FOODS_FRUITS_MELON_SLICE).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("melon_slice")),
                     MFItems.IRON_MELON_SLICE.getKey(),
@@ -155,7 +151,7 @@ public class MFTagsProvider {
         }
 
         private void addCookedChickenTags() {
-            tag(Tags.Items.FOODS_COOKED_MEAT).addTags(MFTags.Items.FOODS_COOKED_CHICKEN);
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_CHICKEN);
             tag(MFTags.Items.FOODS_COOKED_CHICKEN).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_chicken")),
                     MFItems.IRON_COOKED_CHICKEN.getKey(),
@@ -166,7 +162,7 @@ public class MFTagsProvider {
         }
 
         private void addCookedMuttonTags() {
-            tag(Tags.Items.FOODS_COOKED_MEAT).addTags(MFTags.Items.FOODS_COOKED_MUTTON);
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_MUTTON);
             tag(MFTags.Items.FOODS_COOKED_MUTTON).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_mutton")),
                     MFItems.IRON_COOKED_MUTTON.getKey(),
@@ -177,7 +173,7 @@ public class MFTagsProvider {
         }
 
         private void addCookedPorkchopTags() {
-            tag(Tags.Items.FOODS_COOKED_MEAT).addTags(MFTags.Items.FOODS_COOKED_PORKCHOP);
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_PORKCHOP);
             tag(MFTags.Items.FOODS_COOKED_PORKCHOP).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_porkchop")),
                     MFItems.IRON_COOKED_PORKCHOP.getKey(),
@@ -188,7 +184,7 @@ public class MFTagsProvider {
         }
 
         private void addCookedBeefTags() {
-            tag(Tags.Items.FOODS_COOKED_MEAT).addTags(MFTags.Items.FOODS_COOKED_BEEF);
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_BEEF);
             tag(MFTags.Items.FOODS_COOKED_BEEF).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_beef")),
                     MFItems.IRON_COOKED_BEEF.getKey(),
@@ -199,10 +195,10 @@ public class MFTagsProvider {
         }
 
         private void addRiceTags() {
-            tag(Tags.Items.CROPS).addTags(MFTags.Items.CROPS_RICE);
+            tag(Tags.Items.CROPS).addTag(MFTags.Items.CROPS_RICE);
             tag(MFTags.Items.CROPS_RICE).add(TagEntry.element(MFItems.RICE.getId()));
-            tag(ItemTags.VILLAGER_PLANTABLE_SEEDS).addTags(MFTags.Items.SEEDS_RICE);
-            tag(Tags.Items.SEEDS).addTags(MFTags.Items.SEEDS_RICE);
+            tag(ItemTags.VILLAGER_PLANTABLE_SEEDS).addTag(MFTags.Items.SEEDS_RICE);
+            tag(Tags.Items.SEEDS).addTag(MFTags.Items.SEEDS_RICE);
             tag(MFTags.Items.SEEDS_RICE).add(TagEntry.element(MFItems.RICE.getId()));
             tag(Tags.Items.FOODS).addAll(List.of(
                     MFItems.RICE_CHICKEN_BOWL.getKey(),
@@ -214,7 +210,7 @@ public class MFTagsProvider {
         }
 
         private void addSushiTags() {
-            tag(Tags.Items.FOODS).addTags(MFTags.Items.FOODS_SUSHI);
+            tag(Tags.Items.FOODS).addTag(MFTags.Items.FOODS_SUSHI);
             tag(MFTags.Items.FOODS_SUSHI).addAll(List.of(
                     MFItems.SUSHI_BAMBOO.getKey(),
                     MFItems.SUSHI_CARROT.getKey(),
@@ -223,11 +219,11 @@ public class MFTagsProvider {
         }
 
         private void addEggAndBaconTags() {
-            tag(Tags.Items.FOODS).addTags(MFTags.Items.FOODS_COOKED_EGG);
+            tag(Tags.Items.FOODS).addTag(MFTags.Items.FOODS_COOKED_EGG);
             tag(MFTags.Items.FOODS_COOKED_EGG).add(TagEntry.element(MFItems.COOKED_EGG.getId()));
-            tag(Tags.Items.FOODS_RAW_MEAT).addTags(MFTags.Items.FOODS_RAW_BACON);
+            tag(Tags.Items.FOODS_RAW_MEAT).addTag(MFTags.Items.FOODS_RAW_BACON);
             tag(MFTags.Items.FOODS_RAW_BACON).add(TagEntry.element(MFItems.RAW_BACON.getId()));
-            tag(Tags.Items.FOODS_COOKED_MEAT).addTags(MFTags.Items.FOODS_COOKED_BACON);
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_BACON);
             tag(MFTags.Items.FOODS_COOKED_BACON).add(TagEntry.element(MFItems.COOKED_BACON.getId()));
             tag(Tags.Items.FOODS).add(TagEntry.element(MFItems.COOKED_BACON_EGG.getId()));
         }
@@ -248,8 +244,8 @@ public class MFTagsProvider {
     }
 
     public static class Blocks extends TagsProvider<Block> {
-        public Blocks(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, @Nullable ExistingFileHelper existingFileHelper) {
-            super(output, Registries.BLOCK, registries, MoreFood.MOD_ID, existingFileHelper);
+        public Blocks(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+            super(output, Registries.BLOCK, registries, MoreFood.MOD_ID);
         }
 
         @Override

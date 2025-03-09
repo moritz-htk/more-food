@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:cooked_chicken"
-    },
-    "E": {
-      "item": "minecraft:emerald"
-    }
+    "#": "minecraft:cooked_chicken",
+    "E": "minecraft:emerald"
   },
   "pattern": [
     "EEE",

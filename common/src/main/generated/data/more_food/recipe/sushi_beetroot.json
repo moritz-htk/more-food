@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:beetroot"
-    },
-    "D": {
-      "item": "minecraft:dried_kelp"
-    },
-    "R": {
-      "item": "more_food:rice"
-    }
+    "#": "minecraft:beetroot",
+    "D": "minecraft:dried_kelp",
+    "R": "more_food:rice"
   },
   "pattern": [
     "R#R",

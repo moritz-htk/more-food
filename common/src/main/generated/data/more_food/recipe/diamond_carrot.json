@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:carrot"
-    },
-    "D": {
-      "item": "minecraft:diamond"
-    }
+    "#": "minecraft:carrot",
+    "D": "minecraft:diamond"
   },
   "pattern": [
     "DDD",
