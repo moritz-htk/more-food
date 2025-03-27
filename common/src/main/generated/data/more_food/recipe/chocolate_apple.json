@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:apple"
-    },
-    "C": {
-      "item": "more_food:chocolate"
-    }
+    "#": "minecraft:apple",
+    "C": "more_food:chocolate"
   },
   "pattern": [
     "   ",

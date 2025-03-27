@@ -1,4 +1,5 @@
 {
+  "block.more_food.rice": "Rice",
   "item.more_food.apple_bread": "Apple Bread",
   "item.more_food.apple_pie": "Apple Pie",
   "item.more_food.apple_pieces": "Apple Pieces",
@@ -73,7 +74,6 @@
   "item.more_food.pumpking_bread": "Pumpkin Bread",
   "item.more_food.pumpking_soup": "Pumpkin Soup",
   "item.more_food.raw_bacon": "Raw Bacon",
-  "item.more_food.rice": "Rice",
   "item.more_food.rice_chicken_bowl": "Rice Chicken Bowl",
   "item.more_food.rice_cod_bowl": "Rice Cod Bowl",
   "item.more_food.rice_honey_pudding": "Rice Honey Pudding",

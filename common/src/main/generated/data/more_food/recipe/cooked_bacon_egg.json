@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "more_food:cooked_bacon"
-    },
-    {
-      "item": "more_food:cooked_egg"
-    }
+    "more_food:cooked_bacon",
+    "more_food:cooked_egg"
   ],
   "result": {
     "count": 1,

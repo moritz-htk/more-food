@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "item": "minecraft:potato"
-    },
-    {
-      "item": "more_food:potato_pieces"
-    }
+    "minecraft:bowl",
+    "minecraft:potato",
+    "more_food:potato_pieces"
   ],
   "result": {
     "count": 1,

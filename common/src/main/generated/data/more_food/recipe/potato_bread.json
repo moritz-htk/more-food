@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:wheat"
-    },
-    {
-      "item": "minecraft:wheat"
-    },
-    {
-      "item": "minecraft:potato"
-    },
-    {
-      "item": "more_food:potato_pieces"
-    }
+    "minecraft:wheat",
+    "minecraft:wheat",
+    "minecraft:potato",
+    "more_food:potato_pieces"
   ],
   "result": {
     "count": 1,

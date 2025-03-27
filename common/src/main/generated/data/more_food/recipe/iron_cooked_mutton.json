@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:cooked_mutton"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
-    }
+    "#": "minecraft:cooked_mutton",
+    "I": "minecraft:iron_ingot"
   },
   "pattern": [
     "III",

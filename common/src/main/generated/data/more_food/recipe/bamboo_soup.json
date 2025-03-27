@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "item": "minecraft:bamboo"
-    },
-    {
-      "item": "more_food:bamboo_pieces"
-    }
+    "minecraft:bowl",
+    "minecraft:bamboo",
+    "more_food:bamboo_pieces"
   ],
   "result": {
     "count": 1,

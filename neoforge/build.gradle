@@ -9,8 +9,8 @@ architectury {
 
 loom {
     runs {
-        data {
-            data()
+        dataClient {
+            clientData()
             programArgs '--all', '--mod', 'more_food'
             programArgs '--output', project(':common').file('src/main/generated').absolutePath
             programArgs '--existing', project(':common').file('src/main/resources').absolutePath

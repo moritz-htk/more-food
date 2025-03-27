@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:cooked_beef"
-    },
-    "D": {
-      "item": "minecraft:diamond"
-    }
+    "#": "minecraft:cooked_beef",
+    "D": "minecraft:diamond"
   },
   "pattern": [
     "DDD",

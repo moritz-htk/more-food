@@ -1,4 +1,5 @@
 {
+  "block.more_food.rice": "Riz",
   "item.more_food.apple_bread": "Pain à la pomme",
   "item.more_food.apple_pie": "Tarte à la pommes",
   "item.more_food.apple_pieces": "Morceaux de pomme",
@@ -73,7 +74,6 @@
   "item.more_food.pumpking_bread": "Pain à la citrouille",
   "item.more_food.pumpking_soup": "Soupe de citrouille",
   "item.more_food.raw_bacon": "Bacon cru",
-  "item.more_food.rice": "Riz",
   "item.more_food.rice_chicken_bowl": "Bol de riz au poulet",
   "item.more_food.rice_cod_bowl": "Bol de riz au morue",
   "item.more_food.rice_honey_pudding": "Riz au lait et au miel",

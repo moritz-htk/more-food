@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:carrot"
-    },
-    "E": {
-      "item": "minecraft:emerald"
-    }
+    "#": "minecraft:carrot",
+    "E": "minecraft:emerald"
   },
   "pattern": [
     "EEE",

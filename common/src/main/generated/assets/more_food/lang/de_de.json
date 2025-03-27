@@ -1,4 +1,5 @@
 {
+  "block.more_food.rice": "Reis",
   "item.more_food.apple_bread": "Apfelbrot",
   "item.more_food.apple_pie": "Apfelkuchen",
   "item.more_food.apple_pieces": "Apfelstücke",
@@ -73,7 +74,6 @@
   "item.more_food.pumpking_bread": "Kürbisbrot",
   "item.more_food.pumpking_soup": "Kürbissuppe",
   "item.more_food.raw_bacon": "Roher Speck",
-  "item.more_food.rice": "Reis",
   "item.more_food.rice_chicken_bowl": "Reis-Hühnchenschüssel",
   "item.more_food.rice_cod_bowl": "Reis-Kabeljauschüssel",
   "item.more_food.rice_honey_pudding": "Reis-Honigpudding",

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:bamboo"
-    }
+    "minecraft:bamboo"
   ],
   "result": {
     "count": 4,

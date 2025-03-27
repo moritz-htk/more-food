@@ -10,25 +10,22 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagEntry;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.registry.MFBlocks;
 import net.volwert123.more_food.common.registry.MFItems;
 import net.volwert123.more_food.common.registry.MFTags;
 import org.jetbrains.annotations.NotNull;
 
-import javax.annotation.Nullable;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 @SuppressWarnings("unchecked")
 public class MFTagsProvider {
     public static class Items extends TagsProvider<Item> {
-        public Items(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, @Nullable ExistingFileHelper existingFileHelper) {
-            super(output, Registries.ITEM, registries, MoreFood.MOD_ID, existingFileHelper);
+        public Items(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+            super(output, Registries.ITEM, registries, MoreFood.MOD_ID);
         }
 
         @Override
@@ -248,8 +245,8 @@ public class MFTagsProvider {
     }
 
     public static class Blocks extends TagsProvider<Block> {
-        public Blocks(PackOutput output, CompletableFuture<HolderLookup.Provider> registries, @Nullable ExistingFileHelper existingFileHelper) {
-            super(output, Registries.BLOCK, registries, MoreFood.MOD_ID, existingFileHelper);
+        public Blocks(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+            super(output, Registries.BLOCK, registries, MoreFood.MOD_ID);
         }
 
         @Override
