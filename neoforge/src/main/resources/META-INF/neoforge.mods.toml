@@ -30,7 +30,7 @@ issueTrackerURL="https://github.com/Volwert123/more-food/issues"
 [[dependencies.more_food]]
     modId="architectury"
     type="required"
-    versionRange="[16.0.3,)"
+    versionRange="[16.1.4,)"
     ordering="AFTER"
     side="BOTH"
 

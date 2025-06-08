@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "minecraft:carrot",
-    "minecraft:egg",
+    "#c:eggs",
     "minecraft:sugar"
   ],
   "result": {
