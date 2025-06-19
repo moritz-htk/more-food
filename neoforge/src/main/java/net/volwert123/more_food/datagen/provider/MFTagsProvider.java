@@ -3,12 +3,11 @@ package net.volwert123.more_food.datagen.provider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.TagAppender;
 import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagEntry;
+import net.minecraft.tags.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
@@ -50,6 +49,11 @@ public class MFTagsProvider {
             addChocolateTags();
             addSweetBerriesTags();
             addSereneSeasonCropTags();
+        }
+
+        private TagAppender<ResourceKey<Item>, Item> tag(TagKey<Item> tag) {
+            TagBuilder tagbuilder = this.getOrCreateRawBuilder(tag);
+            return TagAppender.forBuilder(tagbuilder);
         }
 
         private void addCarrotTags() {
@@ -247,6 +251,11 @@ public class MFTagsProvider {
     public static class Blocks extends TagsProvider<Block> {
         public Blocks(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
             super(output, Registries.BLOCK, registries, MoreFood.MOD_ID);
+        }
+
+        private TagAppender<ResourceKey<Block>, Block> tag(TagKey<Block> tag) {
+            TagBuilder tagbuilder = this.getOrCreateRawBuilder(tag);
+            return TagAppender.forBuilder(tagbuilder);
         }
 
         @Override

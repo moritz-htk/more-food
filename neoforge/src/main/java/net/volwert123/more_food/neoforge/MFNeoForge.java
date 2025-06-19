@@ -1,7 +1,7 @@
 package net.volwert123.more_food.neoforge;
 
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -23,7 +23,7 @@ public class MFNeoForge {
     public static class BMMClientEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ItemBlockRenderTypes.setRenderLayer(MFBlocks.RICE_CROP.get(), RenderType.CUTOUT);
+            ItemBlockRenderTypes.setRenderLayer(MFBlocks.RICE_CROP.get(), ChunkSectionLayer.CUTOUT);
         }
     }
 }
