@@ -29,8 +29,11 @@ jobs:
           path: |
             common/build/libs/*.jar
             fabric/build/libs/*.jar
+            forge/build/libs/*.jar
             neoforge/build/libs/*.jar
             !common/build/libs/*-transformProductionFabric.jar
+            !common/build/libs/*-transformProductionForge.jar
             !common/build/libs/*-transformProductionNeoForge.jar
             !fabric/build/libs/*-dev-shadow.jar
+            !forge/build/libs/*-dev-shadow.jar
             !neoforge/build/libs/*-dev-shadow.jar

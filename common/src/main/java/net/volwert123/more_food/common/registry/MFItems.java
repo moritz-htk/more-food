@@ -1,144 +1,188 @@
 package net.volwert123.more_food.common.registry;
 
-import dev.architectury.registry.registries.DeferredRegister;
-import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
+import net.blay09.mods.balm.api.DeferredObject;
+import net.blay09.mods.balm.api.item.BalmItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.volwert123.more_food.common.MoreFood;
-import net.volwert123.more_food.common.item.*;
+import net.volwert123.more_food.common.item.MFPufferfishSoupItem;
+import net.volwert123.more_food.common.item.MFRiceBowlItem;
+import net.volwert123.more_food.common.item.MFSoupItem;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
 
 public class MFItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(MoreFood.MOD_ID, Registries.ITEM);
-
     // Carrot Items
-    public static final RegistrySupplier<Item> IRON_CARROT = ITEMS.register("iron_carrot", () -> new MFIronFoodItem(registerItemProperties("iron_carrot"), registerFoodValues(3, 1.5f)));
-    public static final RegistrySupplier<Item> DIAMOND_CARROT = ITEMS.register("diamond_carrot", () -> new MFDiamondFoodItem(registerItemProperties("diamond_carrot"), registerFoodValues(3, 1.5f)));
-    public static final RegistrySupplier<Item> EMERALD_CARROT = ITEMS.register("emerald_carrot", () -> new MFEmeraldFoodItem(registerItemProperties("emerald_carrot"), registerFoodValues(3, 1.5f)));
-    public static final RegistrySupplier<Item> COOKED_CARROT = ITEMS.register("cooked_carrot", () -> new Item(registerItemProperties("cooked_carrot").food(registerFoodValues(5, 2.5f))));
-    public static final RegistrySupplier<Item> CARROT_PIECES = ITEMS.register("carrot_pieces", () -> new Item(registerItemProperties("carrot_pieces")));
-    public static final RegistrySupplier<Item> CARROT_SOUP = ITEMS.register("carrot_soup", () -> new MFSoupItem(registerItemProperties("carrot_soup"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> CARROT_BREAD = ITEMS.register("carrot_bread", () -> new Item(registerItemProperties("carrot_bread").food(registerFoodValues(6, 3f))));
-    public static final RegistrySupplier<Item> CARROT_PIE = ITEMS.register("carrot_pie", () -> new Item(registerItemProperties("carrot_pie").food(registerFoodValues(10, 5f))));
-    public static final RegistrySupplier<Item> CHOCOLATE_CARROT = ITEMS.register("chocolate_carrot", () -> new Item(registerItemProperties("chocolate_carrot").food(registerFoodValues(6, 3f))));
+    public static DeferredObject<Item> COOKED_CARROT;
+    public static DeferredObject<Item> CARROT_PIECES;
+    public static DeferredObject<Item> CARROT_SOUP;
+    public static DeferredObject<Item> CARROT_BREAD;
+    public static DeferredObject<Item> CARROT_PIE;
+    public static DeferredObject<Item> CHOCOLATE_CARROT;
 
     // Apple Items
-    public static final RegistrySupplier<Item> IRON_APPLE = ITEMS.register("iron_apple", () -> new MFIronFoodItem(registerItemProperties("iron_apple"), registerFoodValues(4, 2f)));
-    public static final RegistrySupplier<Item> DIAMOND_APPLE = ITEMS.register("diamond_apple", () -> new MFDiamondFoodItem(registerItemProperties("diamond_apple"), registerFoodValues(4, 2f)));
-    public static final RegistrySupplier<Item> EMERALD_APPLE = ITEMS.register("emerald_apple", () -> new MFEmeraldFoodItem(registerItemProperties("emerald_apple"), registerFoodValues(4, 2f)));
-    public static final RegistrySupplier<Item> COOKED_APPLE = ITEMS.register("cooked_apple", () -> new Item(registerItemProperties("cooked_apple").food(registerFoodValues(5, 2.5f))));
-    public static final RegistrySupplier<Item> APPLE_PIECES = ITEMS.register("apple_pieces", () -> new Item(registerItemProperties("apple_pieces")));
-    public static final RegistrySupplier<Item> APPLE_SOUP = ITEMS.register("apple_soup", () -> new MFSoupItem(registerItemProperties("apple_soup"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> APPLE_BREAD = ITEMS.register("apple_bread", () -> new Item(registerItemProperties("apple_bread").food(registerFoodValues(6, 3f))));
-    public static final RegistrySupplier<Item> APPLE_PIE = ITEMS.register("apple_pie", () -> new Item(registerItemProperties("apple_pie").food(registerFoodValues(10, 5f))));
-    public static final RegistrySupplier<Item> CHOCOLATE_APPLE = ITEMS.register("chocolate_apple", () -> new Item(registerItemProperties("chocolate_apple").food(registerFoodValues(6, 3f))));
+    public static DeferredObject<Item> COOKED_APPLE;
+    public static DeferredObject<Item> APPLE_PIECES;
+    public static DeferredObject<Item> APPLE_SOUP;
+    public static DeferredObject<Item> APPLE_BREAD;
+    public static DeferredObject<Item> APPLE_PIE;
+    public static DeferredObject<Item> CHOCOLATE_APPLE;
 
     // Kelp Items
-    public static final RegistrySupplier<Item> IRON_KELP = ITEMS.register("iron_kelp", () -> new MFIronFoodItem(registerItemProperties("iron_kelp"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> GOLDEN_KELP = ITEMS.register("golden_kelp", () -> new MFGoldenFoodItem(registerItemProperties("golden_kelp"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> DIAMOND_KELP = ITEMS.register("diamond_kelp", () -> new MFDiamondFoodItem(registerItemProperties("diamond_kelp"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> EMERALD_KELP = ITEMS.register("emerald_kelp", () -> new MFEmeraldFoodItem(registerItemProperties("emerald_kelp"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> KELP_PIECES = ITEMS.register("kelp_pieces", () -> new Item(registerItemProperties("kelp_pieces")));
-    public static final RegistrySupplier<Item> KELP_SOUP = ITEMS.register("kelp_soup", () -> new MFSoupItem(registerItemProperties("kelp_soup"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> CHOCOLATE_DRIED_KELP = ITEMS.register("chocolate_dried_kelp", () -> new Item(registerItemProperties("chocolate_dried_kelp").food(registerFoodValues(6, 3f))));
+    public static DeferredObject<Item> KELP_PIECES;
+    public static DeferredObject<Item> KELP_SOUP;
+    public static DeferredObject<Item> CHOCOLATE_DRIED_KELP;
 
     // Potato Items
-    public static final RegistrySupplier<Item> IRON_POTATO = ITEMS.register("iron_potato", () -> new MFIronFoodItem(registerItemProperties("iron_potato"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> GOLDEN_POTATO = ITEMS.register("golden_potato", () -> new MFGoldenFoodItem(registerItemProperties("golden_potato"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> DIAMOND_POTATO = ITEMS.register("diamond_potato", () -> new MFDiamondFoodItem(registerItemProperties("diamond_potato"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> EMERALD_POTATO = ITEMS.register("emerald_potato", () -> new MFEmeraldFoodItem(registerItemProperties("emerald_potato"), registerFoodValues(4, 2f)));
-    public static final RegistrySupplier<Item> POTATO_PIECES = ITEMS.register("potato_pieces", () -> new Item(registerItemProperties("potato_pieces")));
-    public static final RegistrySupplier<Item> POTATO_SOUP = ITEMS.register("potato_soup", () -> new MFSoupItem(registerItemProperties("potato_soup"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> POTATO_BREAD = ITEMS.register("potato_bread", () -> new Item(registerItemProperties("potato_bread").food(registerFoodValues(6, 3f))));
+    public static DeferredObject<Item> POTATO_PIECES;
+    public static DeferredObject<Item> POTATO_SOUP;
+    public static DeferredObject<Item> POTATO_BREAD;
 
     // Phantom Items
-    public static final RegistrySupplier<Item> COOKED_PHANTOM = ITEMS.register("cooked_phantom", () -> new Item(registerItemProperties("cooked_phantom").food(registerFoodValues(5, 2.5f))));
-    public static final RegistrySupplier<Item> PHANTOM_PIECES = ITEMS.register("phantom_pieces", () -> new Item(registerItemProperties("phantom_pieces")));
-    public static final RegistrySupplier<Item> PHANTOM_SOUP = ITEMS.register("phantom_soup", () -> new MFSoupItem(registerItemProperties("phantom_soup"), registerFoodValues(6, 3f)));
+    public static DeferredObject<Item> COOKED_PHANTOM;
+    public static DeferredObject<Item> PHANTOM_PIECES;
+    public static DeferredObject<Item> PHANTOM_SOUP;
 
     // Pufferfish Items
-    public static final RegistrySupplier<Item> COOKED_PUFFERFISH = ITEMS.register("cooked_pufferfish", () -> new Item(registerItemProperties("cooked_pufferfish").food(registerFoodValues(5, 2.5f))));
-    public static final RegistrySupplier<Item> PUFFERFISH_PIECES = ITEMS.register("pufferfish_pieces", () -> new Item(registerItemProperties("pufferfish_pieces")));
-    public static final RegistrySupplier<Item> PUFFERFISH_SOUP = ITEMS.register("pufferfish_soup", () -> new MFPufferfishSoupItem(registerItemProperties("pufferfish_soup"), registerFoodValues(6, 3f)));
+    public static DeferredObject<Item> COOKED_PUFFERFISH;
+    public static DeferredObject<Item> PUFFERFISH_PIECES;
+    public static DeferredObject<Item> PUFFERFISH_SOUP;
 
     // Pumpkin Items
-    public static final RegistrySupplier<Item> PUMPKING_SOUP = ITEMS.register("pumpking_soup", () -> new MFSoupItem(registerItemProperties("pumpking_soup"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> PUMPKING_BREAD = ITEMS.register("pumpking_bread", () -> new Item(registerItemProperties("pumpking_bread").food(registerFoodValues(6, 3f))));
+    public static DeferredObject<Item> PUMPKING_SOUP;
+    public static DeferredObject<Item> PUMPKING_BREAD;
 
     // Bamboo Items
-    public static final RegistrySupplier<Item> COOKED_BAMBOO = ITEMS.register("cooked_bamboo", () -> new Item(registerItemProperties("cooked_bamboo").food(registerFoodValues(5, 2.5f))));
-    public static final RegistrySupplier<Item> BAMBOO_PIECES = ITEMS.register("bamboo_pieces", () -> new Item(registerItemProperties("bamboo_pieces")));
-    public static final RegistrySupplier<Item> BAMBOO_SOUP = ITEMS.register("bamboo_soup", () -> new MFSoupItem(registerItemProperties("bamboo_soup"), registerFoodValues(6, 3f)));
-
-    // Cooked Rabbit Items
-    public static final RegistrySupplier<Item> IRON_COOKED_RABBIT = ITEMS.register("iron_cooked_rabbit", () -> new MFIronFoodItem(registerItemProperties("iron_cooked_rabbit"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> GOLDEN_COOKED_RABBIT = ITEMS.register("golden_cooked_rabbit", () -> new MFGoldenFoodItem(registerItemProperties("golden_cooked_rabbit"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> DIAMOND_COOKED_RABBIT = ITEMS.register("diamond_cooked_rabbit", () -> new MFDiamondFoodItem(registerItemProperties("diamond_cooked_rabbit"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> EMERALD_COOKED_RABBIT = ITEMS.register("emerald_cooked_rabbit", () -> new MFEmeraldFoodItem(registerItemProperties("emerald_cooked_rabbit"), registerFoodValues(5, 2.5f)));
-
-    // Melon Slice Items
-    public static final RegistrySupplier<Item> IRON_MELON_SLICE = ITEMS.register("iron_melon_slice", () -> new MFIronFoodItem(registerItemProperties("iron_melon_slice"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> GOLDEN_MELON_SLICE = ITEMS.register("golden_melon_slice", () -> new MFGoldenFoodItem(registerItemProperties("golden_melon_slice"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> DIAMOND_MELON_SLICE = ITEMS.register("diamond_melon_slice", () -> new MFDiamondFoodItem(registerItemProperties("diamond_melon_slice"), registerFoodValues(5, 2.5f)));
-    public static final RegistrySupplier<Item> EMERALD_MELON_SLICE = ITEMS.register("emerald_melon_slice", () -> new MFEmeraldFoodItem(registerItemProperties("emerald_melon_slice"), registerFoodValues(5, 2.5f)));
-
-    // Cooked Chicken Items
-    public static final RegistrySupplier<Item> IRON_COOKED_CHICKEN = ITEMS.register("iron_cooked_chicken", () -> new MFIronFoodItem(registerItemProperties("iron_cooked_chicken"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> GOLDEN_COOKED_CHICKEN = ITEMS.register("golden_cooked_chicken", () -> new MFGoldenFoodItem(registerItemProperties("golden_cooked_chicken"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> DIAMOND_COOKED_CHICKEN = ITEMS.register("diamond_cooked_chicken", () -> new MFDiamondFoodItem(registerItemProperties("diamond_cooked_chicken"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> EMERALD_COOKED_CHICKEN = ITEMS.register("emerald_cooked_chicken", () -> new MFEmeraldFoodItem(registerItemProperties("emerald_cooked_chicken"), registerFoodValues(6, 3f)));
-
-    // Cooked Mutton Items
-    public static final RegistrySupplier<Item> IRON_COOKED_MUTTON = ITEMS.register("iron_cooked_mutton", () -> new MFIronFoodItem(registerItemProperties("iron_cooked_mutton"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> GOLDEN_COOKED_MUTTON = ITEMS.register("golden_cooked_mutton", () -> new MFGoldenFoodItem(registerItemProperties("golden_cooked_mutton"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> DIAMOND_COOKED_MUTTON = ITEMS.register("diamond_cooked_mutton", () -> new MFDiamondFoodItem(registerItemProperties("diamond_cooked_mutton"), registerFoodValues(6, 3f)));
-    public static final RegistrySupplier<Item> EMERALD_COOKED_MUTTON = ITEMS.register("emerald_cooked_mutton", () -> new MFEmeraldFoodItem(registerItemProperties("emerald_cooked_mutton"), registerFoodValues(6, 3f)));
-
-    // Cooked Porkchop Items
-    public static final RegistrySupplier<Item> IRON_COOKED_PORKCHOP = ITEMS.register("iron_cooked_porkchop", () -> new MFIronFoodItem(registerItemProperties("iron_cooked_porkchop"), registerFoodValues(8, 4f)));
-    public static final RegistrySupplier<Item> GOLDEN_COOKED_PORKCHOP = ITEMS.register("golden_cooked_porkchop", () -> new MFGoldenFoodItem(registerItemProperties("golden_cooked_porkchop"), registerFoodValues(8, 4f)));
-    public static final RegistrySupplier<Item> DIAMOND_COOKED_PORKCHOP = ITEMS.register("diamond_cooked_porkchop", () -> new MFDiamondFoodItem(registerItemProperties("diamond_cooked_porkchop"), registerFoodValues(8, 4f)));
-    public static final RegistrySupplier<Item> EMERALD_COOKED_PORKCHOP = ITEMS.register("emerald_cooked_porkchop", () -> new MFEmeraldFoodItem(registerItemProperties("emerald_cooked_porkchop"), registerFoodValues(8, 4f)));
-
-    // Cooked Beef Items
-    public static final RegistrySupplier<Item> IRON_COOKED_BEEF = ITEMS.register("iron_cooked_beef", () -> new MFIronFoodItem(registerItemProperties("iron_cooked_beef"), registerFoodValues(8, 4f)));
-    public static final RegistrySupplier<Item> GOLDEN_COOKED_BEEF = ITEMS.register("golden_cooked_beef", () -> new MFGoldenFoodItem(registerItemProperties("golden_cooked_beef"), registerFoodValues(8, 4f)));
-    public static final RegistrySupplier<Item> DIAMOND_COOKED_BEEF = ITEMS.register("diamond_cooked_beef", () -> new MFDiamondFoodItem(registerItemProperties("diamond_cooked_beef"), registerFoodValues(8, 4f)));
-    public static final RegistrySupplier<Item> EMERALD_COOKED_BEEF = ITEMS.register("emerald_cooked_beef", () -> new MFEmeraldFoodItem(registerItemProperties("emerald_cooked_beef"), registerFoodValues(8, 4f)));
+    public static DeferredObject<Item> COOKED_BAMBOO;
+    public static DeferredObject<Item> BAMBOO_PIECES;
+    public static DeferredObject<Item> BAMBOO_SOUP;
 
     // Rice Items
-    public static final RegistrySupplier<Item> RICE = ITEMS.register("rice", () -> new BlockItem(MFBlocks.RICE_CROP.get(), registerItemProperties("rice").useBlockDescriptionPrefix()));
-    public static final RegistrySupplier<Item> RICE_CHICKEN_BOWL = ITEMS.register("rice_chicken_bowl", () -> new MFRiceBowlItem(registerItemProperties("rice_chicken_bowl"), registerFoodValues(10, 5f)));
-    public static final RegistrySupplier<Item> RICE_SALMON_BOWL = ITEMS.register("rice_salmon_bowl", () -> new MFRiceBowlItem(registerItemProperties("rice_salmon_bowl"), registerFoodValues(10, 5f)));
-    public static final RegistrySupplier<Item> RICE_COD_BOWL = ITEMS.register("rice_cod_bowl", () -> new MFRiceBowlItem(registerItemProperties("rice_cod_bowl"), registerFoodValues(10, 5f)));
-    public static final RegistrySupplier<Item> RICE_VEGETABLE_BOWL = ITEMS.register("rice_vegetable_bowl", () -> new MFRiceBowlItem(registerItemProperties("rice_vegetable_bowl"), registerFoodValues(9, 4.5f)));
-    public static final RegistrySupplier<Item> RICE_PUDDING = ITEMS.register("rice_pudding", () -> new MFRiceBowlItem(registerItemProperties("rice_pudding"), registerFoodValues(9, 4.5f)));
-    public static final RegistrySupplier<Item> RICE_HONEY_PUDDING = ITEMS.register("rice_honey_pudding", () -> new MFRiceBowlItem(registerItemProperties("rice_honey_pudding"), registerFoodValues(10, 5f)));
+    public static DeferredObject<Item> RICE;
+    public static DeferredObject<Item> RICE_CHICKEN_BOWL;
+    public static DeferredObject<Item> RICE_SALMON_BOWL;
+    public static DeferredObject<Item> RICE_COD_BOWL;
+    public static DeferredObject<Item> RICE_VEGETABLE_BOWL;
+    public static DeferredObject<Item> RICE_PUDDING;
+    public static DeferredObject<Item> RICE_HONEY_PUDDING;
 
     // Sushi Items
-    public static final RegistrySupplier<Item> SUSHI_BAMBOO = ITEMS.register("sushi_bamboo", () -> new Item(registerItemProperties("sushi_bamboo").food(registerFoodValues(5, 2.5f))));
-    public static final RegistrySupplier<Item> SUSHI_CARROT = ITEMS.register("sushi_carrot", () -> new Item(registerItemProperties("sushi_carrot").food(registerFoodValues(5, 2.5f))));
-    public static final RegistrySupplier<Item> SUSHI_BEETROOT = ITEMS.register("sushi_beetroot", () -> new Item(registerItemProperties("sushi_beetroot").food(registerFoodValues(5, 2.5f))));
-    public static final RegistrySupplier<Item> SUSHI_SALMON = ITEMS.register("sushi_salmon", () -> new Item(registerItemProperties("sushi_salmon").food(registerFoodValues(5, 2.5f))));
+    public static DeferredObject<Item> SUSHI_BAMBOO;
+    public static DeferredObject<Item> SUSHI_CARROT;
+    public static DeferredObject<Item> SUSHI_BEETROOT;
+    public static DeferredObject<Item> SUSHI_SALMON;
 
     // Egg & Bacon Items
-    public static final RegistrySupplier<Item> COOKED_EGG = ITEMS.register("cooked_egg", () -> new Item(registerItemProperties("cooked_egg").food(registerFoodValues(3, 1.5f))));
-    public static final RegistrySupplier<Item> RAW_BACON = ITEMS.register("raw_bacon", () -> new Item(registerItemProperties("raw_bacon").food(registerFoodValues(2,1f))));
-    public static final RegistrySupplier<Item> COOKED_BACON = ITEMS.register("cooked_bacon", () -> new Item(registerItemProperties("cooked_bacon").food(registerFoodValues(5,2.5f))));
-    public static final RegistrySupplier<Item> COOKED_BACON_EGG = ITEMS.register("cooked_bacon_egg", () -> new Item(registerItemProperties("cooked_bacon_egg").food(registerFoodValues(7, 3.5f))));
+    public static DeferredObject<Item> COOKED_EGG;
+    public static DeferredObject<Item> RAW_BACON;
+    public static DeferredObject<Item> COOKED_BACON;
+    public static DeferredObject<Item> COOKED_BACON_EGG;
 
     // Chocolate Items
-    public static final RegistrySupplier<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(registerItemProperties("chocolate").food(registerFoodValues(6,3f))));
-    public static final RegistrySupplier<Item> CHOCOLATE_BAR = ITEMS.register("chocolate_bar", () -> new Item(registerItemProperties("chocolate_bar").food(registerFoodValues(8,4f))));
+    public static DeferredObject<Item> CHOCOLATE;
+    public static DeferredObject<Item> CHOCOLATE_BAR;
 
     // Sweet Berries Items
-    public static final RegistrySupplier<Item> CHOCOLATE_SWEET_BERRIES = ITEMS.register("chocolate_sweet_berries", () -> new Item(registerItemProperties("chocolate_sweet_berries").food(registerFoodValues(6, 3f))));
+    public static DeferredObject<Item> CHOCOLATE_SWEET_BERRIES;
 
-    private static Item.Properties registerItemProperties(String id) {
-        return new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, id))).arch$tab(MFCreativeTabs.MORE_FOOD_MAIN);
+    // Creative Mode Tab
+    public static DeferredObject<CreativeModeTab> MORE_FOOD_MAIN;
+
+    public static final List<DeferredObject<Item>> ITEMS = new ArrayList<>();
+
+    public static void initialize(BalmItems items) {
+        BalmItems scoped = items.scoped(MoreFood.MOD_ID);
+
+        // Carrot Items
+        COOKED_CARROT = registerItem(scoped, "cooked_carrot", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
+        CARROT_PIECES = registerItem(scoped, "carrot_pieces", Item::new);
+        CARROT_SOUP = registerItem(scoped, "carrot_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
+        CARROT_BREAD = registerItem(scoped, "carrot_bread", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
+        CARROT_PIE = registerItem(scoped, "carrot_pie", properties -> new Item(properties.food(registerFoodValues(10, 5f))));
+        CHOCOLATE_CARROT = registerItem(scoped, "chocolate_carrot", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
+
+        // Apple Items
+        COOKED_APPLE = registerItem(scoped, "cooked_apple", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
+        APPLE_PIECES = registerItem(scoped, "apple_pieces", Item::new);
+        APPLE_SOUP = registerItem(scoped, "apple_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
+        APPLE_BREAD = registerItem(scoped, "apple_bread", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
+        APPLE_PIE = registerItem(scoped, "apple_pie", properties -> new Item(properties.food(registerFoodValues(10, 5f))));
+        CHOCOLATE_APPLE = registerItem(scoped, "chocolate_apple", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
+
+        // Kelp Items
+        KELP_PIECES = registerItem(scoped, "kelp_pieces", Item::new);
+        KELP_SOUP = registerItem(scoped, "kelp_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
+        CHOCOLATE_DRIED_KELP = registerItem(scoped, "chocolate_dried_kelp", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
+
+        // Potato Items
+        POTATO_PIECES = registerItem(scoped, "potato_pieces", Item::new);
+        POTATO_SOUP = registerItem(scoped, "potato_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
+        POTATO_BREAD = registerItem(scoped, "potato_bread", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
+
+        // Phantom Items
+        COOKED_PHANTOM = registerItem(scoped, "cooked_phantom", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
+        PHANTOM_PIECES = registerItem(scoped, "phantom_pieces", Item::new);
+        PHANTOM_SOUP = registerItem(scoped, "phantom_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
+
+        // Pufferfish Items
+        COOKED_PUFFERFISH = registerItem(scoped, "cooked_pufferfish", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
+        PUFFERFISH_PIECES = registerItem(scoped, "pufferfish_pieces", Item::new);
+        PUFFERFISH_SOUP = registerItem(scoped, "pufferfish_soup", properties -> new MFPufferfishSoupItem(properties, registerFoodValues(6, 3f)));
+
+        // Pumpkin Items
+        PUMPKING_SOUP = registerItem(scoped, "pumpking_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
+        PUMPKING_BREAD = registerItem(scoped, "pumpking_bread", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
+
+        // Bamboo Items
+        COOKED_BAMBOO = registerItem(scoped, "cooked_bamboo", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
+        BAMBOO_PIECES = registerItem(scoped, "bamboo_pieces", Item::new);
+        BAMBOO_SOUP = registerItem(scoped, "bamboo_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
+
+        // Rice Items
+        RICE = registerItem(scoped, "rice", properties -> new BlockItem(MFBlocks.RICE_CROP.get(), properties.useBlockDescriptionPrefix()));
+        RICE_CHICKEN_BOWL = registerItem(scoped, "rice_chicken_bowl", properties -> new MFRiceBowlItem(properties, registerFoodValues(10, 5f)));
+        RICE_SALMON_BOWL = registerItem(scoped, "rice_salmon_bowl", properties -> new MFRiceBowlItem(properties, registerFoodValues(10, 5f)));
+        RICE_COD_BOWL = registerItem(scoped, "rice_cod_bowl", properties -> new MFRiceBowlItem(properties, registerFoodValues(10, 5f)));
+        RICE_VEGETABLE_BOWL = registerItem(scoped, "rice_vegetable_bowl", properties -> new MFRiceBowlItem(properties, registerFoodValues(9, 4.5f)));
+        RICE_PUDDING = registerItem(scoped, "rice_pudding", properties -> new MFRiceBowlItem(properties, registerFoodValues(9, 4.5f)));
+        RICE_HONEY_PUDDING = registerItem(scoped, "rice_honey_pudding", properties -> new MFRiceBowlItem(properties, registerFoodValues(10, 5f)));
+
+        // Sushi Items
+        SUSHI_BAMBOO = registerItem(scoped, "sushi_bamboo", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
+        SUSHI_CARROT = registerItem(scoped, "sushi_carrot", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
+        SUSHI_BEETROOT = registerItem(scoped, "sushi_beetroot", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
+        SUSHI_SALMON = registerItem(scoped, "sushi_salmon", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
+
+        // Egg & Bacon Items
+        COOKED_EGG = registerItem(scoped, "cooked_egg", properties -> new Item(properties.food(registerFoodValues(3, 1.5f))));
+        RAW_BACON = registerItem(scoped, "raw_bacon", properties -> new Item(properties.food(registerFoodValues(2,1f))));
+        COOKED_BACON = registerItem(scoped, "cooked_bacon", properties -> new Item(properties.food(registerFoodValues(5,2.5f))));
+        COOKED_BACON_EGG = registerItem(scoped, "cooked_bacon_egg", properties -> new Item(properties.food(registerFoodValues(7, 3.5f))));
+
+        // Chocolate Items
+        CHOCOLATE = registerItem(scoped, "chocolate", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
+        CHOCOLATE_BAR = registerItem(scoped, "chocolate_bar", properties -> new Item(properties.food(registerFoodValues(8, 4f))));
+
+        // Sweet Berries Items
+        CHOCOLATE_SWEET_BERRIES = registerItem(scoped, "chocolate_sweet_berries", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
+
+        // Creative Mode Tab
+        MORE_FOOD_MAIN = items.registerCreativeModeTab(() -> new ItemStack(COOKED_CARROT.get()), ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, "main"));
+        for (DeferredObject<Item> item : ITEMS) {
+            items.addToCreativeModeTab(MORE_FOOD_MAIN.getIdentifier(), () -> new Item[]{item.get()});
+        }
+    }
+
+    private static DeferredObject<Item> registerItem(BalmItems items, String name, Function<Item.Properties, Item> factory) {
+        DeferredObject<Item> item = items.registerItem(id -> factory.apply(BalmItems.itemProperties(id)), ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, name));
+        ITEMS.add(item);
+        return item;
     }
 
     private static FoodProperties registerFoodValues(int nutrition, float saturation) {

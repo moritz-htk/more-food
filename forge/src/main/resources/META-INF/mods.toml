@@ -7,29 +7,29 @@ issueTrackerURL="https://github.com/Volwert123/more-food/issues"
     modId="${mod_id}"
     version="${mod_version}"
     displayName="${mod_name}"
-    updateJSONURL="https://api.modrinth.com/updates/more-food-xd/forge_updates.json?neoforge=only"
+    updateJSONURL="https://api.modrinth.com/updates/more-food-xd/forge_updates.json"
     displayURL="https://www.curseforge.com/minecraft/mc-mods/more-food-xd"
     logoFile="${mod_icon}"
     authors="${mod_author}"
     description='''${mod_description}'''
 
 [[dependencies.${mod_id}]]
-    modId="neoforge"
-    type="required"
-    versionRange="[${neoforge_version},)"
+    modId="forge"
+    mandatory=true
+    versionRange="[${forge_version},)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.${mod_id}]]
     modId="minecraft"
-    type="required"
+    mandatory=true
     versionRange="[${minecraft_version},)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.${mod_id}]]
     modId="balm"
-    type="required"
+    mandatory=true
     versionRange="[${balm_version},)"
     ordering="NONE"
     side="BOTH"

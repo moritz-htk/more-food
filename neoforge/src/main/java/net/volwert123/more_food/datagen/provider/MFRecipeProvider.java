@@ -29,9 +29,6 @@ public class MFRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes() {
         // Carrot Recipes
-        createIronFoodRecipe(items, MFItems.IRON_CARROT.get(), Items.CARROT).save(output, registerRecipe(MFItems.IRON_CARROT.get()));
-        createDiamondFoodRecipe(items, MFItems.DIAMOND_CARROT.get(), Items.CARROT).save(output, registerRecipe(MFItems.DIAMOND_CARROT.get()));
-        createEmeraldFoodRecipe(items, MFItems.EMERALD_CARROT.get(), Items.CARROT).save(output, registerRecipe(MFItems.EMERALD_CARROT.get()));
         createCookingRecipes(MFItems.COOKED_CARROT.get(), Items.CARROT, output);
         createPiecesRecipe(items, MFItems.CARROT_PIECES.get(), Items.CARROT).save(output, registerRecipe(MFItems.CARROT_PIECES.get()));
         createSoupRecipe(items, MFItems.CARROT_SOUP.get(), Items.CARROT, MFItems.CARROT_PIECES.get()).save(output, registerRecipe(MFItems.CARROT_SOUP.get()));
@@ -40,9 +37,6 @@ public class MFRecipeProvider extends RecipeProvider {
         createChocolateFoodRecipe(items, MFItems.CHOCOLATE_CARROT.get(), Items.CARROT).save(output, registerRecipe(MFItems.CHOCOLATE_CARROT.get()));
 
         // Apple Recipes
-        createIronFoodRecipe(items, MFItems.IRON_APPLE.get(), Items.APPLE).save(output, registerRecipe(MFItems.IRON_APPLE.get()));
-        createDiamondFoodRecipe(items, MFItems.DIAMOND_APPLE.get(), Items.APPLE).save(output, registerRecipe(MFItems.DIAMOND_APPLE.get()));
-        createEmeraldFoodRecipe(items, MFItems.EMERALD_APPLE.get(), Items.APPLE).save(output, registerRecipe(MFItems.EMERALD_APPLE.get()));
         createCookingRecipes(MFItems.COOKED_APPLE.get(), Items.APPLE, output);
         createPiecesRecipe(items, MFItems.APPLE_PIECES.get(), Items.APPLE).save(output, registerRecipe(MFItems.APPLE_PIECES.get()));
         createSoupRecipe(items, MFItems.APPLE_SOUP.get(), Items.APPLE, MFItems.APPLE_PIECES.get()).save(output, registerRecipe(MFItems.APPLE_SOUP.get()));
@@ -51,19 +45,11 @@ public class MFRecipeProvider extends RecipeProvider {
         createChocolateFoodRecipe(items, MFItems.CHOCOLATE_APPLE.get(), Items.APPLE).save(output, registerRecipe(MFItems.CHOCOLATE_APPLE.get()));
 
         // Kelp Recipes
-        createIronFoodRecipe(items, MFItems.IRON_KELP.get(), Items.DRIED_KELP).save(output, registerRecipe(MFItems.IRON_KELP.get()));
-        createGoldenFoodRecipe(items, MFItems.GOLDEN_KELP.get(), Items.DRIED_KELP).save(output, registerRecipe(MFItems.GOLDEN_KELP.get()));
-        createDiamondFoodRecipe(items, MFItems.DIAMOND_KELP.get(), Items.DRIED_KELP).save(output, registerRecipe(MFItems.DIAMOND_KELP.get()));
-        createEmeraldFoodRecipe(items, MFItems.EMERALD_KELP.get(), Items.DRIED_KELP).save(output, registerRecipe(MFItems.EMERALD_KELP.get()));
         createPiecesRecipe(items, MFItems.KELP_PIECES.get(), Items.DRIED_KELP).save(output, registerRecipe(MFItems.KELP_PIECES.get()));
         createSoupRecipe(items, MFItems.KELP_SOUP.get(), Items.DRIED_KELP, MFItems.KELP_PIECES.get()).save(output, registerRecipe(MFItems.KELP_SOUP.get()));
         createChocolateFoodRecipe(items, MFItems.CHOCOLATE_DRIED_KELP.get(), Items.DRIED_KELP).save(output, registerRecipe(MFItems.CHOCOLATE_DRIED_KELP.get()));
 
         // Potato Recipes
-        createIronFoodRecipe(items, MFItems.IRON_POTATO.get(), Items.POTATO).save(output, registerRecipe(MFItems.IRON_POTATO.get()));
-        createGoldenFoodRecipe(items, MFItems.GOLDEN_POTATO.get(), Items.POTATO).save(output, registerRecipe(MFItems.GOLDEN_POTATO.get()));
-        createDiamondFoodRecipe(items, MFItems.DIAMOND_POTATO.get(), Items.POTATO).save(output, registerRecipe(MFItems.DIAMOND_POTATO.get()));
-        createEmeraldFoodRecipe(items, MFItems.EMERALD_POTATO.get(), Items.POTATO).save(output, registerRecipe(MFItems.EMERALD_POTATO.get()));
         createPiecesRecipe(items, MFItems.POTATO_PIECES.get(), Items.POTATO).save(output, registerRecipe(MFItems.POTATO_PIECES.get()));
         createSoupRecipe(items, MFItems.POTATO_SOUP.get(), Items.POTATO, MFItems.POTATO_PIECES.get()).save(output, registerRecipe(MFItems.POTATO_SOUP.get()));
         createBreadRecipe(items, MFItems.POTATO_BREAD.get(), Items.POTATO, MFItems.POTATO_PIECES.get()).save(output, registerRecipe(MFItems.POTATO_BREAD.get()));
@@ -86,42 +72,6 @@ public class MFRecipeProvider extends RecipeProvider {
         createCookingRecipes(MFItems.COOKED_BAMBOO.get(), Items.BAMBOO, output);
         createPiecesRecipe(items, MFItems.BAMBOO_PIECES.get(), Items.BAMBOO).save(output, registerRecipe(MFItems.BAMBOO_PIECES.get()));
         createSoupRecipe(items, MFItems.BAMBOO_SOUP.get(), Items.BAMBOO, MFItems.BAMBOO_PIECES.get()).save(output, registerRecipe(MFItems.BAMBOO_SOUP.get()));
-
-        // Rabbit Recipes
-        createIronFoodRecipe(items, MFItems.IRON_COOKED_RABBIT.get(), Items.COOKED_RABBIT).save(output, registerRecipe(MFItems.IRON_COOKED_RABBIT.get()));
-        createGoldenFoodRecipe(items, MFItems.GOLDEN_COOKED_RABBIT.get(), Items.COOKED_RABBIT).save(output, registerRecipe(MFItems.GOLDEN_COOKED_RABBIT.get()));
-        createDiamondFoodRecipe(items, MFItems.DIAMOND_COOKED_RABBIT.get(), Items.COOKED_RABBIT).save(output, registerRecipe(MFItems.DIAMOND_COOKED_RABBIT.get()));
-        createEmeraldFoodRecipe(items, MFItems.EMERALD_COOKED_RABBIT.get(), Items.COOKED_RABBIT).save(output, registerRecipe(MFItems.EMERALD_COOKED_RABBIT.get()));
-
-        // Melon Slice Recipes
-        createIronFoodRecipe(items, MFItems.IRON_MELON_SLICE.get(), Items.MELON_SLICE).save(output, registerRecipe(MFItems.IRON_MELON_SLICE.get()));
-        createGoldenFoodRecipe(items, MFItems.GOLDEN_MELON_SLICE.get(), Items.MELON_SLICE).save(output, registerRecipe(MFItems.GOLDEN_MELON_SLICE.get()));
-        createDiamondFoodRecipe(items, MFItems.DIAMOND_MELON_SLICE.get(), Items.MELON_SLICE).save(output, registerRecipe(MFItems.DIAMOND_MELON_SLICE.get()));
-        createEmeraldFoodRecipe(items, MFItems.EMERALD_MELON_SLICE.get(), Items.MELON_SLICE).save(output, registerRecipe(MFItems.EMERALD_MELON_SLICE.get()));
-
-        // Cooked Chicken Recipes
-        createIronFoodRecipe(items, MFItems.IRON_COOKED_CHICKEN.get(), Items.COOKED_CHICKEN).save(output, registerRecipe(MFItems.IRON_COOKED_CHICKEN.get()));
-        createGoldenFoodRecipe(items, MFItems.GOLDEN_COOKED_CHICKEN.get(), Items.COOKED_CHICKEN).save(output, registerRecipe(MFItems.GOLDEN_COOKED_CHICKEN.get()));
-        createDiamondFoodRecipe(items, MFItems.DIAMOND_COOKED_CHICKEN.get(), Items.COOKED_CHICKEN).save(output, registerRecipe(MFItems.DIAMOND_COOKED_CHICKEN.get()));
-        createEmeraldFoodRecipe(items, MFItems.EMERALD_COOKED_CHICKEN.get(), Items.COOKED_CHICKEN).save(output, registerRecipe(MFItems.EMERALD_COOKED_CHICKEN.get()));
-
-        // Cooked Mutton Recipes
-        createIronFoodRecipe(items, MFItems.IRON_COOKED_MUTTON.get(), Items.COOKED_MUTTON).save(output, registerRecipe(MFItems.IRON_COOKED_MUTTON.get()));
-        createGoldenFoodRecipe(items, MFItems.GOLDEN_COOKED_MUTTON.get(), Items.COOKED_MUTTON).save(output, registerRecipe(MFItems.GOLDEN_COOKED_MUTTON.get()));
-        createDiamondFoodRecipe(items, MFItems.DIAMOND_COOKED_MUTTON.get(), Items.COOKED_MUTTON).save(output, registerRecipe(MFItems.DIAMOND_COOKED_MUTTON.get()));
-        createEmeraldFoodRecipe(items, MFItems.EMERALD_COOKED_MUTTON.get(), Items.COOKED_MUTTON).save(output, registerRecipe(MFItems.EMERALD_COOKED_MUTTON.get()));
-
-        // Cooked Porkchop Recipes
-        createIronFoodRecipe(items, MFItems.IRON_COOKED_PORKCHOP.get(), Items.COOKED_PORKCHOP).save(output, registerRecipe(MFItems.IRON_COOKED_PORKCHOP.get()));
-        createGoldenFoodRecipe(items, MFItems.GOLDEN_COOKED_PORKCHOP.get(), Items.COOKED_PORKCHOP).save(output, registerRecipe(MFItems.GOLDEN_COOKED_PORKCHOP.get()));
-        createDiamondFoodRecipe(items, MFItems.DIAMOND_COOKED_PORKCHOP.get(), Items.COOKED_PORKCHOP).save(output, registerRecipe(MFItems.DIAMOND_COOKED_PORKCHOP.get()));
-        createEmeraldFoodRecipe(items, MFItems.EMERALD_COOKED_PORKCHOP.get(), Items.COOKED_PORKCHOP).save(output, registerRecipe(MFItems.EMERALD_COOKED_PORKCHOP.get()));
-
-        // Cooked Beef Recipes
-        createIronFoodRecipe(items, MFItems.IRON_COOKED_BEEF.get(), Items.COOKED_BEEF).save(output, registerRecipe(MFItems.IRON_COOKED_BEEF.get()));
-        createGoldenFoodRecipe(items, MFItems.GOLDEN_COOKED_BEEF.get(), Items.COOKED_BEEF).save(output, registerRecipe(MFItems.GOLDEN_COOKED_BEEF.get()));
-        createDiamondFoodRecipe(items, MFItems.DIAMOND_COOKED_BEEF.get(), Items.COOKED_BEEF).save(output, registerRecipe(MFItems.DIAMOND_COOKED_BEEF.get()));
-        createEmeraldFoodRecipe(items, MFItems.EMERALD_COOKED_BEEF.get(), Items.COOKED_BEEF).save(output, registerRecipe(MFItems.EMERALD_COOKED_BEEF.get()));
 
         // Rice Bowl Recipes
         createRiceBowlRecipe(items, MFItems.RICE_CHICKEN_BOWL.get(), Items.COOKED_CHICKEN).save(output, registerRecipe(MFItems.RICE_CHICKEN_BOWL.get()));
@@ -154,50 +104,6 @@ public class MFRecipeProvider extends RecipeProvider {
         // Sweet Berries
         createChocolateFoodRecipe(items, MFItems.CHOCOLATE_SWEET_BERRIES.get(), Items.SWEET_BERRIES).save(output, registerRecipe(MFItems.CHOCOLATE_SWEET_BERRIES.get()));
 
-    }
-
-    private ShapedRecipeBuilder createIronFoodRecipe(HolderGetter<Item> items, ItemLike output, ItemLike input) {
-        return ShapedRecipeBuilder.shaped(items, RecipeCategory.FOOD, output)
-                .define('I', Items.IRON_INGOT)
-                .define('#', input)
-                .pattern("III")
-                .pattern("I#I")
-                .pattern("III")
-                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
-                .unlockedBy(getHasName(input), has(input));
-    }
-
-    private ShapedRecipeBuilder createGoldenFoodRecipe(HolderGetter<Item> items, ItemLike output, ItemLike input) {
-        return ShapedRecipeBuilder.shaped(items, RecipeCategory.FOOD, output)
-                .define('G', Items.GOLD_INGOT)
-                .define('#', input)
-                .pattern("GGG")
-                .pattern("G#G")
-                .pattern("GGG")
-                .unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
-                .unlockedBy(getHasName(input), has(input));
-    }
-
-    private ShapedRecipeBuilder createDiamondFoodRecipe(HolderGetter<Item> items, ItemLike output, ItemLike input) {
-        return ShapedRecipeBuilder.shaped(items, RecipeCategory.FOOD, output)
-                .define('D', Items.DIAMOND)
-                .define('#', input)
-                .pattern("DDD")
-                .pattern("D#D")
-                .pattern("DDD")
-                .unlockedBy(getHasName(Items.DIAMOND), has(Items.DIAMOND))
-                .unlockedBy(getHasName(input), has(input));
-    }
-
-    private ShapedRecipeBuilder createEmeraldFoodRecipe(HolderGetter<Item> items, ItemLike output, ItemLike input) {
-        return ShapedRecipeBuilder.shaped(items, RecipeCategory.FOOD, output)
-                .define('E', Items.EMERALD)
-                .define('#', input)
-                .pattern("EEE")
-                .pattern("E#E")
-                .pattern("EEE")
-                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
-                .unlockedBy(getHasName(input), has(input));
     }
 
     private void createCookingRecipes(ItemLike output, ItemLike input, RecipeOutput recipeOutput) {
