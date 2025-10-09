@@ -45,5 +45,6 @@
   "item.more_food.sushi_bamboo": "Sushi Bamboo",
   "item.more_food.sushi_beetroot": "Sushi Beetroot",
   "item.more_food.sushi_carrot": "Sushi Carrot",
-  "item.more_food.sushi_salmon": "Sushi Salmon"
+  "item.more_food.sushi_salmon": "Sushi Salmon",
+  "itemGroup.more_food.main": "More Food"
 }

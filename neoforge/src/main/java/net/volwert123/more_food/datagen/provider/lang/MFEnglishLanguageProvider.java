@@ -84,5 +84,8 @@ public class MFEnglishLanguageProvider extends LanguageProvider {
 
         // Sweet Berries Items
         add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Chocolate Sweet Berries");
+
+        // Creative Mode Tab
+        add("itemGroup.more_food.main", "More Food");
     }
 }

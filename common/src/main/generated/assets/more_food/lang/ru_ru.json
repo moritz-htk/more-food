@@ -45,5 +45,6 @@
   "item.more_food.sushi_bamboo": "Суши с бамбука",
   "item.more_food.sushi_beetroot": "Суши с свёклы",
   "item.more_food.sushi_carrot": "Суши с моркови",
-  "item.more_food.sushi_salmon": "Суши с лососем"
+  "item.more_food.sushi_salmon": "Суши с лососем",
+  "itemGroup.more_food.main": "More Food"
 }

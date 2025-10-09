@@ -45,5 +45,6 @@
   "item.more_food.sushi_bamboo": "Bambus Sushi",
   "item.more_food.sushi_beetroot": "Rote Bete Sushi",
   "item.more_food.sushi_carrot": "Karotten Sushi",
-  "item.more_food.sushi_salmon": "Lachs Sushi"
+  "item.more_food.sushi_salmon": "Lachs Sushi",
+  "itemGroup.more_food.main": "More Food"
 }
