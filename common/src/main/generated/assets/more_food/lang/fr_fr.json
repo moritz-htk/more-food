@@ -46,5 +46,15 @@
   "item.more_food.sushi_beetroot": "Sushi de betterave",
   "item.more_food.sushi_carrot": "Sushi de carotte",
   "item.more_food.sushi_salmon": "Sushi de saumon",
-  "itemGroup.more_food.main": "More Food"
+  "itemGroup.more_food.main": "More Food",
+  "tag.item.c.crops.rice": "Riz",
+  "tag.item.c.foods.cooked_bacon": "Bacon cuit",
+  "tag.item.c.foods.cooked_egg": "Œufs cuits",
+  "tag.item.c.foods.fruits.apple": "Pommes",
+  "tag.item.c.foods.raw_bacon": "Bacon cru",
+  "tag.item.c.foods.sushi": "Sushi",
+  "tag.item.c.foods.vegetables.carrot": "Carottes",
+  "tag.item.c.foods.vegetables.kelp": "Algues",
+  "tag.item.c.foods.vegetables.potato": "Pommes de terre",
+  "tag.item.c.seeds.rice": "Graines de riz"
 }

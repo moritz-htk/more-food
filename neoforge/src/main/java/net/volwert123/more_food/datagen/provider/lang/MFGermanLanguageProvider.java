@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.registry.MFItems;
+import net.volwert123.more_food.common.registry.MFTags;
 
 public class MFGermanLanguageProvider extends LanguageProvider {
     public MFGermanLanguageProvider(PackOutput output) {
@@ -87,5 +88,27 @@ public class MFGermanLanguageProvider extends LanguageProvider {
 
         // Creative Mode Tab
         add("itemGroup.more_food.main", "More Food");
+
+        // Vegetable Food Tags
+        add(MFTags.Items.FOODS_VEGETABLES_CARROT, "Karotten");
+        add(MFTags.Items.FOODS_VEGETABLES_KELP, "Seetange");
+        add(MFTags.Items.FOODS_VEGETABLES_POTATO, "Kartoffeln");
+
+        // Fruit Food Tags
+        add(MFTags.Items.FOODS_FRUITS_APPLE, "Äpfel");
+
+        // Cooked Meat Food Tags
+        add(MFTags.Items.FOODS_COOKED_BACON, "Gebratener Speck");
+
+        // Raw Meat Food Tags
+        add(MFTags.Items.FOODS_RAW_BACON, "Roher Speck");
+
+        // Miscellaneous Food Tags
+        add(MFTags.Items.FOODS_SUSHI, "Sushi");
+        add(MFTags.Items.FOODS_COOKED_EGG, "Gekochte Eier");
+
+        // Crop and Seed Tags
+        add(MFTags.Items.CROPS_RICE, "Reis");
+        add(MFTags.Items.SEEDS_RICE, "Reissamen");
     }
 }

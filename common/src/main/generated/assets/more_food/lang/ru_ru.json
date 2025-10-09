@@ -46,5 +46,15 @@
   "item.more_food.sushi_beetroot": "Суши с свёклы",
   "item.more_food.sushi_carrot": "Суши с моркови",
   "item.more_food.sushi_salmon": "Суши с лососем",
-  "itemGroup.more_food.main": "More Food"
+  "itemGroup.more_food.main": "More Food",
+  "tag.item.c.crops.rice": "Рис",
+  "tag.item.c.foods.cooked_bacon": "Жареный бекон",
+  "tag.item.c.foods.cooked_egg": "Варёные яйца",
+  "tag.item.c.foods.fruits.apple": "Яблоки",
+  "tag.item.c.foods.raw_bacon": "Сырой бекон",
+  "tag.item.c.foods.sushi": "Суши",
+  "tag.item.c.foods.vegetables.carrot": "Моркови",
+  "tag.item.c.foods.vegetables.kelp": "Ламинарии",
+  "tag.item.c.foods.vegetables.potato": "Картофели",
+  "tag.item.c.seeds.rice": "Семена риса"
 }

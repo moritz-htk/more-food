@@ -46,5 +46,15 @@
   "item.more_food.sushi_beetroot": "Sushi Beetroot",
   "item.more_food.sushi_carrot": "Sushi Carrot",
   "item.more_food.sushi_salmon": "Sushi Salmon",
-  "itemGroup.more_food.main": "More Food"
+  "itemGroup.more_food.main": "More Food",
+  "tag.item.c.crops.rice": "Rice",
+  "tag.item.c.foods.cooked_bacon": "Cooked Bacons",
+  "tag.item.c.foods.cooked_egg": "Cooked Eggs",
+  "tag.item.c.foods.fruits.apple": "Apples",
+  "tag.item.c.foods.raw_bacon": "Raw Bacons",
+  "tag.item.c.foods.sushi": "Sushi",
+  "tag.item.c.foods.vegetables.carrot": "Carrots",
+  "tag.item.c.foods.vegetables.kelp": "Kelps",
+  "tag.item.c.foods.vegetables.potato": "Potatoes",
+  "tag.item.c.seeds.rice": "Rice Seeds"
 }
