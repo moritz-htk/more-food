@@ -14,6 +14,9 @@ public class MFGermanLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         // Carrot Items
+        add(MFItems.IRON_CARROT.get(), "Eisenkarotte");
+        add(MFItems.DIAMOND_CARROT.get(), "Diamantkarotte");
+        add(MFItems.EMERALD_CARROT.get(), "Smaragdkarotte");
         add(MFItems.COOKED_CARROT.get(), "Gebratene Karotte");
         add(MFItems.CARROT_PIECES.get(), "Karottenstücke");
         add(MFItems.CARROT_SOUP.get(), "Karottensuppe");
@@ -22,6 +25,9 @@ public class MFGermanLanguageProvider extends LanguageProvider {
         add(MFItems.CHOCOLATE_CARROT.get(), "Schokoladenkarotte");
 
         // Apple Items
+        add(MFItems.IRON_APPLE.get(), "Eisenapfel");
+        add(MFItems.DIAMOND_APPLE.get(), "Diamantapfel");
+        add(MFItems.EMERALD_APPLE.get(), "Smaragdapfel");
         add(MFItems.COOKED_APPLE.get(), "Gebratener Apfel");
         add(MFItems.APPLE_PIECES.get(), "Apfelstücke");
         add(MFItems.APPLE_SOUP.get(), "Apfelsuppe");
@@ -30,14 +36,25 @@ public class MFGermanLanguageProvider extends LanguageProvider {
         add(MFItems.CHOCOLATE_APPLE.get(), "Schokoladenapfel");
 
         // Kelp Items
+        add(MFItems.IRON_KELP.get(), "Eisenseetang");
+        add(MFItems.GOLDEN_KELP.get(), "Goldener Seetang");
+        add(MFItems.DIAMOND_KELP.get(), "Diamantseetang");
+        add(MFItems.EMERALD_KELP.get(), "Smaragdseetang");
         add(MFItems.KELP_PIECES.get(), "Seetangstücke");
         add(MFItems.KELP_SOUP.get(), "Seetangsuppe");
         add(MFItems.CHOCOLATE_DRIED_KELP.get(), "Getrockneter Schokoladenseetang");
 
         // Potato Items
+        add(MFItems.IRON_POTATO.get(), "Eisenkartoffel");
+        add(MFItems.GOLDEN_POTATO.get(), "Goldene Kartoffel");
+        add(MFItems.DIAMOND_POTATO.get(), "Diamantkartoffel");
+        add(MFItems.EMERALD_POTATO.get(), "Smaragdkartoffel");
         add(MFItems.POTATO_PIECES.get(), "Kartoffelstücke");
         add(MFItems.POTATO_SOUP.get(), "Kartoffelsuppe");
         add(MFItems.POTATO_BREAD.get(), "Kartoffelbrot");
+
+        // Sweet Berries Items
+        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Schokoladensüßbeeren");
 
         // Phantom Items
         add(MFItems.COOKED_PHANTOM.get(), "Gebratenes Phantom");
@@ -57,6 +74,42 @@ public class MFGermanLanguageProvider extends LanguageProvider {
         add(MFItems.COOKED_BAMBOO.get(), "Gebratener Bambus");
         add(MFItems.BAMBOO_PIECES.get(), "Bambusstücke");
         add(MFItems.BAMBOO_SOUP.get(), "Bambussuppe");
+
+        // Melon Slice Items
+        add(MFItems.IRON_MELON_SLICE.get(), "Eisenmelonenscheibe");
+        add(MFItems.GOLDEN_MELON_SLICE.get(), "Goldene Melonenscheibe");
+        add(MFItems.DIAMOND_MELON_SLICE.get(), "Diamantmelonenscheibe");
+        add(MFItems.EMERALD_MELON_SLICE.get(), "Smaragdmelonenscheibe");
+
+        // Cooked Rabbit Items
+        add(MFItems.IRON_COOKED_RABBIT.get(), "Gebratenes Eisenkaninchen");
+        add(MFItems.GOLDEN_COOKED_RABBIT.get(), "Goldenes Gebratenes Kaninchen");
+        add(MFItems.DIAMOND_COOKED_RABBIT.get(), "Gebratenes Diamantkaninchen");
+        add(MFItems.EMERALD_COOKED_RABBIT.get(), "Gebratenes Smaragdkaninchen");
+
+        // Cooked Chicken Items
+        add(MFItems.IRON_COOKED_CHICKEN.get(), "Gebratenes Eisenhühnchen");
+        add(MFItems.GOLDEN_COOKED_CHICKEN.get(), "Goldenes Gebratenes Hühnchen");
+        add(MFItems.DIAMOND_COOKED_CHICKEN.get(), "Gebratenes Diamanthühnchen");
+        add(MFItems.EMERALD_COOKED_CHICKEN.get(), "Gebratenes Smaragdhühnchen");
+
+        // Cooked Mutton Items
+        add(MFItems.IRON_COOKED_MUTTON.get(), "Gebratenes Eisenhammelfleisch");
+        add(MFItems.GOLDEN_COOKED_MUTTON.get(), "Goldenes Gebratenes Hammelfleisch");
+        add(MFItems.DIAMOND_COOKED_MUTTON.get(), "Gebratenes Diamanthammelfleisch");
+        add(MFItems.EMERALD_COOKED_MUTTON.get(), "Gebratenes Smaragdhammelfleisch");
+
+        // Cooked Porkchop Items
+        add(MFItems.IRON_COOKED_PORKCHOP.get(), "Gebratenes Eisenschweinefleisch");
+        add(MFItems.GOLDEN_COOKED_PORKCHOP.get(), "Goldenes Gebratenes Schweinefleisch");
+        add(MFItems.DIAMOND_COOKED_PORKCHOP.get(), "Gebratenes Diamantschweinefleisch");
+        add(MFItems.EMERALD_COOKED_PORKCHOP.get(), "Gebratenes Smaragdschweinefleisch");
+
+        // Cooked Beef Items
+        add(MFItems.IRON_COOKED_BEEF.get(), "Eisensteak");
+        add(MFItems.GOLDEN_COOKED_BEEF.get(), "Goldenes Steak");
+        add(MFItems.DIAMOND_COOKED_BEEF.get(), "Diamantsteak");
+        add(MFItems.EMERALD_COOKED_BEEF.get(), "Smaragdsteak");
 
         // Rice Items
         add(MFItems.RICE.get(), "Reis");
@@ -83,9 +136,6 @@ public class MFGermanLanguageProvider extends LanguageProvider {
         add(MFItems.CHOCOLATE.get(), "Schokolade");
         add(MFItems.CHOCOLATE_BAR.get(), "Schokoladentafel");
 
-        // Sweet Berries Items
-        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Schokoladensüßbeeren");
-
         // Creative Mode Tab
         add("itemGroup.more_food.main", "More Food");
 
@@ -96,8 +146,14 @@ public class MFGermanLanguageProvider extends LanguageProvider {
 
         // Fruit Food Tags
         add(MFTags.Items.FOODS_FRUITS_APPLE, "Äpfel");
+        add(MFTags.Items.FOODS_FRUITS_MELON_SLICE, "Melonenscheiben");
 
         // Cooked Meat Food Tags
+        add(MFTags.Items.FOODS_COOKED_RABBIT, "Gebratene Kaninchen");
+        add(MFTags.Items.FOODS_COOKED_CHICKEN, "Gebratene Hühnchen");
+        add(MFTags.Items.FOODS_COOKED_MUTTON, "Gebratenes Hammelfleisch");
+        add(MFTags.Items.FOODS_COOKED_PORKCHOP, "Gebratenes Schweinefleisch");
+        add(MFTags.Items.FOODS_COOKED_BEEF, "Steaks");
         add(MFTags.Items.FOODS_COOKED_BACON, "Gebratener Speck");
 
         // Raw Meat Food Tags

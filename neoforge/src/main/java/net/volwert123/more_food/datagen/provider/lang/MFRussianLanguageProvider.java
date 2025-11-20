@@ -14,6 +14,9 @@ public class MFRussianLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         // Carrot Items
+        add(MFItems.IRON_CARROT.get(), "Железная морковь");
+        add(MFItems.DIAMOND_CARROT.get(), "Алмазная морковь");
+        add(MFItems.EMERALD_CARROT.get(), "Изумрудная морковь");
         add(MFItems.COOKED_CARROT.get(), "Жареная морковь");
         add(MFItems.CARROT_PIECES.get(), "Кусочки моркови");
         add(MFItems.CARROT_SOUP.get(), "Морковный суп");
@@ -22,6 +25,9 @@ public class MFRussianLanguageProvider extends LanguageProvider {
         add(MFItems.CHOCOLATE_CARROT.get(), "Шоколадная морковь");
 
         // Apple Items
+        add(MFItems.IRON_APPLE.get(), "Железное яблоко");
+        add(MFItems.DIAMOND_APPLE.get(), "Алмазное яблоко");
+        add(MFItems.EMERALD_APPLE.get(), "Изумрудное яблоко");
         add(MFItems.COOKED_APPLE.get(), "Жареное яблоко");
         add(MFItems.APPLE_PIECES.get(), "Кусочки яблока");
         add(MFItems.APPLE_SOUP.get(), "Яблочный суп");
@@ -30,14 +36,25 @@ public class MFRussianLanguageProvider extends LanguageProvider {
         add(MFItems.CHOCOLATE_APPLE.get(), "Шоколадное яблоко");
 
         // Kelp Items
+        add(MFItems.IRON_KELP.get(), "Железный ламинария");
+        add(MFItems.GOLDEN_KELP.get(), "Золотистая ламинария");
+        add(MFItems.DIAMOND_KELP.get(), "Алмазная ламинария");
+        add(MFItems.EMERALD_KELP.get(), "Изумрудная ламинария");
         add(MFItems.KELP_PIECES.get(), "Кусочки ламинарии");
         add(MFItems.KELP_SOUP.get(), "Ламинарийный суп");
         add(MFItems.CHOCOLATE_DRIED_KELP.get(), "Сушёная шоколадная ламинария");
 
         // Potato Items
+        add(MFItems.IRON_POTATO.get(), "Железный картофель");
+        add(MFItems.GOLDEN_POTATO.get(), "Золотой картофель");
+        add(MFItems.DIAMOND_POTATO.get(), "Алмазный картофель");
+        add(MFItems.EMERALD_POTATO.get(), "Изумрудный картофель");
         add(MFItems.POTATO_PIECES.get(), "Кусочки картофеля");
         add(MFItems.POTATO_SOUP.get(), "Картофельный суп");
         add(MFItems.POTATO_BREAD.get(), "Картофельный хлеб");
+
+        // Sweet Berries Items
+        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Шоколадные сладкие ягоды");
 
         // Phantom Items
         add(MFItems.COOKED_PHANTOM.get(), "Жареный фантом");
@@ -57,6 +74,42 @@ public class MFRussianLanguageProvider extends LanguageProvider {
         add(MFItems.COOKED_BAMBOO.get(), "Жареный бамбук");
         add(MFItems.BAMBOO_PIECES.get(), "Кусочки бамбука");
         add(MFItems.BAMBOO_SOUP.get(), "Бамбук суп");
+
+        // Melon Slice Items
+        add(MFItems.IRON_MELON_SLICE.get(), "Железный ломтик арбуза");
+        add(MFItems.GOLDEN_MELON_SLICE.get(), "Золотой ломтик арбуза");
+        add(MFItems.DIAMOND_MELON_SLICE.get(), "Алмазный ломтик арбуза");
+        add(MFItems.EMERALD_MELON_SLICE.get(), "Изумрудный ломтик арбуза");
+
+        // Cooked Rabbit Items
+        add(MFItems.IRON_COOKED_RABBIT.get(), "Железная жареная крольчатина");
+        add(MFItems.GOLDEN_COOKED_RABBIT.get(), "Золотая жареная крольчатина");
+        add(MFItems.DIAMOND_COOKED_RABBIT.get(), "Алмазная жареная крольчатина");
+        add(MFItems.EMERALD_COOKED_RABBIT.get(), "Изумрудная жареная крольчатина");
+
+        // Cooked Chicken Items
+        add(MFItems.IRON_COOKED_CHICKEN.get(), "Железная жареная курятина");
+        add(MFItems.GOLDEN_COOKED_CHICKEN.get(), "Золотая жареная курятина");
+        add(MFItems.DIAMOND_COOKED_CHICKEN.get(), "Алмазная жареная курятина");
+        add(MFItems.EMERALD_COOKED_CHICKEN.get(), "Изумрудная жареная курятина");
+
+        // Cooked Mutton Items
+        add(MFItems.IRON_COOKED_MUTTON.get(), "Железная жареная баранина");
+        add(MFItems.GOLDEN_COOKED_MUTTON.get(), "Золотая жареная баранина");
+        add(MFItems.DIAMOND_COOKED_MUTTON.get(), "Алмазная жареная баранина");
+        add(MFItems.EMERALD_COOKED_MUTTON.get(), "Изумрудная жареная баранина");
+
+        // Cooked Porkchop Items
+        add(MFItems.IRON_COOKED_PORKCHOP.get(), "Железная жареная свинина");
+        add(MFItems.GOLDEN_COOKED_PORKCHOP.get(), "Золотая жареная свинина");
+        add(MFItems.DIAMOND_COOKED_PORKCHOP.get(), "Алмазная жареная свинина");
+        add(MFItems.EMERALD_COOKED_PORKCHOP.get(), "Изумрудная жареная свинина");
+
+        // Cooked Beef Items
+        add(MFItems.IRON_COOKED_BEEF.get(), "Железная жареная говядина");
+        add(MFItems.GOLDEN_COOKED_BEEF.get(), "Золотая жареная говядина");
+        add(MFItems.DIAMOND_COOKED_BEEF.get(), "Алмазная жареная говядина");
+        add(MFItems.EMERALD_COOKED_BEEF.get(), "Изумрудная жареная говядина");
 
         // Rice Items
         add(MFItems.RICE.get(), "Рис");
@@ -83,9 +136,6 @@ public class MFRussianLanguageProvider extends LanguageProvider {
         add(MFItems.CHOCOLATE.get(), "Шоколад");
         add(MFItems.CHOCOLATE_BAR.get(), "Шоколадная плитка");
 
-        // Sweet Berries Items
-        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Шоколадные сладкие ягоды");
-
         // Creative Mode Tab
         add("itemGroup.more_food.main", "More Food");
 
@@ -96,8 +146,14 @@ public class MFRussianLanguageProvider extends LanguageProvider {
 
         // Fruit Food Tags
         add(MFTags.Items.FOODS_FRUITS_APPLE, "Яблоки");
+        add(MFTags.Items.FOODS_FRUITS_MELON_SLICE, "Ломтики арбуза");
 
         // Cooked Meat Food Tags
+        add(MFTags.Items.FOODS_COOKED_RABBIT, "Жареная крольчатина");
+        add(MFTags.Items.FOODS_COOKED_CHICKEN, "Жареная курятина");
+        add(MFTags.Items.FOODS_COOKED_MUTTON, "Жареная баранина");
+        add(MFTags.Items.FOODS_COOKED_PORKCHOP, "Жареная свинина");
+        add(MFTags.Items.FOODS_COOKED_BEEF, "Жареная говядина");
         add(MFTags.Items.FOODS_COOKED_BACON, "Жареный бекон");
 
         // Raw Meat Food Tags

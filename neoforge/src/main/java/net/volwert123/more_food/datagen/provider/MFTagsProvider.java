@@ -42,6 +42,12 @@ public class MFTagsProvider {
             addPufferfishTags();
             addPumpkinTags();
             addBambooTags();
+            addMelonSliceTags();
+            addCookedRabbitTags();
+            addCookedChickenTags();
+            addCookedMuttonTags();
+            addCookedPorkchopTags();
+            addCookedBeefTags();
             addRiceTags();
             addSushiTags();
             addEggAndBaconTags();
@@ -54,6 +60,9 @@ public class MFTagsProvider {
             tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_CARROT);
             tag(MFTags.Items.FOODS_VEGETABLES_CARROT).addAll(List.of(
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("carrot")),
+                    getKey(MFItems.IRON_CARROT),
+                    getKey(MFItems.DIAMOND_CARROT),
+                    getKey(MFItems.EMERALD_CARROT),
                     getKey(MFItems.COOKED_CARROT)));
             tag(Tags.Items.FOODS_SOUP).add(getKey(MFItems.CARROT_SOUP));
             tag(Tags.Items.FOODS_BREAD).add(getKey(MFItems.CARROT_BREAD));
@@ -67,6 +76,9 @@ public class MFTagsProvider {
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("apple")),
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("golden_apple")),
                     ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("enchanted_golden_apple")),
+                    getKey(MFItems.IRON_APPLE),
+                    getKey(MFItems.DIAMOND_APPLE),
+                    getKey(MFItems.EMERALD_APPLE),
                     getKey(MFItems.COOKED_APPLE)));
             tag(Tags.Items.FOODS_SOUP).add(getKey(MFItems.APPLE_SOUP));
             tag(Tags.Items.FOODS_BREAD).add(getKey(MFItems.APPLE_BREAD));
@@ -76,14 +88,32 @@ public class MFTagsProvider {
 
         private void addKelpTags() {
             tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_KELP);
+            tag(MFTags.Items.FOODS_VEGETABLES_KELP).addAll(List.of(
+                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("dried_kelp")),
+                    getKey(MFItems.IRON_KELP),
+                    getKey(MFItems.GOLDEN_KELP),
+                    getKey(MFItems.DIAMOND_KELP),
+                    getKey(MFItems.EMERALD_KELP)));
+            tag(Tags.Items.FOODS_GOLDEN).add(getKey(MFItems.GOLDEN_KELP));
             tag(Tags.Items.FOODS_SOUP).add(getKey(MFItems.KELP_SOUP));
             tag(Tags.Items.FOODS).add(getKey(MFItems.CHOCOLATE_DRIED_KELP));
         }
 
         private void addPotatoTags() {
             tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_POTATO);
+            tag(MFTags.Items.FOODS_VEGETABLES_POTATO).addAll(List.of(
+                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("potato")),
+                    getKey(MFItems.IRON_POTATO),
+                    getKey(MFItems.GOLDEN_POTATO),
+                    getKey(MFItems.DIAMOND_POTATO),
+                    getKey(MFItems.EMERALD_POTATO)));
+            tag(Tags.Items.FOODS_GOLDEN).add(getKey(MFItems.GOLDEN_POTATO));
             tag(Tags.Items.FOODS_SOUP).add(getKey(MFItems.POTATO_SOUP));
             tag(Tags.Items.FOODS_BREAD).add(getKey(MFItems.POTATO_BREAD));
+        }
+
+        private void addSweetBerriesTags() {
+            tag(Tags.Items.FOODS).add(getKey(MFItems.CHOCOLATE_SWEET_BERRIES));
         }
 
         private void addPhantomTags() {
@@ -105,6 +135,72 @@ public class MFTagsProvider {
         private void addBambooTags() {
             tag(Tags.Items.FOODS).add(getKey(MFItems.COOKED_BAMBOO));
             tag(Tags.Items.FOODS_SOUP).add(getKey(MFItems.BAMBOO_SOUP));
+        }
+
+        private void addMelonSliceTags() {
+            tag(Tags.Items.FOODS_FRUIT).addTag(MFTags.Items.FOODS_FRUITS_MELON_SLICE);
+            tag(MFTags.Items.FOODS_FRUITS_MELON_SLICE).addAll(List.of(
+                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("melon_slice")),
+                    getKey(MFItems.IRON_MELON_SLICE),
+                    getKey(MFItems.GOLDEN_MELON_SLICE),
+                    getKey(MFItems.DIAMOND_MELON_SLICE),
+                    getKey(MFItems.EMERALD_MELON_SLICE)));
+            tag(Tags.Items.FOODS_GOLDEN).add(getKey(MFItems.GOLDEN_MELON_SLICE));
+        }
+
+        private void addCookedRabbitTags() {
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_RABBIT);
+            tag(MFTags.Items.FOODS_COOKED_RABBIT).addAll(List.of(
+                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_rabbit")),
+                    getKey(MFItems.IRON_COOKED_RABBIT),
+                    getKey(MFItems.GOLDEN_COOKED_RABBIT),
+                    getKey(MFItems.DIAMOND_COOKED_RABBIT),
+                    getKey(MFItems.EMERALD_COOKED_RABBIT)));
+            tag(Tags.Items.FOODS_GOLDEN).add(getKey(MFItems.GOLDEN_COOKED_RABBIT));
+        }
+
+        private void addCookedChickenTags() {
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_CHICKEN);
+            tag(MFTags.Items.FOODS_COOKED_CHICKEN).addAll(List.of(
+                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_chicken")),
+                    getKey(MFItems.IRON_COOKED_CHICKEN),
+                    getKey(MFItems.GOLDEN_COOKED_CHICKEN),
+                    getKey(MFItems.DIAMOND_COOKED_CHICKEN),
+                    getKey(MFItems.EMERALD_COOKED_CHICKEN)));
+            tag(Tags.Items.FOODS_GOLDEN).add(getKey(MFItems.GOLDEN_COOKED_CHICKEN));
+        }
+
+        private void addCookedMuttonTags() {
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_MUTTON);
+            tag(MFTags.Items.FOODS_COOKED_MUTTON).addAll(List.of(
+                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_mutton")),
+                    getKey(MFItems.IRON_COOKED_MUTTON),
+                    getKey(MFItems.GOLDEN_COOKED_MUTTON),
+                    getKey(MFItems.DIAMOND_COOKED_MUTTON),
+                    getKey(MFItems.EMERALD_COOKED_MUTTON)));
+            tag(Tags.Items.FOODS_GOLDEN).add(getKey(MFItems.GOLDEN_COOKED_MUTTON));
+        }
+
+        private void addCookedPorkchopTags() {
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_PORKCHOP);
+            tag(MFTags.Items.FOODS_COOKED_PORKCHOP).addAll(List.of(
+                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_porkchop")),
+                    getKey(MFItems.IRON_COOKED_PORKCHOP),
+                    getKey(MFItems.GOLDEN_COOKED_PORKCHOP),
+                    getKey(MFItems.DIAMOND_COOKED_PORKCHOP),
+                    getKey(MFItems.EMERALD_COOKED_PORKCHOP)));
+            tag(Tags.Items.FOODS_GOLDEN).add(getKey(MFItems.GOLDEN_COOKED_PORKCHOP));
+        }
+
+        private void addCookedBeefTags() {
+            tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_BEEF);
+            tag(MFTags.Items.FOODS_COOKED_BEEF).addAll(List.of(
+                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_beef")),
+                    getKey(MFItems.IRON_COOKED_BEEF),
+                    getKey(MFItems.GOLDEN_COOKED_BEEF),
+                    getKey(MFItems.DIAMOND_COOKED_BEEF),
+                    getKey(MFItems.EMERALD_COOKED_BEEF)));
+            tag(Tags.Items.FOODS_GOLDEN).add(getKey(MFItems.GOLDEN_COOKED_BEEF));
         }
 
         private void addRiceTags() {
@@ -145,10 +241,6 @@ public class MFTagsProvider {
             tag(Tags.Items.FOODS_CANDY).addAll(List.of(
                     getKey(MFItems.CHOCOLATE),
                     getKey(MFItems.CHOCOLATE_BAR)));
-        }
-
-        private void addSweetBerriesTags() {
-            tag(Tags.Items.FOODS).add(getKey(MFItems.CHOCOLATE_SWEET_BERRIES));
         }
 
         private void addSereneSeasonCropTags() {

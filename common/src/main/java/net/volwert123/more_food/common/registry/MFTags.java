@@ -15,8 +15,14 @@ public class MFTags {
 
         // Fruit Food Tags
         public static final TagKey<Item> FOODS_FRUITS_APPLE = registerCommonKey("foods/fruits/apple");
+        public static final TagKey<Item> FOODS_FRUITS_MELON_SLICE = registerCommonKey("foods/fruits/melon_slice");
 
         // Cooked Meat Food Tags
+        public static final TagKey<Item> FOODS_COOKED_RABBIT = registerCommonKey("foods/cooked_rabbit");
+        public static final TagKey<Item> FOODS_COOKED_CHICKEN = registerCommonKey("foods/cooked_chicken");
+        public static final TagKey<Item> FOODS_COOKED_MUTTON = registerCommonKey("foods/cooked_mutton");
+        public static final TagKey<Item> FOODS_COOKED_PORKCHOP = registerCommonKey("foods/cooked_porkchop");
+        public static final TagKey<Item> FOODS_COOKED_BEEF = registerCommonKey("foods/cooked_beef");
         public static final TagKey<Item> FOODS_COOKED_BACON = registerCommonKey("foods/cooked_bacon");
 
         // Raw Meat Food Tags

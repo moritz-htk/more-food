@@ -16,6 +16,8 @@ public class MFRiceLootModifier implements BalmLootModifier {
 
     @Override
     public void apply(LootContext context, List<ItemStack> loot) {
+        if (!context.hasParameter(LootContextParams.BLOCK_STATE)) return;
+
         BlockState state = context.getParameter(LootContextParams.BLOCK_STATE);
         Block block = state.getBlock();
         float roll = context.getRandom().nextFloat();

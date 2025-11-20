@@ -9,9 +9,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.volwert123.more_food.common.MoreFood;
-import net.volwert123.more_food.common.item.MFPufferfishSoupItem;
-import net.volwert123.more_food.common.item.MFRiceBowlItem;
-import net.volwert123.more_food.common.item.MFSoupItem;
+import net.volwert123.more_food.common.item.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +17,9 @@ import java.util.function.Function;
 
 public class MFItems {
     // Carrot Items
+    public static DeferredObject<Item> IRON_CARROT;
+    public static DeferredObject<Item> DIAMOND_CARROT;
+    public static DeferredObject<Item> EMERALD_CARROT;
     public static DeferredObject<Item> COOKED_CARROT;
     public static DeferredObject<Item> CARROT_PIECES;
     public static DeferredObject<Item> CARROT_SOUP;
@@ -27,6 +28,9 @@ public class MFItems {
     public static DeferredObject<Item> CHOCOLATE_CARROT;
 
     // Apple Items
+    public static DeferredObject<Item> IRON_APPLE;
+    public static DeferredObject<Item> DIAMOND_APPLE;
+    public static DeferredObject<Item> EMERALD_APPLE;
     public static DeferredObject<Item> COOKED_APPLE;
     public static DeferredObject<Item> APPLE_PIECES;
     public static DeferredObject<Item> APPLE_SOUP;
@@ -35,14 +39,25 @@ public class MFItems {
     public static DeferredObject<Item> CHOCOLATE_APPLE;
 
     // Kelp Items
+    public static DeferredObject<Item> IRON_KELP;
+    public static DeferredObject<Item> GOLDEN_KELP;
+    public static DeferredObject<Item> DIAMOND_KELP;
+    public static DeferredObject<Item> EMERALD_KELP;
     public static DeferredObject<Item> KELP_PIECES;
     public static DeferredObject<Item> KELP_SOUP;
     public static DeferredObject<Item> CHOCOLATE_DRIED_KELP;
 
     // Potato Items
+    public static DeferredObject<Item> IRON_POTATO;
+    public static DeferredObject<Item> GOLDEN_POTATO;
+    public static DeferredObject<Item> DIAMOND_POTATO;
+    public static DeferredObject<Item> EMERALD_POTATO;
     public static DeferredObject<Item> POTATO_PIECES;
     public static DeferredObject<Item> POTATO_SOUP;
     public static DeferredObject<Item> POTATO_BREAD;
+
+    // Sweet Berries Items
+    public static DeferredObject<Item> CHOCOLATE_SWEET_BERRIES;
 
     // Phantom Items
     public static DeferredObject<Item> COOKED_PHANTOM;
@@ -62,6 +77,42 @@ public class MFItems {
     public static DeferredObject<Item> COOKED_BAMBOO;
     public static DeferredObject<Item> BAMBOO_PIECES;
     public static DeferredObject<Item> BAMBOO_SOUP;
+
+    // Melon Slice Items
+    public static DeferredObject<Item> IRON_MELON_SLICE;
+    public static DeferredObject<Item> GOLDEN_MELON_SLICE;
+    public static DeferredObject<Item> DIAMOND_MELON_SLICE;
+    public static DeferredObject<Item> EMERALD_MELON_SLICE;
+
+    // Cooked Rabbit Items
+    public static DeferredObject<Item> IRON_COOKED_RABBIT;
+    public static DeferredObject<Item> GOLDEN_COOKED_RABBIT;
+    public static DeferredObject<Item> DIAMOND_COOKED_RABBIT;
+    public static DeferredObject<Item> EMERALD_COOKED_RABBIT;
+
+    // Cooked Chicken Items
+    public static DeferredObject<Item> IRON_COOKED_CHICKEN;
+    public static DeferredObject<Item> GOLDEN_COOKED_CHICKEN;
+    public static DeferredObject<Item> DIAMOND_COOKED_CHICKEN;
+    public static DeferredObject<Item> EMERALD_COOKED_CHICKEN;
+
+    // Cooked Mutton Items
+    public static DeferredObject<Item> IRON_COOKED_MUTTON;
+    public static DeferredObject<Item> GOLDEN_COOKED_MUTTON;
+    public static DeferredObject<Item> DIAMOND_COOKED_MUTTON;
+    public static DeferredObject<Item> EMERALD_COOKED_MUTTON;
+
+    // Cooked Porkchop Items
+    public static DeferredObject<Item> IRON_COOKED_PORKCHOP;
+    public static DeferredObject<Item> GOLDEN_COOKED_PORKCHOP;
+    public static DeferredObject<Item> DIAMOND_COOKED_PORKCHOP;
+    public static DeferredObject<Item> EMERALD_COOKED_PORKCHOP;
+
+    // Cooked Beef Items
+    public static DeferredObject<Item> IRON_COOKED_BEEF;
+    public static DeferredObject<Item> GOLDEN_COOKED_BEEF;
+    public static DeferredObject<Item> DIAMOND_COOKED_BEEF;
+    public static DeferredObject<Item> EMERALD_COOKED_BEEF;
 
     // Rice Items
     public static DeferredObject<Item> RICE;
@@ -88,9 +139,6 @@ public class MFItems {
     public static DeferredObject<Item> CHOCOLATE;
     public static DeferredObject<Item> CHOCOLATE_BAR;
 
-    // Sweet Berries Items
-    public static DeferredObject<Item> CHOCOLATE_SWEET_BERRIES;
-
     // Creative Mode Tab
     public static DeferredObject<CreativeModeTab> MORE_FOOD_MAIN;
 
@@ -100,6 +148,9 @@ public class MFItems {
         BalmItems scoped = items.scoped(MoreFood.MOD_ID);
 
         // Carrot Items
+        IRON_CARROT = registerItem(scoped, "iron_carrot", properties -> new MFIronFoodItem(properties, registerFoodValues(3, 1.5f)));
+        DIAMOND_CARROT = registerItem(scoped, "diamond_carrot", properties -> new MFDiamondFoodItem(properties, registerFoodValues(3, 1.5f)));
+        EMERALD_CARROT = registerItem(scoped, "emerald_carrot", properties -> new MFEmeraldFoodItem(properties, registerFoodValues(3, 1.5f)));
         COOKED_CARROT = registerItem(scoped, "cooked_carrot", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
         CARROT_PIECES = registerItem(scoped, "carrot_pieces", Item::new);
         CARROT_SOUP = registerItem(scoped, "carrot_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
@@ -108,6 +159,9 @@ public class MFItems {
         CHOCOLATE_CARROT = registerItem(scoped, "chocolate_carrot", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
 
         // Apple Items
+        IRON_APPLE = registerItem(scoped, "iron_apple", properties -> new MFIronFoodItem(properties, registerFoodValues(4, 2f)));
+        DIAMOND_APPLE = registerItem(scoped, "diamond_apple", properties -> new MFDiamondFoodItem(properties, registerFoodValues(4, 2f)));
+        EMERALD_APPLE = registerItem(scoped, "emerald_apple", properties -> new MFEmeraldFoodItem(properties, registerFoodValues(4, 2f)));
         COOKED_APPLE = registerItem(scoped, "cooked_apple", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
         APPLE_PIECES = registerItem(scoped, "apple_pieces", Item::new);
         APPLE_SOUP = registerItem(scoped, "apple_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
@@ -116,14 +170,25 @@ public class MFItems {
         CHOCOLATE_APPLE = registerItem(scoped, "chocolate_apple", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
 
         // Kelp Items
+        IRON_KELP = registerItem(scoped, "iron_kelp", properties -> new MFIronFoodItem(properties, registerFoodValues(5, 2.5f)));
+        GOLDEN_KELP = registerItem(scoped, "golden_kelp", properties -> new MFGoldenFoodItem(properties, registerFoodValues(5, 2.5f)));
+        DIAMOND_KELP = registerItem(scoped, "diamond_kelp", properties -> new MFDiamondFoodItem(properties, registerFoodValues(5, 2.5f)));
+        EMERALD_KELP = registerItem(scoped, "emerald_kelp", properties -> new MFEmeraldFoodItem(properties, registerFoodValues(5, 2.5f)));
         KELP_PIECES = registerItem(scoped, "kelp_pieces", Item::new);
         KELP_SOUP = registerItem(scoped, "kelp_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
         CHOCOLATE_DRIED_KELP = registerItem(scoped, "chocolate_dried_kelp", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
 
         // Potato Items
+        IRON_POTATO = registerItem(scoped, "iron_potato", properties -> new MFIronFoodItem(properties, registerFoodValues(5, 2.5f)));
+        GOLDEN_POTATO = registerItem(scoped, "golden_potato", properties -> new MFGoldenFoodItem(properties, registerFoodValues(5, 2.5f)));
+        DIAMOND_POTATO = registerItem(scoped, "diamond_potato", properties -> new MFDiamondFoodItem(properties, registerFoodValues(5, 2.5f)));
+        EMERALD_POTATO = registerItem(scoped, "emerald_potato", properties -> new MFEmeraldFoodItem(properties, registerFoodValues(5, 2.5f)));
         POTATO_PIECES = registerItem(scoped, "potato_pieces", Item::new);
         POTATO_SOUP = registerItem(scoped, "potato_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
         POTATO_BREAD = registerItem(scoped, "potato_bread", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
+
+        // Sweet Berries Items
+        CHOCOLATE_SWEET_BERRIES = registerItem(scoped, "chocolate_sweet_berries", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
 
         // Phantom Items
         COOKED_PHANTOM = registerItem(scoped, "cooked_phantom", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
@@ -143,6 +208,42 @@ public class MFItems {
         COOKED_BAMBOO = registerItem(scoped, "cooked_bamboo", properties -> new Item(properties.food(registerFoodValues(5, 2.5f))));
         BAMBOO_PIECES = registerItem(scoped, "bamboo_pieces", Item::new);
         BAMBOO_SOUP = registerItem(scoped, "bamboo_soup", properties -> new MFSoupItem(properties, registerFoodValues(6, 3f)));
+
+        // Melon Slice Items
+        IRON_MELON_SLICE = registerItem(scoped, "iron_melon_slice", properties -> new MFIronFoodItem(properties, registerFoodValues(5, 2.5f)));
+        GOLDEN_MELON_SLICE = registerItem(scoped, "golden_melon_slice", properties -> new MFGoldenFoodItem(properties, registerFoodValues(5, 2.5f)));
+        DIAMOND_MELON_SLICE = registerItem(scoped, "diamond_melon_slice", properties -> new MFDiamondFoodItem(properties, registerFoodValues(5, 2.5f)));
+        EMERALD_MELON_SLICE = registerItem(scoped, "emerald_melon_slice", properties -> new MFEmeraldFoodItem(properties, registerFoodValues(5, 2.5f)));
+
+        // Cooked Rabbit Items
+        IRON_COOKED_RABBIT = registerItem(scoped, "iron_cooked_rabbit", properties -> new MFIronFoodItem(properties, registerFoodValues(5, 2.5f)));
+        GOLDEN_COOKED_RABBIT = registerItem(scoped, "golden_cooked_rabbit", properties -> new MFGoldenFoodItem(properties, registerFoodValues(5, 2.5f)));
+        DIAMOND_COOKED_RABBIT = registerItem(scoped, "diamond_cooked_rabbit", properties -> new MFDiamondFoodItem(properties, registerFoodValues(5, 2.5f)));
+        EMERALD_COOKED_RABBIT = registerItem(scoped, "emerald_cooked_rabbit", properties -> new MFEmeraldFoodItem(properties, registerFoodValues(5, 2.5f)));
+
+        // Cooked Chicken Items
+        IRON_COOKED_CHICKEN = registerItem(scoped, "iron_cooked_chicken", properties -> new MFIronFoodItem(properties, registerFoodValues(6, 3f)));
+        GOLDEN_COOKED_CHICKEN = registerItem(scoped, "golden_cooked_chicken", properties -> new MFGoldenFoodItem(properties, registerFoodValues(6, 3f)));
+        DIAMOND_COOKED_CHICKEN = registerItem(scoped, "diamond_cooked_chicken", properties -> new MFDiamondFoodItem(properties, registerFoodValues(6, 3f)));
+        EMERALD_COOKED_CHICKEN = registerItem(scoped, "emerald_cooked_chicken", properties -> new MFEmeraldFoodItem(properties, registerFoodValues(6, 3f)));
+
+        // Cooked Mutton Items
+        IRON_COOKED_MUTTON = registerItem(scoped, "iron_cooked_mutton", properties -> new MFIronFoodItem(properties, registerFoodValues(6, 3f)));
+        GOLDEN_COOKED_MUTTON = registerItem(scoped, "golden_cooked_mutton", properties -> new MFGoldenFoodItem(properties, registerFoodValues(6, 3f)));
+        DIAMOND_COOKED_MUTTON = registerItem(scoped, "diamond_cooked_mutton", properties -> new MFDiamondFoodItem(properties, registerFoodValues(6, 3f)));
+        EMERALD_COOKED_MUTTON = registerItem(scoped, "emerald_cooked_mutton", properties -> new MFEmeraldFoodItem(properties, registerFoodValues(6, 3f)));
+
+        // Cooked Porkchop Items
+        IRON_COOKED_PORKCHOP = registerItem(scoped, "iron_cooked_porkchop", properties -> new MFIronFoodItem(properties, registerFoodValues(8, 4f)));
+        GOLDEN_COOKED_PORKCHOP = registerItem(scoped, "golden_cooked_porkchop", properties -> new MFGoldenFoodItem(properties, registerFoodValues(8, 4f)));
+        DIAMOND_COOKED_PORKCHOP = registerItem(scoped, "diamond_cooked_porkchop", properties -> new MFDiamondFoodItem(properties, registerFoodValues(8, 4f)));
+        EMERALD_COOKED_PORKCHOP = registerItem(scoped, "emerald_cooked_porkchop", properties -> new MFEmeraldFoodItem(properties, registerFoodValues(8, 4f)));
+
+        // Cooked Beef Items
+        IRON_COOKED_BEEF = registerItem(scoped, "iron_cooked_beef", properties -> new MFIronFoodItem(properties, registerFoodValues(8, 4f)));
+        GOLDEN_COOKED_BEEF = registerItem(scoped, "golden_cooked_beef", properties -> new MFGoldenFoodItem(properties, registerFoodValues(8, 4f)));
+        DIAMOND_COOKED_BEEF = registerItem(scoped, "diamond_cooked_beef", properties -> new MFDiamondFoodItem(properties, registerFoodValues(8, 4f)));
+        EMERALD_COOKED_BEEF = registerItem(scoped, "emerald_cooked_beef", properties -> new MFEmeraldFoodItem(properties, registerFoodValues(8, 4f)));
 
         // Rice Items
         RICE = registerItem(scoped, "rice", properties -> new BlockItem(MFBlocks.RICE_CROP.get(), properties.useBlockDescriptionPrefix()));
@@ -168,9 +269,6 @@ public class MFItems {
         // Chocolate Items
         CHOCOLATE = registerItem(scoped, "chocolate", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
         CHOCOLATE_BAR = registerItem(scoped, "chocolate_bar", properties -> new Item(properties.food(registerFoodValues(8, 4f))));
-
-        // Sweet Berries Items
-        CHOCOLATE_SWEET_BERRIES = registerItem(scoped, "chocolate_sweet_berries", properties -> new Item(properties.food(registerFoodValues(6, 3f))));
 
         // Creative Mode Tab
         MORE_FOOD_MAIN = items.registerCreativeModeTab(() -> new ItemStack(COOKED_CARROT.get()), ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, "main"));
