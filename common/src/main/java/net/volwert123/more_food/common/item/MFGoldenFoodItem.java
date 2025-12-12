@@ -27,8 +27,8 @@ public class MFGoldenFoodItem extends Item {
         if (player instanceof ServerPlayer) {
             CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayer) player, stack);
         }
-        if (level.isClientSide) user.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 800));
-        if (level.isClientSide) user.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 800, 1));
+        if (level.isClientSide()) user.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 800));
+        if (level.isClientSide()) user.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 800, 1));
         if (player != null) {
             player.awardStat(Stats.ITEM_USED.get(this));
             player.getFoodData().eat(foodProperties);

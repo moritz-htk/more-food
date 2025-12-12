@@ -18,11 +18,11 @@ public class MFRiceCropBlock extends CropBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_7;
 
     public MFRiceCropBlock(Properties properties) {
-        super(properties.mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY).noOcclusion());
+        super(properties.mapColor(MapColor.PLANT).noCollision().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY).noOcclusion());
     }
 
     protected @NotNull ItemLike getBaseSeedId() {
-        return MFItems.RICE.get();
+        return MFItems.RICE.asItem();
     }
 
     public @NotNull IntegerProperty getAgeProperty() {

@@ -1,8 +1,7 @@
 package net.volwert123.more_food.datagen.provider;
 
-import net.blay09.mods.balm.api.DeferredObject;
-import net.blay09.mods.balm.api.block.BalmBlocks;
-import net.blay09.mods.balm.api.item.BalmItems;
+import net.blay09.mods.balm.world.item.DeferredItem;
+import net.blay09.mods.balm.world.level.block.DeferredBlock;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
@@ -252,8 +251,8 @@ public class MFTagsProvider {
             return TagAppender.forBuilder(tagbuilder);
         }
 
-        private ResourceKey<Item> getKey(DeferredObject<Item> item) {
-            return BalmItems.itemId(item.getIdentifier());
+        private ResourceKey<Item> getKey(DeferredItem item) {
+            return item.getKey();
         }
     }
 
@@ -274,8 +273,8 @@ public class MFTagsProvider {
             return TagAppender.forBuilder(tagbuilder);
         }
 
-        private ResourceKey<Block> getKey(DeferredObject<Block> block) {
-            return BalmBlocks.blockId(block.getIdentifier());
+        private ResourceKey<Block> getKey(DeferredBlock block) {
+            return block.getKey();
         }
     }
 }

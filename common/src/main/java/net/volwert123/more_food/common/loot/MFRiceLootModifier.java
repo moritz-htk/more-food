@@ -23,7 +23,7 @@ public class MFRiceLootModifier implements BalmLootModifier {
         float roll = context.getRandom().nextFloat();
 
         if (isRiceGrass(block) && roll < DROP_CHANCE) {
-            loot.add(new ItemStack(MFItems.RICE.get(), 1));
+            loot.add(new ItemStack(MFItems.RICE.asItem(), 1));
         }
     }
 
