@@ -1,6 +1,6 @@
 package net.volwert123.more_food.datagen.provider;
 
-import dev.architectury.registry.registries.RegistrySupplier;
+import net.blay09.mods.balm.api.DeferredObject;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
@@ -31,7 +31,7 @@ public class MFModelProvider extends ModelProvider {
     }
 
     private void generateItemModels(ItemModelGenerators itemModels) {
-        for (RegistrySupplier<Item> item : MFItems.ITEMS) {
+        for (DeferredObject<Item> item : MFItems.ITEMS) {
             Set<Item> excludedItems = Set.of(MFItems.RICE.get());
             if (!excludedItems.contains(item.get())) {
                 itemModels.generateFlatItem(item.get(), ModelTemplates.FLAT_ITEM);

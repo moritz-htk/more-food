@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.registry.MFItems;
+import net.volwert123.more_food.common.registry.MFTags;
 
 public class MFGermanLanguageProvider extends LanguageProvider {
     public MFGermanLanguageProvider(PackOutput output) {
@@ -52,6 +53,9 @@ public class MFGermanLanguageProvider extends LanguageProvider {
         add(MFItems.POTATO_SOUP.get(), "Kartoffelsuppe");
         add(MFItems.POTATO_BREAD.get(), "Kartoffelbrot");
 
+        // Sweet Berries Items
+        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Schokoladensüßbeeren");
+
         // Phantom Items
         add(MFItems.COOKED_PHANTOM.get(), "Gebratenes Phantom");
         add(MFItems.PHANTOM_PIECES.get(), "Phantomstücke");
@@ -71,17 +75,17 @@ public class MFGermanLanguageProvider extends LanguageProvider {
         add(MFItems.BAMBOO_PIECES.get(), "Bambusstücke");
         add(MFItems.BAMBOO_SOUP.get(), "Bambussuppe");
 
-        // Cooked Rabbit Items
-        add(MFItems.IRON_COOKED_RABBIT.get(), "Gebratenes Eisenkaninchen");
-        add(MFItems.GOLDEN_COOKED_RABBIT.get(), "Goldenes Gebratenes Kaninchen");
-        add(MFItems.DIAMOND_COOKED_RABBIT.get(), "Gebratenes Diamantkaninchen");
-        add(MFItems.EMERALD_COOKED_RABBIT.get(), "Gebratenes Smaragdkaninchen");
-
         // Melon Slice Items
         add(MFItems.IRON_MELON_SLICE.get(), "Eisenmelonenscheibe");
         add(MFItems.GOLDEN_MELON_SLICE.get(), "Goldene Melonenscheibe");
         add(MFItems.DIAMOND_MELON_SLICE.get(), "Diamantmelonenscheibe");
         add(MFItems.EMERALD_MELON_SLICE.get(), "Smaragdmelonenscheibe");
+
+        // Cooked Rabbit Items
+        add(MFItems.IRON_COOKED_RABBIT.get(), "Gebratenes Eisenkaninchen");
+        add(MFItems.GOLDEN_COOKED_RABBIT.get(), "Goldenes Gebratenes Kaninchen");
+        add(MFItems.DIAMOND_COOKED_RABBIT.get(), "Gebratenes Diamantkaninchen");
+        add(MFItems.EMERALD_COOKED_RABBIT.get(), "Gebratenes Smaragdkaninchen");
 
         // Cooked Chicken Items
         add(MFItems.IRON_COOKED_CHICKEN.get(), "Gebratenes Eisenhühnchen");
@@ -132,7 +136,35 @@ public class MFGermanLanguageProvider extends LanguageProvider {
         add(MFItems.CHOCOLATE.get(), "Schokolade");
         add(MFItems.CHOCOLATE_BAR.get(), "Schokoladentafel");
 
-        // Sweet Berries Items
-        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Schokoladensüßbeeren");
+        // Creative Mode Tab
+        add("itemGroup.more_food.main", "More Food");
+
+        // Vegetable Food Tags
+        add(MFTags.Items.FOODS_VEGETABLES_CARROT, "Karotten");
+        add(MFTags.Items.FOODS_VEGETABLES_KELP, "Seetange");
+        add(MFTags.Items.FOODS_VEGETABLES_POTATO, "Kartoffeln");
+
+        // Fruit Food Tags
+        add(MFTags.Items.FOODS_FRUITS_APPLE, "Äpfel");
+        add(MFTags.Items.FOODS_FRUITS_MELON_SLICE, "Melonenscheiben");
+
+        // Cooked Meat Food Tags
+        add(MFTags.Items.FOODS_COOKED_RABBIT, "Gebratene Kaninchen");
+        add(MFTags.Items.FOODS_COOKED_CHICKEN, "Gebratene Hühnchen");
+        add(MFTags.Items.FOODS_COOKED_MUTTON, "Gebratenes Hammelfleisch");
+        add(MFTags.Items.FOODS_COOKED_PORKCHOP, "Gebratenes Schweinefleisch");
+        add(MFTags.Items.FOODS_COOKED_BEEF, "Steaks");
+        add(MFTags.Items.FOODS_COOKED_BACON, "Gebratener Speck");
+
+        // Raw Meat Food Tags
+        add(MFTags.Items.FOODS_RAW_BACON, "Roher Speck");
+
+        // Miscellaneous Food Tags
+        add(MFTags.Items.FOODS_SUSHI, "Sushi");
+        add(MFTags.Items.FOODS_COOKED_EGG, "Gekochte Eier");
+
+        // Crop and Seed Tags
+        add(MFTags.Items.CROPS_RICE, "Reis");
+        add(MFTags.Items.SEEDS_RICE, "Reissamen");
     }
 }

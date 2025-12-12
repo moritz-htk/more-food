@@ -83,5 +83,22 @@
   "item.more_food.sushi_bamboo": "Bambus Sushi",
   "item.more_food.sushi_beetroot": "Rote Bete Sushi",
   "item.more_food.sushi_carrot": "Karotten Sushi",
-  "item.more_food.sushi_salmon": "Lachs Sushi"
+  "item.more_food.sushi_salmon": "Lachs Sushi",
+  "itemGroup.more_food.main": "More Food",
+  "tag.item.c.crops.rice": "Reis",
+  "tag.item.c.foods.cooked_bacon": "Gebratener Speck",
+  "tag.item.c.foods.cooked_beef": "Steaks",
+  "tag.item.c.foods.cooked_chicken": "Gebratene Hühnchen",
+  "tag.item.c.foods.cooked_egg": "Gekochte Eier",
+  "tag.item.c.foods.cooked_mutton": "Gebratenes Hammelfleisch",
+  "tag.item.c.foods.cooked_porkchop": "Gebratenes Schweinefleisch",
+  "tag.item.c.foods.cooked_rabbit": "Gebratene Kaninchen",
+  "tag.item.c.foods.fruits.apple": "Äpfel",
+  "tag.item.c.foods.fruits.melon_slice": "Melonenscheiben",
+  "tag.item.c.foods.raw_bacon": "Roher Speck",
+  "tag.item.c.foods.sushi": "Sushi",
+  "tag.item.c.foods.vegetables.carrot": "Karotten",
+  "tag.item.c.foods.vegetables.kelp": "Seetange",
+  "tag.item.c.foods.vegetables.potato": "Kartoffeln",
+  "tag.item.c.seeds.rice": "Reissamen"
 }

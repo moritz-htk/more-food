@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.registry.MFItems;
+import net.volwert123.more_food.common.registry.MFTags;
 
 public class MFRussianLanguageProvider extends LanguageProvider {
     public MFRussianLanguageProvider(PackOutput output) {
@@ -52,6 +53,9 @@ public class MFRussianLanguageProvider extends LanguageProvider {
         add(MFItems.POTATO_SOUP.get(), "Картофельный суп");
         add(MFItems.POTATO_BREAD.get(), "Картофельный хлеб");
 
+        // Sweet Berries Items
+        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Шоколадные сладкие ягоды");
+
         // Phantom Items
         add(MFItems.COOKED_PHANTOM.get(), "Жареный фантом");
         add(MFItems.PHANTOM_PIECES.get(), "Кусочки фантома");
@@ -71,17 +75,17 @@ public class MFRussianLanguageProvider extends LanguageProvider {
         add(MFItems.BAMBOO_PIECES.get(), "Кусочки бамбука");
         add(MFItems.BAMBOO_SOUP.get(), "Бамбук суп");
 
-        // Cooked Rabbit Items
-        add(MFItems.IRON_COOKED_RABBIT.get(), "Железная жареная крольчатина");
-        add(MFItems.GOLDEN_COOKED_RABBIT.get(), "Золотая жареная крольчатина");
-        add(MFItems.DIAMOND_COOKED_RABBIT.get(), "Алмазная жареная крольчатина");
-        add(MFItems.EMERALD_COOKED_RABBIT.get(), "Изумрудная жареная крольчатина");
-
         // Melon Slice Items
         add(MFItems.IRON_MELON_SLICE.get(), "Железный ломтик арбуза");
         add(MFItems.GOLDEN_MELON_SLICE.get(), "Золотой ломтик арбуза");
         add(MFItems.DIAMOND_MELON_SLICE.get(), "Алмазный ломтик арбуза");
         add(MFItems.EMERALD_MELON_SLICE.get(), "Изумрудный ломтик арбуза");
+
+        // Cooked Rabbit Items
+        add(MFItems.IRON_COOKED_RABBIT.get(), "Железная жареная крольчатина");
+        add(MFItems.GOLDEN_COOKED_RABBIT.get(), "Золотая жареная крольчатина");
+        add(MFItems.DIAMOND_COOKED_RABBIT.get(), "Алмазная жареная крольчатина");
+        add(MFItems.EMERALD_COOKED_RABBIT.get(), "Изумрудная жареная крольчатина");
 
         // Cooked Chicken Items
         add(MFItems.IRON_COOKED_CHICKEN.get(), "Железная жареная курятина");
@@ -132,7 +136,35 @@ public class MFRussianLanguageProvider extends LanguageProvider {
         add(MFItems.CHOCOLATE.get(), "Шоколад");
         add(MFItems.CHOCOLATE_BAR.get(), "Шоколадная плитка");
 
-        // Sweet Berries Items
-        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Шоколадные сладкие ягоды");
+        // Creative Mode Tab
+        add("itemGroup.more_food.main", "More Food");
+
+        // Vegetable Food Tags
+        add(MFTags.Items.FOODS_VEGETABLES_CARROT, "Моркови");
+        add(MFTags.Items.FOODS_VEGETABLES_KELP, "Ламинарии");
+        add(MFTags.Items.FOODS_VEGETABLES_POTATO, "Картофели");
+
+        // Fruit Food Tags
+        add(MFTags.Items.FOODS_FRUITS_APPLE, "Яблоки");
+        add(MFTags.Items.FOODS_FRUITS_MELON_SLICE, "Ломтики арбуза");
+
+        // Cooked Meat Food Tags
+        add(MFTags.Items.FOODS_COOKED_RABBIT, "Жареная крольчатина");
+        add(MFTags.Items.FOODS_COOKED_CHICKEN, "Жареная курятина");
+        add(MFTags.Items.FOODS_COOKED_MUTTON, "Жареная баранина");
+        add(MFTags.Items.FOODS_COOKED_PORKCHOP, "Жареная свинина");
+        add(MFTags.Items.FOODS_COOKED_BEEF, "Жареная говядина");
+        add(MFTags.Items.FOODS_COOKED_BACON, "Жареный бекон");
+
+        // Raw Meat Food Tags
+        add(MFTags.Items.FOODS_RAW_BACON, "Сырой бекон");
+
+        // Miscellaneous Food Tags
+        add(MFTags.Items.FOODS_SUSHI, "Суши");
+        add(MFTags.Items.FOODS_COOKED_EGG, "Варёные яйца");
+
+        // Crop and Seed Tags
+        add(MFTags.Items.CROPS_RICE, "Рис");
+        add(MFTags.Items.SEEDS_RICE, "Семена риса");
     }
 }

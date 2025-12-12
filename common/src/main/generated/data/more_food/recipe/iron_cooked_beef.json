@@ -3,12 +3,12 @@
   "category": "misc",
   "key": {
     "#": "minecraft:cooked_beef",
-    "I": "minecraft:iron_ingot"
+    "*": "minecraft:iron_ingot"
   },
   "pattern": [
-    "III",
-    "I#I",
-    "III"
+    "***",
+    "*#*",
+    "***"
   ],
   "result": {
     "count": 1,

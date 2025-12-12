@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.registry.MFItems;
+import net.volwert123.more_food.common.registry.MFTags;
 
 public class MFEnglishLanguageProvider extends LanguageProvider {
     public MFEnglishLanguageProvider(PackOutput output) {
@@ -52,6 +53,9 @@ public class MFEnglishLanguageProvider extends LanguageProvider {
         add(MFItems.POTATO_SOUP.get(), "Potato Soup");
         add(MFItems.POTATO_BREAD.get(), "Potato Bread");
 
+        // Sweet Berries Items
+        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Chocolate Sweet Berries");
+
         // Phantom Items
         add(MFItems.COOKED_PHANTOM.get(), "Cooked Phantom");
         add(MFItems.PHANTOM_PIECES.get(), "Phantom Pieces");
@@ -71,17 +75,17 @@ public class MFEnglishLanguageProvider extends LanguageProvider {
         add(MFItems.BAMBOO_PIECES.get(), "Bamboo Pieces");
         add(MFItems.BAMBOO_SOUP.get(), "Bamboo Soup");
 
-        // Cooked Rabbit Items
-        add(MFItems.IRON_COOKED_RABBIT.get(), "Iron Cooked Rabbit");
-        add(MFItems.GOLDEN_COOKED_RABBIT.get(), "Golden Cooked Rabbit");
-        add(MFItems.DIAMOND_COOKED_RABBIT.get(), "Diamond Cooked Rabbit");
-        add(MFItems.EMERALD_COOKED_RABBIT.get(), "Emerald Cooked Rabbit");
-
         // Melon Slice Items
         add(MFItems.IRON_MELON_SLICE.get(), "Iron Melon Slice");
         add(MFItems.GOLDEN_MELON_SLICE.get(), "Golden Melon Slice");
         add(MFItems.DIAMOND_MELON_SLICE.get(), "Diamond Melon Slice");
         add(MFItems.EMERALD_MELON_SLICE.get(), "Emerald Melon Slice");
+
+        // Cooked Rabbit Items
+        add(MFItems.IRON_COOKED_RABBIT.get(), "Iron Cooked Rabbit");
+        add(MFItems.GOLDEN_COOKED_RABBIT.get(), "Golden Cooked Rabbit");
+        add(MFItems.DIAMOND_COOKED_RABBIT.get(), "Diamond Cooked Rabbit");
+        add(MFItems.EMERALD_COOKED_RABBIT.get(), "Emerald Cooked Rabbit");
 
         // Cooked Chicken Items
         add(MFItems.IRON_COOKED_CHICKEN.get(), "Iron Cooked Chicken");
@@ -132,7 +136,35 @@ public class MFEnglishLanguageProvider extends LanguageProvider {
         add(MFItems.CHOCOLATE.get(), "Chocolate");
         add(MFItems.CHOCOLATE_BAR.get(), "Chocolate Bar");
 
-        // Sweet Berries Items
-        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Chocolate Sweet Berries");
+        // Creative Mode Tab
+        add("itemGroup.more_food.main", "More Food");
+
+        // Vegetable Food Tags
+        add(MFTags.Items.FOODS_VEGETABLES_CARROT, "Carrots");
+        add(MFTags.Items.FOODS_VEGETABLES_KELP, "Kelps");
+        add(MFTags.Items.FOODS_VEGETABLES_POTATO, "Potatoes");
+
+        // Fruit Food Tags
+        add(MFTags.Items.FOODS_FRUITS_APPLE, "Apples");
+        add(MFTags.Items.FOODS_FRUITS_MELON_SLICE, "Melon Slices");
+
+        // Cooked Meat Food Tags
+        add(MFTags.Items.FOODS_COOKED_RABBIT, "Cooked Rabbits");
+        add(MFTags.Items.FOODS_COOKED_CHICKEN, "Cooked Chickens");
+        add(MFTags.Items.FOODS_COOKED_MUTTON, "Cooked Muttons");
+        add(MFTags.Items.FOODS_COOKED_PORKCHOP, "Cooked Porkchops");
+        add(MFTags.Items.FOODS_COOKED_BEEF, "Cooked Beefs");
+        add(MFTags.Items.FOODS_COOKED_BACON, "Cooked Bacons");
+
+        // Raw Meat Food Tags
+        add(MFTags.Items.FOODS_RAW_BACON, "Raw Bacons");
+
+        // Miscellaneous Food Tags
+        add(MFTags.Items.FOODS_SUSHI, "Sushi");
+        add(MFTags.Items.FOODS_COOKED_EGG, "Cooked Eggs");
+
+        // Crop and Seed Tags
+        add(MFTags.Items.CROPS_RICE, "Rice");
+        add(MFTags.Items.SEEDS_RICE, "Rice Seeds");
     }
 }

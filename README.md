@@ -1,4 +1,4 @@
-![More Food icon](https://github.com/Volwert123/more-food/blob/master/common/src/main/resources/icon.png)
+![More Food icon](https://github.com/Volwert123/more-food/blob/master/common/src/main/resources/assets/more_food/icon.png)
 
 [![CurseForge Downloads](https://cf.way2muchnoise.eu/short_874343_downloads.svg?badge_style=for_the_badge)](https://www.curseforge.com/minecraft/mc-mods/more-food-xd)
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/kReQ7M8K?style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/more-food-xd)
@@ -14,7 +14,7 @@ The **More Food** mod was created by [Volwert123](https://github.com/Volwert123)
 To prepare the food, new ingredients were added!
 
 ## Supported languages
-- English, German, French, Spanish, Russian
+- English, German, French, Russian
 
 ## Planned functions
 - more languages

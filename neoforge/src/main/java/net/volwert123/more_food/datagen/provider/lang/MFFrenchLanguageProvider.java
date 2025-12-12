@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.registry.MFItems;
+import net.volwert123.more_food.common.registry.MFTags;
 
 public class MFFrenchLanguageProvider extends LanguageProvider {
     public MFFrenchLanguageProvider(PackOutput output) {
@@ -52,6 +53,9 @@ public class MFFrenchLanguageProvider extends LanguageProvider {
         add(MFItems.POTATO_SOUP.get(), "Soupe de pommes de terre");
         add(MFItems.POTATO_BREAD.get(), "Pain à la pommes de terre");
 
+        // Sweet Berries Items
+        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Baies sucrées au chocolat");
+
         // Phantom Items
         add(MFItems.COOKED_PHANTOM.get(), "Phantom cuit");
         add(MFItems.PHANTOM_PIECES.get(), "Morceaux de phantom");
@@ -71,17 +75,17 @@ public class MFFrenchLanguageProvider extends LanguageProvider {
         add(MFItems.BAMBOO_PIECES.get(), "Morceaux de bambou");
         add(MFItems.BAMBOO_SOUP.get(), "Soupe de bambou");
 
-        // Cooked Rabbit Items
-        add(MFItems.IRON_COOKED_RABBIT.get(), "Lapin cuit de fer");
-        add(MFItems.GOLDEN_COOKED_RABBIT.get(), "Lapin cuit doré");
-        add(MFItems.DIAMOND_COOKED_RABBIT.get(), "Lapin cuit de diamant");
-        add(MFItems.EMERALD_COOKED_RABBIT.get(), "Lapin cuit d'émeraude");
-
         // Melon Slice Items
         add(MFItems.IRON_MELON_SLICE.get(), "Tranche de pastèque de fer");
         add(MFItems.GOLDEN_MELON_SLICE.get(), "Tranche de pastèque dorée");
         add(MFItems.DIAMOND_MELON_SLICE.get(), "Tranche de pastèque de diamant");
         add(MFItems.EMERALD_MELON_SLICE.get(), "Tranche de pastèque d'émeraude");
+
+        // Cooked Rabbit Items
+        add(MFItems.IRON_COOKED_RABBIT.get(), "Lapin cuit de fer");
+        add(MFItems.GOLDEN_COOKED_RABBIT.get(), "Lapin cuit doré");
+        add(MFItems.DIAMOND_COOKED_RABBIT.get(), "Lapin cuit de diamant");
+        add(MFItems.EMERALD_COOKED_RABBIT.get(), "Lapin cuit d'émeraude");
 
         // Cooked Chicken Items
         add(MFItems.IRON_COOKED_CHICKEN.get(), "Poulet rôti de fer");
@@ -132,7 +136,35 @@ public class MFFrenchLanguageProvider extends LanguageProvider {
         add(MFItems.CHOCOLATE.get(), "Chocolat");
         add(MFItems.CHOCOLATE_BAR.get(), "Tablette de chocolat");
 
-        // Sweet Berries Items
-        add(MFItems.CHOCOLATE_SWEET_BERRIES.get(), "Baies sucrées au chocolat");
+        // Creative Mode Tab
+        add("itemGroup.more_food.main", "More Food");
+
+        // Vegetable Food Tags
+        add(MFTags.Items.FOODS_VEGETABLES_CARROT, "Carottes");
+        add(MFTags.Items.FOODS_VEGETABLES_KELP, "Algues");
+        add(MFTags.Items.FOODS_VEGETABLES_POTATO, "Pommes de terre");
+
+        // Fruit Food Tags
+        add(MFTags.Items.FOODS_FRUITS_APPLE, "Pommes");
+        add(MFTags.Items.FOODS_FRUITS_MELON_SLICE, "Tranches de pastèque");
+
+        // Cooked Meat Food Tags
+        add(MFTags.Items.FOODS_COOKED_RABBIT, "Lapins cuit");
+        add(MFTags.Items.FOODS_COOKED_CHICKEN, "Poulets cuit");
+        add(MFTags.Items.FOODS_COOKED_MUTTON, "Moutons cuit");
+        add(MFTags.Items.FOODS_COOKED_PORKCHOP, "Côtelettes de porc cuite");
+        add(MFTags.Items.FOODS_COOKED_BEEF, "Steaks cuit");
+        add(MFTags.Items.FOODS_COOKED_BACON, "Bacon cuit");
+
+        // Raw Meat Food Tags
+        add(MFTags.Items.FOODS_RAW_BACON, "Bacon cru");
+
+        // Miscellaneous Food Tags
+        add(MFTags.Items.FOODS_SUSHI, "Sushi");
+        add(MFTags.Items.FOODS_COOKED_EGG, "Œufs cuit");
+
+        // Crop and Seed Tags
+        add(MFTags.Items.CROPS_RICE, "Riz");
+        add(MFTags.Items.SEEDS_RICE, "Graines de riz");
     }
 }

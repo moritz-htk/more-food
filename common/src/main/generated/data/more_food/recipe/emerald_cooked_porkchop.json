@@ -3,12 +3,12 @@
   "category": "misc",
   "key": {
     "#": "minecraft:cooked_porkchop",
-    "E": "minecraft:emerald"
+    "*": "minecraft:emerald"
   },
   "pattern": [
-    "EEE",
-    "E#E",
-    "EEE"
+    "***",
+    "*#*",
+    "***"
   ],
   "result": {
     "count": 1,

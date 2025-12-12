@@ -3,12 +3,12 @@
   "category": "misc",
   "key": {
     "#": "minecraft:melon_slice",
-    "E": "minecraft:emerald"
+    "*": "minecraft:emerald"
   },
   "pattern": [
-    "EEE",
-    "E#E",
-    "EEE"
+    "***",
+    "*#*",
+    "***"
   ],
   "result": {
     "count": 1,

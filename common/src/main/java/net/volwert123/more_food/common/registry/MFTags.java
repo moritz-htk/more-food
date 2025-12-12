@@ -8,16 +8,16 @@ import net.minecraft.world.level.block.Block;
 
 public class MFTags {
     public static class Items {
-        // Foods - Vegetables
+        // Vegetable Food Tags
         public static final TagKey<Item> FOODS_VEGETABLES_CARROT = registerCommonKey("foods/vegetables/carrot");
         public static final TagKey<Item> FOODS_VEGETABLES_KELP = registerCommonKey("foods/vegetables/kelp");
         public static final TagKey<Item> FOODS_VEGETABLES_POTATO = registerCommonKey("foods/vegetables/potato");
 
-        // Foods - Fruits
+        // Fruit Food Tags
         public static final TagKey<Item> FOODS_FRUITS_APPLE = registerCommonKey("foods/fruits/apple");
         public static final TagKey<Item> FOODS_FRUITS_MELON_SLICE = registerCommonKey("foods/fruits/melon_slice");
 
-        // Foods - Cooked Meat
+        // Cooked Meat Food Tags
         public static final TagKey<Item> FOODS_COOKED_RABBIT = registerCommonKey("foods/cooked_rabbit");
         public static final TagKey<Item> FOODS_COOKED_CHICKEN = registerCommonKey("foods/cooked_chicken");
         public static final TagKey<Item> FOODS_COOKED_MUTTON = registerCommonKey("foods/cooked_mutton");
@@ -25,14 +25,14 @@ public class MFTags {
         public static final TagKey<Item> FOODS_COOKED_BEEF = registerCommonKey("foods/cooked_beef");
         public static final TagKey<Item> FOODS_COOKED_BACON = registerCommonKey("foods/cooked_bacon");
 
-        // Foods - Raw Meat
+        // Raw Meat Food Tags
         public static final TagKey<Item> FOODS_RAW_BACON = registerCommonKey("foods/raw_bacon");
 
-        // Foods - Miscellaneous
+        // Miscellaneous Food Tags
         public static final TagKey<Item> FOODS_SUSHI = registerCommonKey("foods/sushi");
         public static final TagKey<Item> FOODS_COOKED_EGG = registerCommonKey("foods/cooked_egg");
 
-        // Crops and Seeds
+        // Crop and Seed Tags
         public static final TagKey<Item> CROPS_RICE = registerCommonKey("crops/rice");
         public static final TagKey<Item> SEEDS_RICE = registerCommonKey("seeds/rice");
 

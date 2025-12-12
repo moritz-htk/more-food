@@ -83,5 +83,22 @@
   "item.more_food.sushi_bamboo": "Sushi Bamboo",
   "item.more_food.sushi_beetroot": "Sushi Beetroot",
   "item.more_food.sushi_carrot": "Sushi Carrot",
-  "item.more_food.sushi_salmon": "Sushi Salmon"
+  "item.more_food.sushi_salmon": "Sushi Salmon",
+  "itemGroup.more_food.main": "More Food",
+  "tag.item.c.crops.rice": "Rice",
+  "tag.item.c.foods.cooked_bacon": "Cooked Bacons",
+  "tag.item.c.foods.cooked_beef": "Cooked Beefs",
+  "tag.item.c.foods.cooked_chicken": "Cooked Chickens",
+  "tag.item.c.foods.cooked_egg": "Cooked Eggs",
+  "tag.item.c.foods.cooked_mutton": "Cooked Muttons",
+  "tag.item.c.foods.cooked_porkchop": "Cooked Porkchops",
+  "tag.item.c.foods.cooked_rabbit": "Cooked Rabbits",
+  "tag.item.c.foods.fruits.apple": "Apples",
+  "tag.item.c.foods.fruits.melon_slice": "Melon Slices",
+  "tag.item.c.foods.raw_bacon": "Raw Bacons",
+  "tag.item.c.foods.sushi": "Sushi",
+  "tag.item.c.foods.vegetables.carrot": "Carrots",
+  "tag.item.c.foods.vegetables.kelp": "Kelps",
+  "tag.item.c.foods.vegetables.potato": "Potatoes",
+  "tag.item.c.seeds.rice": "Rice Seeds"
 }

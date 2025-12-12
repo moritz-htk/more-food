@@ -1,38 +1,35 @@
 modLoader="javafml"
-loaderVersion="[4,)"
-license="MIT"
+loaderVersion="[0,)"
+license="${mod_license}"
 issueTrackerURL="https://github.com/Volwert123/more-food/issues"
 
 [[mods]]
-    modId="more_food"
-    version="${version}"
-    displayName="More Food"
+    modId="${mod_id}"
+    version="${mod_version}"
+    displayName="${mod_name}"
     updateJSONURL="https://api.modrinth.com/updates/more-food-xd/forge_updates.json?neoforge=only"
     displayURL="https://www.curseforge.com/minecraft/mc-mods/more-food-xd"
-    logoFile="assets/more_food/icon.png"
-    authors="Volwert123, moritz_htk"
-    description='''This mod adds more food to Minecraft.'''
+    logoFile="${mod_icon}"
+    authors="${mod_author}"
+    description='''${mod_description}'''
 
-[[dependencies.more_food]]
+[[dependencies.${mod_id}]]
     modId="neoforge"
     type="required"
-    versionRange="[21.5,)"
+    versionRange="[${neoforge_version},)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.more_food]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     type="required"
-    versionRange="[1.21.5,)"
+    versionRange="[${minecraft_version},)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.more_food]]
-    modId="architectury"
+[[dependencies.${mod_id}]]
+    modId="balm"
     type="required"
-    versionRange="[16.1.4,)"
-    ordering="AFTER"
+    versionRange="[${balm_version},)"
+    ordering="NONE"
     side="BOTH"
-
-[modproperties.more_food]
-    catalogueItemIcon="more_food:cooked_carrot"

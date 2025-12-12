@@ -3,12 +3,12 @@
   "category": "misc",
   "key": {
     "#": "minecraft:dried_kelp",
-    "E": "minecraft:emerald"
+    "*": "minecraft:emerald"
   },
   "pattern": [
-    "EEE",
-    "E#E",
-    "EEE"
+    "***",
+    "*#*",
+    "***"
   ],
   "result": {
     "count": 1,

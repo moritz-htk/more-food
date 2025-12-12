@@ -3,12 +3,12 @@
   "category": "misc",
   "key": {
     "#": "minecraft:potato",
-    "I": "minecraft:iron_ingot"
+    "*": "minecraft:iron_ingot"
   },
   "pattern": [
-    "III",
-    "I#I",
-    "III"
+    "***",
+    "*#*",
+    "***"
   ],
   "result": {
     "count": 1,
