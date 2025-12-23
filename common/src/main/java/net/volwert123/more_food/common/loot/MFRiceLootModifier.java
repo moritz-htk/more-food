@@ -1,6 +1,6 @@
 package net.volwert123.more_food.common.loot;
 
-import net.blay09.mods.balm.api.loot.BalmLootModifier;
+import net.blay09.mods.balm.world.level.storage.loot.BalmLootModifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;

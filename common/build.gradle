@@ -10,5 +10,5 @@ sourceSets {
 
 dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
-    modApi "net.blay09.mods:balm-common:${project.balm_version}+${project.minecraft_version}"
+    modApi "net.blay09.mods:balm-common:${project.balm_version}"
 }

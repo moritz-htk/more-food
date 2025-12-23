@@ -5,8 +5,8 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
@@ -141,9 +141,9 @@ public class MFRecipeProvider extends RecipeProvider {
         createSushiRecipe(items, MFItems.SUSHI_SALMON.asItem(), Items.SALMON).save(output, registerRecipe(MFItems.SUSHI_SALMON.asItem()));
 
         // Egg Recipes
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.EGG), RecipeCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.EGG)).save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.EGG) + "_smelting")));
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BROWN_EGG), RecipeCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.BROWN_EGG)).save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.BROWN_EGG) + "_smelting")));
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BLUE_EGG), RecipeCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.BLUE_EGG)).save(output, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.BLUE_EGG) + "_smelting")));
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.EGG), RecipeCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.EGG)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.EGG) + "_smelting")));
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BROWN_EGG), RecipeCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.BROWN_EGG)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.BROWN_EGG) + "_smelting")));
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BLUE_EGG), RecipeCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.BLUE_EGG)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.BLUE_EGG) + "_smelting")));
 
         // Bacon Recipes
         createRawBaconRecipe(items).save(output, registerRecipe(MFItems.RAW_BACON.asItem()));
@@ -167,9 +167,9 @@ public class MFRecipeProvider extends RecipeProvider {
     }
 
     private void createCookingRecipes(ItemLike output, ItemLike input, RecipeOutput recipeOutput) {
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_smelting")));
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,100, RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_smoking")));
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, CampfireCookingRecipe::new).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_campfire_cooking")));
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_smelting")));
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,100, RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_smoking")));
+        SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, CampfireCookingRecipe::new).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_campfire_cooking")));
     }
 
     private ShapelessRecipeBuilder createPiecesRecipe(HolderGetter<Item> items, ItemLike output, ItemLike input) {
@@ -298,7 +298,7 @@ public class MFRecipeProvider extends RecipeProvider {
     }
 
     private static ResourceKey<Recipe<?>> registerRecipe(ItemLike item) {
-        return ResourceKey.create(Registries.RECIPE, ResourceLocation.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(item)));
+        return ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(item)));
     }
 
     public static class Runner extends RecipeProvider.Runner {

@@ -1,6 +1,6 @@
 package net.volwert123.more_food.datagen.provider;
 
-import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.advancements.criterion.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -48,7 +48,7 @@ public class MFLootTableProvider {
 
         @Override
         protected @NotNull Iterable<Block> getKnownBlocks() {
-            return BuiltInRegistries.BLOCK.entrySet().stream().filter(e -> e.getKey().location().getNamespace().equals(MoreFood.MOD_ID)).map(Map.Entry::getValue).toList();
+            return BuiltInRegistries.BLOCK.entrySet().stream().filter(e -> e.getKey().identifier().getNamespace().equals(MoreFood.MOD_ID)).map(Map.Entry::getValue).toList();
         }
     }
 }

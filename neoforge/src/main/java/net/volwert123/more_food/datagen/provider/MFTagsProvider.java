@@ -7,8 +7,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagAppender;
 import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagBuilder;
@@ -58,7 +58,7 @@ public class MFTagsProvider {
         private void addCarrotTags() {
             tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_CARROT);
             tag(MFTags.Items.FOODS_VEGETABLES_CARROT).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("carrot")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("carrot")),
                     getKey(MFItems.IRON_CARROT),
                     getKey(MFItems.DIAMOND_CARROT),
                     getKey(MFItems.EMERALD_CARROT),
@@ -72,9 +72,9 @@ public class MFTagsProvider {
         private void addAppleTags() {
             tag(Tags.Items.FOODS_FRUIT).addTag(MFTags.Items.FOODS_FRUITS_APPLE);
             tag(MFTags.Items.FOODS_FRUITS_APPLE).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("apple")),
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("golden_apple")),
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("enchanted_golden_apple")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("apple")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("golden_apple")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("enchanted_golden_apple")),
                     getKey(MFItems.IRON_APPLE),
                     getKey(MFItems.DIAMOND_APPLE),
                     getKey(MFItems.EMERALD_APPLE),
@@ -88,7 +88,7 @@ public class MFTagsProvider {
         private void addKelpTags() {
             tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_KELP);
             tag(MFTags.Items.FOODS_VEGETABLES_KELP).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("dried_kelp")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("dried_kelp")),
                     getKey(MFItems.IRON_KELP),
                     getKey(MFItems.GOLDEN_KELP),
                     getKey(MFItems.DIAMOND_KELP),
@@ -101,7 +101,7 @@ public class MFTagsProvider {
         private void addPotatoTags() {
             tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_POTATO);
             tag(MFTags.Items.FOODS_VEGETABLES_POTATO).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("potato")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("potato")),
                     getKey(MFItems.IRON_POTATO),
                     getKey(MFItems.GOLDEN_POTATO),
                     getKey(MFItems.DIAMOND_POTATO),
@@ -139,7 +139,7 @@ public class MFTagsProvider {
         private void addMelonSliceTags() {
             tag(Tags.Items.FOODS_FRUIT).addTag(MFTags.Items.FOODS_FRUITS_MELON_SLICE);
             tag(MFTags.Items.FOODS_FRUITS_MELON_SLICE).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("melon_slice")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("melon_slice")),
                     getKey(MFItems.IRON_MELON_SLICE),
                     getKey(MFItems.GOLDEN_MELON_SLICE),
                     getKey(MFItems.DIAMOND_MELON_SLICE),
@@ -150,7 +150,7 @@ public class MFTagsProvider {
         private void addCookedRabbitTags() {
             tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_RABBIT);
             tag(MFTags.Items.FOODS_COOKED_RABBIT).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_rabbit")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("cooked_rabbit")),
                     getKey(MFItems.IRON_COOKED_RABBIT),
                     getKey(MFItems.GOLDEN_COOKED_RABBIT),
                     getKey(MFItems.DIAMOND_COOKED_RABBIT),
@@ -161,7 +161,7 @@ public class MFTagsProvider {
         private void addCookedChickenTags() {
             tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_CHICKEN);
             tag(MFTags.Items.FOODS_COOKED_CHICKEN).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_chicken")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("cooked_chicken")),
                     getKey(MFItems.IRON_COOKED_CHICKEN),
                     getKey(MFItems.GOLDEN_COOKED_CHICKEN),
                     getKey(MFItems.DIAMOND_COOKED_CHICKEN),
@@ -172,7 +172,7 @@ public class MFTagsProvider {
         private void addCookedMuttonTags() {
             tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_MUTTON);
             tag(MFTags.Items.FOODS_COOKED_MUTTON).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_mutton")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("cooked_mutton")),
                     getKey(MFItems.IRON_COOKED_MUTTON),
                     getKey(MFItems.GOLDEN_COOKED_MUTTON),
                     getKey(MFItems.DIAMOND_COOKED_MUTTON),
@@ -183,7 +183,7 @@ public class MFTagsProvider {
         private void addCookedPorkchopTags() {
             tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_PORKCHOP);
             tag(MFTags.Items.FOODS_COOKED_PORKCHOP).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_porkchop")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("cooked_porkchop")),
                     getKey(MFItems.IRON_COOKED_PORKCHOP),
                     getKey(MFItems.GOLDEN_COOKED_PORKCHOP),
                     getKey(MFItems.DIAMOND_COOKED_PORKCHOP),
@@ -194,7 +194,7 @@ public class MFTagsProvider {
         private void addCookedBeefTags() {
             tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_BEEF);
             tag(MFTags.Items.FOODS_COOKED_BEEF).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, ResourceLocation.withDefaultNamespace("cooked_beef")),
+                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("cooked_beef")),
                     getKey(MFItems.IRON_COOKED_BEEF),
                     getKey(MFItems.GOLDEN_COOKED_BEEF),
                     getKey(MFItems.DIAMOND_COOKED_BEEF),

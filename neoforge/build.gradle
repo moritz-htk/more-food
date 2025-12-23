@@ -42,7 +42,7 @@ repositories {
 dependencies {
     neoForge "net.neoforged:neoforge:${project.neoforge_version}"
 
-    modApi "net.blay09.mods:balm-neoforge:${project.balm_version}+${project.minecraft_version}"
+    modApi "net.blay09.mods:balm-neoforge:${project.balm_version}"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionNeoForge')

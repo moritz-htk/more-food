@@ -27,7 +27,7 @@ configurations {
 dependencies {
     forge "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
 
-    modApi "net.blay09.mods:balm-forge:${project.balm_version}+${project.minecraft_version}"
+    modApi "net.blay09.mods:balm-forge:${project.balm_version}"
 
     common(project(path: ':common', configuration: 'namedElements')) { transitive false }
     shadowBundle project(path: ':common', configuration: 'transformProductionForge')
