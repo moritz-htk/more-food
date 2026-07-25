@@ -1,26 +1,24 @@
 package net.volwert123.more_food.datagen.provider;
 
-import net.blay09.mods.balm.world.item.DeferredItem;
 import net.blay09.mods.balm.world.level.block.DeferredBlock;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.TagAppender;
 import net.minecraft.data.tags.TagsProvider;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagBuilder;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.registry.MFBlocks;
 import net.volwert123.more_food.common.registry.MFItems;
-import net.volwert123.more_food.common.registry.MFTags;
-import org.jetbrains.annotations.NotNull;
+import net.volwert123.more_food.common.tags.MFTags;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -32,7 +30,7 @@ public class MFTagsProvider {
         }
 
         @Override
-        protected void addTags(HolderLookup.@NotNull Provider provider) {
+        protected void addTags(HolderLookup.Provider provider) {
             addCarrotTags();
             addAppleTags();
             addKelpTags();
@@ -58,7 +56,7 @@ public class MFTagsProvider {
         private void addCarrotTags() {
             tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_CARROT);
             tag(MFTags.Items.FOODS_VEGETABLES_CARROT).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("carrot")),
+                    getKey(net.minecraft.world.item.Items.CARROT),
                     getKey(MFItems.IRON_CARROT),
                     getKey(MFItems.DIAMOND_CARROT),
                     getKey(MFItems.EMERALD_CARROT),
@@ -72,9 +70,9 @@ public class MFTagsProvider {
         private void addAppleTags() {
             tag(Tags.Items.FOODS_FRUIT).addTag(MFTags.Items.FOODS_FRUITS_APPLE);
             tag(MFTags.Items.FOODS_FRUITS_APPLE).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("apple")),
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("golden_apple")),
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("enchanted_golden_apple")),
+                    getKey(net.minecraft.world.item.Items.APPLE),
+                    getKey(net.minecraft.world.item.Items.GOLDEN_APPLE),
+                    getKey(net.minecraft.world.item.Items.ENCHANTED_GOLDEN_APPLE),
                     getKey(MFItems.IRON_APPLE),
                     getKey(MFItems.DIAMOND_APPLE),
                     getKey(MFItems.EMERALD_APPLE),
@@ -88,7 +86,7 @@ public class MFTagsProvider {
         private void addKelpTags() {
             tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_KELP);
             tag(MFTags.Items.FOODS_VEGETABLES_KELP).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("dried_kelp")),
+                    getKey(net.minecraft.world.item.Items.DRIED_KELP),
                     getKey(MFItems.IRON_KELP),
                     getKey(MFItems.GOLDEN_KELP),
                     getKey(MFItems.DIAMOND_KELP),
@@ -101,7 +99,7 @@ public class MFTagsProvider {
         private void addPotatoTags() {
             tag(Tags.Items.FOODS_VEGETABLE).addTag(MFTags.Items.FOODS_VEGETABLES_POTATO);
             tag(MFTags.Items.FOODS_VEGETABLES_POTATO).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("potato")),
+                    getKey(net.minecraft.world.item.Items.POTATO),
                     getKey(MFItems.IRON_POTATO),
                     getKey(MFItems.GOLDEN_POTATO),
                     getKey(MFItems.DIAMOND_POTATO),
@@ -139,7 +137,7 @@ public class MFTagsProvider {
         private void addMelonSliceTags() {
             tag(Tags.Items.FOODS_FRUIT).addTag(MFTags.Items.FOODS_FRUITS_MELON_SLICE);
             tag(MFTags.Items.FOODS_FRUITS_MELON_SLICE).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("melon_slice")),
+                    getKey(net.minecraft.world.item.Items.MELON_SLICE),
                     getKey(MFItems.IRON_MELON_SLICE),
                     getKey(MFItems.GOLDEN_MELON_SLICE),
                     getKey(MFItems.DIAMOND_MELON_SLICE),
@@ -150,7 +148,7 @@ public class MFTagsProvider {
         private void addCookedRabbitTags() {
             tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_RABBIT);
             tag(MFTags.Items.FOODS_COOKED_RABBIT).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("cooked_rabbit")),
+                    getKey(net.minecraft.world.item.Items.COOKED_RABBIT),
                     getKey(MFItems.IRON_COOKED_RABBIT),
                     getKey(MFItems.GOLDEN_COOKED_RABBIT),
                     getKey(MFItems.DIAMOND_COOKED_RABBIT),
@@ -161,7 +159,7 @@ public class MFTagsProvider {
         private void addCookedChickenTags() {
             tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_CHICKEN);
             tag(MFTags.Items.FOODS_COOKED_CHICKEN).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("cooked_chicken")),
+                    getKey(net.minecraft.world.item.Items.COOKED_CHICKEN),
                     getKey(MFItems.IRON_COOKED_CHICKEN),
                     getKey(MFItems.GOLDEN_COOKED_CHICKEN),
                     getKey(MFItems.DIAMOND_COOKED_CHICKEN),
@@ -172,7 +170,7 @@ public class MFTagsProvider {
         private void addCookedMuttonTags() {
             tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_MUTTON);
             tag(MFTags.Items.FOODS_COOKED_MUTTON).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("cooked_mutton")),
+                    getKey(net.minecraft.world.item.Items.COOKED_MUTTON),
                     getKey(MFItems.IRON_COOKED_MUTTON),
                     getKey(MFItems.GOLDEN_COOKED_MUTTON),
                     getKey(MFItems.DIAMOND_COOKED_MUTTON),
@@ -183,7 +181,7 @@ public class MFTagsProvider {
         private void addCookedPorkchopTags() {
             tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_PORKCHOP);
             tag(MFTags.Items.FOODS_COOKED_PORKCHOP).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("cooked_porkchop")),
+                    getKey(net.minecraft.world.item.Items.COOKED_PORKCHOP),
                     getKey(MFItems.IRON_COOKED_PORKCHOP),
                     getKey(MFItems.GOLDEN_COOKED_PORKCHOP),
                     getKey(MFItems.DIAMOND_COOKED_PORKCHOP),
@@ -194,7 +192,7 @@ public class MFTagsProvider {
         private void addCookedBeefTags() {
             tag(Tags.Items.FOODS_COOKED_MEAT).addTag(MFTags.Items.FOODS_COOKED_BEEF);
             tag(MFTags.Items.FOODS_COOKED_BEEF).addAll(List.of(
-                    ResourceKey.create(Registries.ITEM, Identifier.withDefaultNamespace("cooked_beef")),
+                    getKey(net.minecraft.world.item.Items.COOKED_BEEF),
                     getKey(MFItems.IRON_COOKED_BEEF),
                     getKey(MFItems.GOLDEN_COOKED_BEEF),
                     getKey(MFItems.DIAMOND_COOKED_BEEF),
@@ -251,8 +249,8 @@ public class MFTagsProvider {
             return TagAppender.forBuilder(tagbuilder);
         }
 
-        private ResourceKey<Item> getKey(DeferredItem item) {
-            return item.getKey();
+        private ResourceKey<Item> getKey(ItemLike item) {
+            return item.asItem().builtInRegistryHolder().getKey();
         }
     }
 
@@ -262,7 +260,7 @@ public class MFTagsProvider {
         }
 
         @Override
-        protected void addTags(HolderLookup.@NotNull Provider provider) {
+        protected void addTags(HolderLookup.Provider provider) {
             tag(BlockTags.CROPS).add(getKey(MFBlocks.RICE_CROP));
             tag(BlockTags.MAINTAINS_FARMLAND).add(getKey(MFBlocks.RICE_CROP));
             tag(MFTags.Blocks.SERENE_SEASON_SUMMER_CROPS).add(getKey(MFBlocks.RICE_CROP));

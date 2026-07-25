@@ -5,7 +5,6 @@
   "experience": 1.0,
   "ingredient": "minecraft:bamboo",
   "result": {
-    "count": 1,
     "id": "more_food:cooked_bamboo"
   }
 }

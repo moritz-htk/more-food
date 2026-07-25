@@ -1,4 +1,4 @@
-package net.volwert123.more_food.common.registry;
+package net.volwert123.more_food.common.tags;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;

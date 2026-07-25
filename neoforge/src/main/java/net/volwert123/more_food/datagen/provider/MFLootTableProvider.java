@@ -22,16 +22,15 @@ import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.block.MFRiceCropBlock;
 import net.volwert123.more_food.common.registry.MFBlocks;
 import net.volwert123.more_food.common.registry.MFItems;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-public class MFLootTableProvider {
-    public static LootTableProvider create(PackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
-        return new LootTableProvider(output, Set.of(), List.of(new LootTableProvider.SubProviderEntry(MFBlockLootTables::new, LootContextParamSets.BLOCK)), completableFuture);
+public class MFLootTableProvider extends LootTableProvider {
+    public MFLootTableProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+        super(output, Set.of(), List.of(new LootTableProvider.SubProviderEntry(MFBlockLootTables::new, LootContextParamSets.BLOCK)), registries);
     }
 
     public static class MFBlockLootTables extends BlockLootSubProvider {
@@ -47,7 +46,7 @@ public class MFLootTableProvider {
         }
 
         @Override
-        protected @NotNull Iterable<Block> getKnownBlocks() {
+        protected Iterable<Block> getKnownBlocks() {
             return BuiltInRegistries.BLOCK.entrySet().stream().filter(e -> e.getKey().identifier().getNamespace().equals(MoreFood.MOD_ID)).map(Map.Entry::getValue).toList();
         }
     }

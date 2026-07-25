@@ -31,10 +31,10 @@ public class MFDataGenerators {
         event.createProvider(MFGermanLanguageProvider::new);
         event.createProvider(MFRussianLanguageProvider::new);
 
-        event.addProvider(MFLootTableProvider.create(packOutput, lookupProvider));
-        event.createProvider(MFModelProvider::new);
-        event.addProvider(new MFTagsProvider.Items(packOutput, lookupProvider));
+        event.addProvider(new MFLootTableProvider(packOutput, lookupProvider));
+        event.addProvider(new MFModelProvider(packOutput));
         event.addProvider(new MFRecipeProvider.Runner(packOutput, lookupProvider));
+        event.addProvider(new MFTagsProvider.Items(packOutput, lookupProvider));
         event.addProvider(new MFTagsProvider.Blocks(packOutput, lookupProvider));
     }
 }

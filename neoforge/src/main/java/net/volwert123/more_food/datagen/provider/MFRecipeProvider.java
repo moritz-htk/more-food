@@ -14,7 +14,6 @@ import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.Tags;
 import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.registry.MFItems;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -141,9 +140,9 @@ public class MFRecipeProvider extends RecipeProvider {
         createSushiRecipe(items, MFItems.SUSHI_SALMON.asItem(), Items.SALMON).save(output, registerRecipe(MFItems.SUSHI_SALMON.asItem()));
 
         // Egg Recipes
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.EGG), RecipeCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.EGG)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.EGG) + "_smelting")));
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BROWN_EGG), RecipeCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.BROWN_EGG)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.BROWN_EGG) + "_smelting")));
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(Items.BLUE_EGG), RecipeCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.BLUE_EGG)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.BLUE_EGG) + "_smelting")));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.EGG), RecipeCategory.FOOD, CookingBookCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.EGG)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.EGG) + "_smelting")));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.BROWN_EGG), RecipeCategory.FOOD, CookingBookCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.BROWN_EGG)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.BROWN_EGG) + "_smelting")));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Items.BLUE_EGG), RecipeCategory.FOOD, CookingBookCategory.FOOD, MFItems.COOKED_EGG.asItem(), 1.0f,200).unlockedBy(getHasName(MFItems.COOKED_EGG.asItem()), has(Items.BLUE_EGG)).save(output, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(MFItems.COOKED_EGG.asItem()) + getItemName(Items.BLUE_EGG) + "_smelting")));
 
         // Bacon Recipes
         createRawBaconRecipe(items).save(output, registerRecipe(MFItems.RAW_BACON.asItem()));
@@ -157,19 +156,19 @@ public class MFRecipeProvider extends RecipeProvider {
 
     private ShapedRecipeBuilder createMaterialFoodRecipe(HolderGetter<Item> items, ItemLike output, ItemLike input, ItemLike material) {
         return ShapedRecipeBuilder.shaped(items, RecipeCategory.FOOD, output)
-                .define('#', input)
-                .define('*', material)
-                .pattern("***")
-                .pattern("*#*")
-                .pattern("***")
+                .define('1', input)
+                .define('2', material)
+                .pattern("222")
+                .pattern("212")
+                .pattern("222")
                 .unlockedBy(getHasName(material), has(material))
                 .unlockedBy(getHasName(input), has(input));
     }
 
     private void createCookingRecipes(ItemLike output, ItemLike input, RecipeOutput recipeOutput) {
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,200, RecipeSerializer.SMELTING_RECIPE, SmeltingRecipe::new).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_smelting")));
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,100, RecipeSerializer.SMOKING_RECIPE, SmokingRecipe::new).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_smoking")));
-        SimpleCookingRecipeBuilder.generic(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,600, RecipeSerializer.CAMPFIRE_COOKING_RECIPE, CampfireCookingRecipe::new).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_campfire_cooking")));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(input), RecipeCategory.FOOD, CookingBookCategory.FOOD, output,1.0f,200).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_smelting")));
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,100).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_smoking")));
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(input), RecipeCategory.FOOD, output,1.0f,600).unlockedBy(getHasName(input), has(input)).save(recipeOutput, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(MoreFood.MOD_ID, getItemName(output) + "_campfire_cooking")));
     }
 
     private ShapelessRecipeBuilder createPiecesRecipe(HolderGetter<Item> items, ItemLike output, ItemLike input) {
@@ -210,12 +209,12 @@ public class MFRecipeProvider extends RecipeProvider {
 
     private ShapedRecipeBuilder createRiceBowlRecipe(HolderGetter<Item> items, ItemLike output, ItemLike input) {
         return ShapedRecipeBuilder.shaped(items, RecipeCategory.FOOD, output)
-                .define('B', Items.BOWL)
-                .define('R', MFItems.RICE.asItem())
-                .define('#', input)
-                .pattern("  #")
-                .pattern("RRR")
-                .pattern(" B ")
+                .define('1', Items.BOWL)
+                .define('2', MFItems.RICE.asItem())
+                .define('3', input)
+                .pattern("  3")
+                .pattern("222")
+                .pattern(" 1 ")
                 .unlockedBy(getHasName(Items.BOWL), has(Items.BOWL))
                 .unlockedBy(getHasName(MFItems.RICE.asItem()), has(MFItems.RICE.asItem()))
                 .unlockedBy(getHasName(input), has(input));
@@ -223,13 +222,13 @@ public class MFRecipeProvider extends RecipeProvider {
 
     private ShapedRecipeBuilder createRiceVegetableBowlRecipe(HolderGetter<Item> items) {
         return ShapedRecipeBuilder.shaped(items, RecipeCategory.FOOD, MFItems.RICE_VEGETABLE_BOWL.asItem())
-                .define('B', Items.BOWL)
-                .define('R', MFItems.RICE.asItem())
-                .define('A', MFItems.COOKED_BAMBOO.asItem())
-                .define('C', Items.CARROT)
-                .pattern(" AC")
-                .pattern("RRR")
-                .pattern(" B ")
+                .define('1', Items.BOWL)
+                .define('2', MFItems.RICE.asItem())
+                .define('3', MFItems.COOKED_BAMBOO.asItem())
+                .define('4', Items.CARROT)
+                .pattern(" 34")
+                .pattern("222")
+                .pattern(" 1 ")
                 .unlockedBy(getHasName(Items.BOWL), has(Items.BOWL))
                 .unlockedBy(getHasName(MFItems.RICE.asItem()), has(MFItems.RICE.asItem()))
                 .unlockedBy(getHasName(MFItems.COOKED_BAMBOO.asItem()), has(MFItems.COOKED_BAMBOO.asItem()))
@@ -246,11 +245,11 @@ public class MFRecipeProvider extends RecipeProvider {
 
     private ShapedRecipeBuilder createSushiRecipe(HolderGetter<Item> items, ItemLike output, ItemLike input) {
         return ShapedRecipeBuilder.shaped(items, RecipeCategory.FOOD, output)
-                .define('D', Items.DRIED_KELP)
-                .define('R', MFItems.RICE.asItem())
-                .define('#', input)
-                .pattern("R#R")
-                .pattern("DDD")
+                .define('1', Items.DRIED_KELP)
+                .define('2', MFItems.RICE.asItem())
+                .define('3', input)
+                .pattern("232")
+                .pattern("111")
                 .unlockedBy(getHasName(Items.DRIED_KELP), has(Items.DRIED_KELP))
                 .unlockedBy(getHasName(MFItems.RICE.asItem()), has(MFItems.RICE.asItem()))
                 .unlockedBy(getHasName(input), has(input));
@@ -288,11 +287,11 @@ public class MFRecipeProvider extends RecipeProvider {
 
     private ShapedRecipeBuilder createChocolateFoodRecipe(HolderGetter<Item> items, ItemLike output, ItemLike input) {
         return ShapedRecipeBuilder.shaped(items, RecipeCategory.FOOD, output)
-                .define('C', MFItems.CHOCOLATE.asItem())
-                .define('#', input)
+                .define('1', MFItems.CHOCOLATE.asItem())
+                .define('2', input)
                 .pattern("   ")
-                .pattern(" # ")
-                .pattern(" C ")
+                .pattern(" 2 ")
+                .pattern(" 1 ")
                 .unlockedBy(getHasName(MFItems.CHOCOLATE.asItem()), has(MFItems.CHOCOLATE.asItem()))
                 .unlockedBy(getHasName(input), has(input));
     }
@@ -307,12 +306,12 @@ public class MFRecipeProvider extends RecipeProvider {
         }
 
         @Override
-        protected @NotNull RecipeProvider createRecipeProvider(HolderLookup.@NotNull Provider registries, @NotNull RecipeOutput output) {
+        protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput output) {
             return new MFRecipeProvider(registries, output);
         }
 
         @Override
-        public @NotNull String getName() {
+        public String getName() {
             return MoreFood.MOD_ID + " recipes";
         }
     }

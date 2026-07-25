@@ -2,16 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:cooked_rabbit",
-    "*": "minecraft:gold_ingot"
+    "1": "minecraft:cooked_rabbit",
+    "2": "minecraft:gold_ingot"
   },
   "pattern": [
-    "***",
-    "*#*",
-    "***"
+    "222",
+    "212",
+    "222"
   ],
   "result": {
-    "count": 1,
     "id": "more_food:golden_cooked_rabbit"
   }
 }

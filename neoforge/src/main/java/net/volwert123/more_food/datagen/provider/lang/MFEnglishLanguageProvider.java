@@ -4,7 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.registry.MFItems;
-import net.volwert123.more_food.common.registry.MFTags;
+import net.volwert123.more_food.common.tags.MFTags;
 
 public class MFEnglishLanguageProvider extends LanguageProvider {
     public MFEnglishLanguageProvider(PackOutput output) {

@@ -2,17 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:milk_bucket",
-    "B": "minecraft:bowl",
-    "R": "more_food:rice"
+    "1": "minecraft:bowl",
+    "2": "more_food:rice",
+    "3": "minecraft:milk_bucket"
   },
   "pattern": [
-    "  #",
-    "RRR",
-    " B "
+    "  3",
+    "222",
+    " 1 "
   ],
   "result": {
-    "count": 1,
     "id": "more_food:rice_pudding"
   }
 }

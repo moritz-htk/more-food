@@ -1,41 +1,19 @@
 package net.volwert123.more_food.common;
 
-import net.blay09.mods.balm.platform.module.BalmModule;
-import net.blay09.mods.balm.world.item.BalmCreativeModeTabRegistrar;
-import net.blay09.mods.balm.world.item.BalmItemRegistrar;
-import net.blay09.mods.balm.world.level.block.BalmBlockRegistrar;
-import net.blay09.mods.balm.world.level.storage.loot.BalmLootTables;
-import net.minecraft.resources.Identifier;
+import net.blay09.mods.balm.Balm;
+import net.blay09.mods.balm.core.BalmRegistrars;
 import net.volwert123.more_food.common.registry.MFBlocks;
-import net.volwert123.more_food.common.registry.MFCreativeModeTabs;
+import net.volwert123.more_food.common.registry.MFCreativeTabs;
 import net.volwert123.more_food.common.registry.MFItems;
 import net.volwert123.more_food.common.registry.MFLootTables;
 
-public class MoreFood implements BalmModule {
+public class MoreFood {
     public static final String MOD_ID = "more_food";
 
-    @Override
-    public void registerBlocks(BalmBlockRegistrar blocks) {
-        MFBlocks.initialize(blocks);
-    }
-
-    @Override
-    public void registerItems(BalmItemRegistrar items) {
-        MFItems.initialize(items);
-    }
-
-    @Override
-    public void registerCreativeModeTabs(BalmCreativeModeTabRegistrar creativeModeTabs) {
-        MFCreativeModeTabs.initialize(creativeModeTabs);
-    }
-
-    @Override
-    public void registerLootTables(BalmLootTables lootTables) {
-        MFLootTables.initialize(lootTables);
-    }
-
-    @Override
-    public Identifier getId() {
-        return Identifier.fromNamespaceAndPath(MOD_ID, "common");
+    public static void initialize(BalmRegistrars registrars) {
+        registrars.blocks(MFBlocks::initialize);
+        registrars.items(MFItems::initialize);
+        registrars.creativeModeTabs(MFCreativeTabs::initialize);
+        MFLootTables.initialize(Balm.lootModifiers());
     }
 }

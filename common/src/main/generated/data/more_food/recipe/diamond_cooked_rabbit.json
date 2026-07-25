@@ -2,16 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:cooked_rabbit",
-    "*": "minecraft:diamond"
+    "1": "minecraft:cooked_rabbit",
+    "2": "minecraft:diamond"
   },
   "pattern": [
-    "***",
-    "*#*",
-    "***"
+    "222",
+    "212",
+    "222"
   ],
   "result": {
-    "count": 1,
     "id": "more_food:diamond_cooked_rabbit"
   }
 }

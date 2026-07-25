@@ -11,7 +11,6 @@ import net.volwert123.more_food.common.MoreFood;
 import net.volwert123.more_food.common.block.MFRiceCropBlock;
 import net.volwert123.more_food.common.registry.MFBlocks;
 import net.volwert123.more_food.common.registry.MFItems;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
@@ -21,7 +20,7 @@ public class MFModelProvider extends ModelProvider {
     }
 
     @Override
-    protected void registerModels(@NotNull BlockModelGenerators blockModels, @NotNull ItemModelGenerators itemModels) {
+    protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
         generateBlockStateModels(blockModels);
         generateItemModels(itemModels);
     }
