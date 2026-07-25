@@ -1,6 +1,6 @@
 package net.volwert123.more_food.datagen.provider;
 
-import net.blay09.mods.balm.api.DeferredObject;
+import net.blay09.mods.balm.world.item.DeferredItem;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
@@ -27,14 +27,14 @@ public class MFModelProvider extends ModelProvider {
     }
 
     private void generateBlockStateModels(BlockModelGenerators blockModels) {
-        blockModels.createCropBlock(MFBlocks.RICE_CROP.get(), MFRiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
+        blockModels.createCropBlock(MFBlocks.RICE_CROP.asBlock(), MFRiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
     }
 
     private void generateItemModels(ItemModelGenerators itemModels) {
-        for (DeferredObject<Item> item : MFItems.ITEMS) {
-            Set<Item> excludedItems = Set.of(MFItems.RICE.get());
-            if (!excludedItems.contains(item.get())) {
-                itemModels.generateFlatItem(item.get(), ModelTemplates.FLAT_ITEM);
+        for (DeferredItem item : MFItems.ITEMS) {
+            Set<Item> excludedItems = Set.of(MFItems.RICE.asItem());
+            if (!excludedItems.contains(item.asItem())) {
+                itemModels.generateFlatItem(item.asItem(), ModelTemplates.FLAT_ITEM);
             }
         }
     }
