@@ -21,9 +21,9 @@ public class MFRiceLootModifier implements BalmLootModifier {
 
     @Override
     public void apply(LootContext context, List<ItemStack> loot, @Nullable ResourceKey<LootTable> lootTableId) {
-        if (!context.hasParameter(LootContextParams.BLOCK_STATE)) {
-            return;
-        }
+        if (lootTableId == null) return;
+
+        if (!context.hasParameter(LootContextParams.BLOCK_STATE)) return;
 
         BlockState state = context.getOptionalParameter(LootContextParams.BLOCK_STATE);
 
