@@ -18,6 +18,9 @@
   "entrypoints": {
     "main": [
       "net.volwert123.more_food.fabric.MFFabric"
+    ],
+    "fabric-datagen": [
+      "net.volwert123.more_food.datagen.MFDataGenerators"
     ]
   },
   "accessWidener": "${mod_id}.classtweaker",
