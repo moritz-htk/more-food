@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
     "1": "minecraft:bowl",
     "2": "more_food:rice",

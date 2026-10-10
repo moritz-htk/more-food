@@ -1,19 +1,14 @@
 package net.volwert123.more_food.datagen.provider;
 
-import net.blay09.mods.balm.world.level.block.DeferredBlock;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.tags.TagAppender;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagBuilder;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.volwert123.more_food.common.registry.MFBlocks;
 import net.volwert123.more_food.common.registry.MFItems;
 import net.volwert123.more_food.common.tags.MFTags;
@@ -55,14 +50,14 @@ public class MFTagsProvider {
             tag(ConventionalItemTags.VEGETABLE_FOODS).addTag(MFTags.Items.FOODS_VEGETABLES_CARROT);
             tag(MFTags.Items.FOODS_VEGETABLES_CARROT).addAll(List.of(
                     getKey(net.minecraft.world.item.Items.CARROT),
-                    getKey(MFItems.IRON_CARROT),
-                    getKey(MFItems.DIAMOND_CARROT),
-                    getKey(MFItems.EMERALD_CARROT),
-                    getKey(MFItems.COOKED_CARROT)));
-            tag(ConventionalItemTags.SOUP_FOODS).add(getKey(MFItems.CARROT_SOUP));
-            tag(ConventionalItemTags.BREAD_FOODS).add(getKey(MFItems.CARROT_BREAD));
-            tag(ConventionalItemTags.PIE_FOODS).add(getKey(MFItems.CARROT_PIE));
-            tag(ConventionalItemTags.FOODS).add(getKey(MFItems.CHOCOLATE_CARROT));
+                    MFItems.IRON_CARROT.asResourceKey(),
+                    MFItems.DIAMOND_CARROT.asResourceKey(),
+                    MFItems.EMERALD_CARROT.asResourceKey(),
+                    MFItems.COOKED_CARROT.asResourceKey()));
+            tag(ConventionalItemTags.SOUP_FOODS).add(MFItems.CARROT_SOUP.asResourceKey());
+            tag(ConventionalItemTags.BREAD_FOODS).add(MFItems.CARROT_BREAD.asResourceKey());
+            tag(ConventionalItemTags.PIE_FOODS).add(MFItems.CARROT_PIE.asResourceKey());
+            tag(ConventionalItemTags.FOODS).add(MFItems.CHOCOLATE_CARROT.asResourceKey());
         }
 
         private void addAppleTags() {
@@ -71,180 +66,175 @@ public class MFTagsProvider {
                     getKey(net.minecraft.world.item.Items.APPLE),
                     getKey(net.minecraft.world.item.Items.GOLDEN_APPLE),
                     getKey(net.minecraft.world.item.Items.ENCHANTED_GOLDEN_APPLE),
-                    getKey(MFItems.IRON_APPLE),
-                    getKey(MFItems.DIAMOND_APPLE),
-                    getKey(MFItems.EMERALD_APPLE),
-                    getKey(MFItems.COOKED_APPLE)));
-            tag(ConventionalItemTags.SOUP_FOODS).add(getKey(MFItems.APPLE_SOUP));
-            tag(ConventionalItemTags.BREAD_FOODS).add(getKey(MFItems.APPLE_BREAD));
-            tag(ConventionalItemTags.PIE_FOODS).add(getKey(MFItems.APPLE_PIE));
-            tag(ConventionalItemTags.FOODS).add(getKey(MFItems.CHOCOLATE_APPLE));
+                    MFItems.IRON_APPLE.asResourceKey(),
+                    MFItems.DIAMOND_APPLE.asResourceKey(),
+                    MFItems.EMERALD_APPLE.asResourceKey(),
+                    MFItems.COOKED_APPLE.asResourceKey()));
+            tag(ConventionalItemTags.SOUP_FOODS).add(MFItems.APPLE_SOUP.asResourceKey());
+            tag(ConventionalItemTags.BREAD_FOODS).add(MFItems.APPLE_BREAD.asResourceKey());
+            tag(ConventionalItemTags.PIE_FOODS).add(MFItems.APPLE_PIE.asResourceKey());
+            tag(ConventionalItemTags.FOODS).add(MFItems.CHOCOLATE_APPLE.asResourceKey());
         }
 
         private void addKelpTags() {
             tag(ConventionalItemTags.VEGETABLE_FOODS).addTag(MFTags.Items.FOODS_VEGETABLES_KELP);
             tag(MFTags.Items.FOODS_VEGETABLES_KELP).addAll(List.of(
                     getKey(net.minecraft.world.item.Items.DRIED_KELP),
-                    getKey(MFItems.IRON_KELP),
-                    getKey(MFItems.GOLDEN_KELP),
-                    getKey(MFItems.DIAMOND_KELP),
-                    getKey(MFItems.EMERALD_KELP)));
-            tag(ConventionalItemTags.GOLDEN_FOODS).add(getKey(MFItems.GOLDEN_KELP));
-            tag(ConventionalItemTags.SOUP_FOODS).add(getKey(MFItems.KELP_SOUP));
-            tag(ConventionalItemTags.FOODS).add(getKey(MFItems.CHOCOLATE_DRIED_KELP));
+                    MFItems.IRON_KELP.asResourceKey(),
+                    MFItems.GOLDEN_KELP.asResourceKey(),
+                    MFItems.DIAMOND_KELP.asResourceKey(),
+                    MFItems.EMERALD_KELP.asResourceKey()));
+            tag(ConventionalItemTags.GOLDEN_FOODS).add(MFItems.GOLDEN_KELP.asResourceKey());
+            tag(ConventionalItemTags.SOUP_FOODS).add(MFItems.KELP_SOUP.asResourceKey());
+            tag(ConventionalItemTags.FOODS).add(MFItems.CHOCOLATE_DRIED_KELP.asResourceKey());
         }
 
         private void addPotatoTags() {
             tag(ConventionalItemTags.VEGETABLE_FOODS).addTag(MFTags.Items.FOODS_VEGETABLES_POTATO);
             tag(MFTags.Items.FOODS_VEGETABLES_POTATO).addAll(List.of(
                     getKey(net.minecraft.world.item.Items.POTATO),
-                    getKey(MFItems.IRON_POTATO),
-                    getKey(MFItems.GOLDEN_POTATO),
-                    getKey(MFItems.DIAMOND_POTATO),
-                    getKey(MFItems.EMERALD_POTATO)));
-            tag(ConventionalItemTags.GOLDEN_FOODS).add(getKey(MFItems.GOLDEN_POTATO));
-            tag(ConventionalItemTags.SOUP_FOODS).add(getKey(MFItems.POTATO_SOUP));
-            tag(ConventionalItemTags.BREAD_FOODS).add(getKey(MFItems.POTATO_BREAD));
+                    MFItems.IRON_POTATO.asResourceKey(),
+                    MFItems.GOLDEN_POTATO.asResourceKey(),
+                    MFItems.DIAMOND_POTATO.asResourceKey(),
+                    MFItems.EMERALD_POTATO.asResourceKey()));
+            tag(ConventionalItemTags.GOLDEN_FOODS).add(MFItems.GOLDEN_POTATO.asResourceKey());
+            tag(ConventionalItemTags.SOUP_FOODS).add(MFItems.POTATO_SOUP.asResourceKey());
+            tag(ConventionalItemTags.BREAD_FOODS).add(MFItems.POTATO_BREAD.asResourceKey());
         }
 
         private void addSweetBerriesTags() {
-            tag(ConventionalItemTags.FOODS).add(getKey(MFItems.CHOCOLATE_SWEET_BERRIES));
+            tag(ConventionalItemTags.FOODS).add(MFItems.CHOCOLATE_SWEET_BERRIES.asResourceKey());
         }
 
         private void addPhantomTags() {
-            tag(ConventionalItemTags.COOKED_MEAT_FOODS).add(getKey(MFItems.COOKED_PHANTOM));
-            tag(ConventionalItemTags.SOUP_FOODS).add(getKey(MFItems.PHANTOM_SOUP));
+            tag(ConventionalItemTags.COOKED_MEAT_FOODS).add(MFItems.COOKED_PHANTOM.asResourceKey());
+            tag(ConventionalItemTags.SOUP_FOODS).add(MFItems.PHANTOM_SOUP.asResourceKey());
         }
 
         private void addPufferfishTags() {
-            tag(ConventionalItemTags.COOKED_FISH_FOODS).add(getKey(MFItems.COOKED_PUFFERFISH));
-            tag(ConventionalItemTags.SOUP_FOODS).add(getKey(MFItems.PUFFERFISH_SOUP));
-            tag(ConventionalItemTags.FOOD_POISONING_FOODS).add(getKey(MFItems.PUFFERFISH_SOUP));
+            tag(ConventionalItemTags.COOKED_FISH_FOODS).add(MFItems.COOKED_PUFFERFISH.asResourceKey());
+            tag(ConventionalItemTags.SOUP_FOODS).add(MFItems.PUFFERFISH_SOUP.asResourceKey());
+            tag(ConventionalItemTags.FOOD_POISONING_FOODS).add(MFItems.PUFFERFISH_SOUP.asResourceKey());
         }
 
         private void addPumpkinTags() {
-            tag(ConventionalItemTags.SOUP_FOODS).add(getKey(MFItems.PUMPKING_SOUP));
-            tag(ConventionalItemTags.BREAD_FOODS).add(getKey(MFItems.PUMPKING_BREAD));
+            tag(ConventionalItemTags.SOUP_FOODS).add(MFItems.PUMPKING_SOUP.asResourceKey());
+            tag(ConventionalItemTags.BREAD_FOODS).add(MFItems.PUMPKING_BREAD.asResourceKey());
         }
 
         private void addBambooTags() {
-            tag(ConventionalItemTags.FOODS).add(getKey(MFItems.COOKED_BAMBOO));
-            tag(ConventionalItemTags.SOUP_FOODS).add(getKey(MFItems.BAMBOO_SOUP));
+            tag(ConventionalItemTags.FOODS).add(MFItems.COOKED_BAMBOO.asResourceKey());
+            tag(ConventionalItemTags.SOUP_FOODS).add(MFItems.BAMBOO_SOUP.asResourceKey());
         }
 
         private void addMelonSliceTags() {
             tag(ConventionalItemTags.FRUIT_FOODS).addTag(MFTags.Items.FOODS_FRUITS_MELON_SLICE);
             tag(MFTags.Items.FOODS_FRUITS_MELON_SLICE).addAll(List.of(
                     getKey(net.minecraft.world.item.Items.MELON_SLICE),
-                    getKey(MFItems.IRON_MELON_SLICE),
-                    getKey(MFItems.GOLDEN_MELON_SLICE),
-                    getKey(MFItems.DIAMOND_MELON_SLICE),
-                    getKey(MFItems.EMERALD_MELON_SLICE)));
-            tag(ConventionalItemTags.GOLDEN_FOODS).add(getKey(MFItems.GOLDEN_MELON_SLICE));
+                    MFItems.IRON_MELON_SLICE.asResourceKey(),
+                    MFItems.GOLDEN_MELON_SLICE.asResourceKey(),
+                    MFItems.DIAMOND_MELON_SLICE.asResourceKey(),
+                    MFItems.EMERALD_MELON_SLICE.asResourceKey()));
+            tag(ConventionalItemTags.GOLDEN_FOODS).add(MFItems.GOLDEN_MELON_SLICE.asResourceKey());
         }
 
         private void addCookedRabbitTags() {
             tag(ConventionalItemTags.COOKED_MEAT_FOODS).addTag(MFTags.Items.FOODS_COOKED_RABBIT);
             tag(MFTags.Items.FOODS_COOKED_RABBIT).addAll(List.of(
                     getKey(net.minecraft.world.item.Items.COOKED_RABBIT),
-                    getKey(MFItems.IRON_COOKED_RABBIT),
-                    getKey(MFItems.GOLDEN_COOKED_RABBIT),
-                    getKey(MFItems.DIAMOND_COOKED_RABBIT),
-                    getKey(MFItems.EMERALD_COOKED_RABBIT)));
-            tag(ConventionalItemTags.GOLDEN_FOODS).add(getKey(MFItems.GOLDEN_COOKED_RABBIT));
+                    MFItems.IRON_COOKED_RABBIT.asResourceKey(),
+                    MFItems.GOLDEN_COOKED_RABBIT.asResourceKey(),
+                    MFItems.DIAMOND_COOKED_RABBIT.asResourceKey(),
+                    MFItems.EMERALD_COOKED_RABBIT.asResourceKey()));
+            tag(ConventionalItemTags.GOLDEN_FOODS).add(MFItems.GOLDEN_COOKED_RABBIT.asResourceKey());
         }
 
         private void addCookedChickenTags() {
             tag(ConventionalItemTags.COOKED_MEAT_FOODS).addTag(MFTags.Items.FOODS_COOKED_CHICKEN);
             tag(MFTags.Items.FOODS_COOKED_CHICKEN).addAll(List.of(
                     getKey(net.minecraft.world.item.Items.COOKED_CHICKEN),
-                    getKey(MFItems.IRON_COOKED_CHICKEN),
-                    getKey(MFItems.GOLDEN_COOKED_CHICKEN),
-                    getKey(MFItems.DIAMOND_COOKED_CHICKEN),
-                    getKey(MFItems.EMERALD_COOKED_CHICKEN)));
-            tag(ConventionalItemTags.GOLDEN_FOODS).add(getKey(MFItems.GOLDEN_COOKED_CHICKEN));
+                    MFItems.IRON_COOKED_CHICKEN.asResourceKey(),
+                    MFItems.GOLDEN_COOKED_CHICKEN.asResourceKey(),
+                    MFItems.DIAMOND_COOKED_CHICKEN.asResourceKey(),
+                    MFItems.EMERALD_COOKED_CHICKEN.asResourceKey()));
+            tag(ConventionalItemTags.GOLDEN_FOODS).add(MFItems.GOLDEN_COOKED_CHICKEN.asResourceKey());
         }
 
         private void addCookedMuttonTags() {
             tag(ConventionalItemTags.COOKED_MEAT_FOODS).addTag(MFTags.Items.FOODS_COOKED_MUTTON);
             tag(MFTags.Items.FOODS_COOKED_MUTTON).addAll(List.of(
                     getKey(net.minecraft.world.item.Items.COOKED_MUTTON),
-                    getKey(MFItems.IRON_COOKED_MUTTON),
-                    getKey(MFItems.GOLDEN_COOKED_MUTTON),
-                    getKey(MFItems.DIAMOND_COOKED_MUTTON),
-                    getKey(MFItems.EMERALD_COOKED_MUTTON)));
-            tag(ConventionalItemTags.GOLDEN_FOODS).add(getKey(MFItems.GOLDEN_COOKED_MUTTON));
+                    MFItems.IRON_COOKED_MUTTON.asResourceKey(),
+                    MFItems.GOLDEN_COOKED_MUTTON.asResourceKey(),
+                    MFItems.DIAMOND_COOKED_MUTTON.asResourceKey(),
+                    MFItems.EMERALD_COOKED_MUTTON.asResourceKey()));
+            tag(ConventionalItemTags.GOLDEN_FOODS).add(MFItems.GOLDEN_COOKED_MUTTON.asResourceKey());
         }
 
         private void addCookedPorkchopTags() {
             tag(ConventionalItemTags.COOKED_MEAT_FOODS).addTag(MFTags.Items.FOODS_COOKED_PORKCHOP);
             tag(MFTags.Items.FOODS_COOKED_PORKCHOP).addAll(List.of(
                     getKey(net.minecraft.world.item.Items.COOKED_PORKCHOP),
-                    getKey(MFItems.IRON_COOKED_PORKCHOP),
-                    getKey(MFItems.GOLDEN_COOKED_PORKCHOP),
-                    getKey(MFItems.DIAMOND_COOKED_PORKCHOP),
-                    getKey(MFItems.EMERALD_COOKED_PORKCHOP)));
-            tag(ConventionalItemTags.GOLDEN_FOODS).add(getKey(MFItems.GOLDEN_COOKED_PORKCHOP));
+                    MFItems.IRON_COOKED_PORKCHOP.asResourceKey(),
+                    MFItems.GOLDEN_COOKED_PORKCHOP.asResourceKey(),
+                    MFItems.DIAMOND_COOKED_PORKCHOP.asResourceKey(),
+                    MFItems.EMERALD_COOKED_PORKCHOP.asResourceKey()));
+            tag(ConventionalItemTags.GOLDEN_FOODS).add(MFItems.GOLDEN_COOKED_PORKCHOP.asResourceKey());
         }
 
         private void addCookedBeefTags() {
             tag(ConventionalItemTags.COOKED_MEAT_FOODS).addTag(MFTags.Items.FOODS_COOKED_BEEF);
             tag(MFTags.Items.FOODS_COOKED_BEEF).addAll(List.of(
                     getKey(net.minecraft.world.item.Items.COOKED_BEEF),
-                    getKey(MFItems.IRON_COOKED_BEEF),
-                    getKey(MFItems.GOLDEN_COOKED_BEEF),
-                    getKey(MFItems.DIAMOND_COOKED_BEEF),
-                    getKey(MFItems.EMERALD_COOKED_BEEF)));
-            tag(ConventionalItemTags.GOLDEN_FOODS).add(getKey(MFItems.GOLDEN_COOKED_BEEF));
+                    MFItems.IRON_COOKED_BEEF.asResourceKey(),
+                    MFItems.GOLDEN_COOKED_BEEF.asResourceKey(),
+                    MFItems.DIAMOND_COOKED_BEEF.asResourceKey(),
+                    MFItems.EMERALD_COOKED_BEEF.asResourceKey()));
+            tag(ConventionalItemTags.GOLDEN_FOODS).add(MFItems.GOLDEN_COOKED_BEEF.asResourceKey());
         }
 
         private void addRiceTags() {
             tag(ConventionalItemTags.CROPS).addTag(MFTags.Items.CROPS_RICE);
-            tag(MFTags.Items.CROPS_RICE).add(getKey(MFItems.RICE));
+            tag(MFTags.Items.CROPS_RICE).add(MFItems.RICE.asResourceKey());
             tag(ItemTags.VILLAGER_PLANTABLE_SEEDS).addTag(MFTags.Items.SEEDS_RICE);
             tag(ConventionalItemTags.SEEDS).addTag(MFTags.Items.SEEDS_RICE);
-            tag(MFTags.Items.SEEDS_RICE).add(getKey(MFItems.RICE));
+            tag(MFTags.Items.SEEDS_RICE).add(MFItems.RICE.asResourceKey());
             tag(ConventionalItemTags.FOODS).addAll(List.of(
-                    getKey(MFItems.RICE_CHICKEN_BOWL),
-                    getKey(MFItems.RICE_SALMON_BOWL),
-                    getKey(MFItems.RICE_COD_BOWL),
-                    getKey(MFItems.RICE_VEGETABLE_BOWL),
-                    getKey(MFItems.RICE_PUDDING),
-                    getKey(MFItems.RICE_HONEY_PUDDING)));
+                    MFItems.RICE_CHICKEN_BOWL.asResourceKey(),
+                    MFItems.RICE_SALMON_BOWL.asResourceKey(),
+                    MFItems.RICE_COD_BOWL.asResourceKey(),
+                    MFItems.RICE_VEGETABLE_BOWL.asResourceKey(),
+                    MFItems.RICE_PUDDING.asResourceKey(),
+                    MFItems.RICE_HONEY_PUDDING.asResourceKey()));
         }
 
         private void addSushiTags() {
             tag(ConventionalItemTags.FOODS).addTag(MFTags.Items.FOODS_SUSHI);
             tag(MFTags.Items.FOODS_SUSHI).addAll(List.of(
-                    getKey(MFItems.SUSHI_BAMBOO),
-                    getKey(MFItems.SUSHI_CARROT),
-                    getKey(MFItems.SUSHI_BEETROOT),
-                    getKey(MFItems.SUSHI_SALMON)));
+                    MFItems.SUSHI_BAMBOO.asResourceKey(),
+                    MFItems.SUSHI_CARROT.asResourceKey(),
+                    MFItems.SUSHI_BEETROOT.asResourceKey(),
+                    MFItems.SUSHI_SALMON.asResourceKey()));
         }
 
         private void addEggAndBaconTags() {
             tag(ConventionalItemTags.FOODS).addTag(MFTags.Items.FOODS_COOKED_EGG);
-            tag(MFTags.Items.FOODS_COOKED_EGG).add(getKey(MFItems.COOKED_EGG));
+            tag(MFTags.Items.FOODS_COOKED_EGG).add(MFItems.COOKED_EGG.asResourceKey());
             tag(ConventionalItemTags.RAW_MEAT_FOODS).addTag(MFTags.Items.FOODS_RAW_BACON);
-            tag(MFTags.Items.FOODS_RAW_BACON).add(getKey(MFItems.RAW_BACON));
+            tag(MFTags.Items.FOODS_RAW_BACON).add(MFItems.RAW_BACON.asResourceKey());
             tag(ConventionalItemTags.COOKED_MEAT_FOODS).addTag(MFTags.Items.FOODS_COOKED_BACON);
-            tag(MFTags.Items.FOODS_COOKED_BACON).add(getKey(MFItems.COOKED_BACON));
-            tag(ConventionalItemTags.FOODS).add(getKey(MFItems.COOKED_BACON_EGG));
+            tag(MFTags.Items.FOODS_COOKED_BACON).add(MFItems.COOKED_BACON.asResourceKey());
+            tag(ConventionalItemTags.FOODS).add(MFItems.COOKED_BACON_EGG.asResourceKey());
         }
 
         private void addChocolateTags() {
             tag(ConventionalItemTags.CANDY_FOODS).addAll(List.of(
-                    getKey(MFItems.CHOCOLATE),
-                    getKey(MFItems.CHOCOLATE_BAR)));
+                    MFItems.CHOCOLATE.asResourceKey(),
+                    MFItems.CHOCOLATE_BAR.asResourceKey()));
         }
 
         private void addSereneSeasonCropTags() {
-            tag(MFTags.Items.SERENE_SEASON_SUMMER_CROPS).add(getKey(MFItems.RICE));
-        }
-
-        private TagAppender<ResourceKey<Item>, Item> tag(TagKey<Item> tag) {
-            TagBuilder tagbuilder = this.getOrCreateRawBuilder(tag);
-            return TagAppender.forBuilder(tagbuilder);
+            tag(MFTags.Items.SERENE_SEASON_SUMMER_CROPS).add(MFItems.RICE.asResourceKey());
         }
 
         private ResourceKey<Item> getKey(ItemLike item) {
@@ -259,18 +249,9 @@ public class MFTagsProvider {
 
         @Override
         protected void addTags(HolderLookup.Provider registries) {
-            tag(BlockTags.CROPS).add(getKey(MFBlocks.RICE_CROP));
-            tag(BlockTags.MAINTAINS_FARMLAND).add(getKey(MFBlocks.RICE_CROP));
-            tag(MFTags.Blocks.SERENE_SEASON_SUMMER_CROPS).add(getKey(MFBlocks.RICE_CROP));
-        }
-
-        private TagAppender<ResourceKey<Block>, Block> tag(TagKey<Block> tag) {
-            TagBuilder tagbuilder = this.getOrCreateRawBuilder(tag);
-            return TagAppender.forBuilder(tagbuilder);
-        }
-
-        private ResourceKey<Block> getKey(DeferredBlock block) {
-            return block.unwrapKey().get();
+            tag(BlockTags.CROPS).add(MFBlocks.RICE_CROP.asResourceKey());
+            tag(BlockTags.MAINTAINS_FARMLAND).add(MFBlocks.RICE_CROP.asResourceKey());
+            tag(MFTags.Blocks.SERENE_SEASON_SUMMER_CROPS).add(MFBlocks.RICE_CROP.asResourceKey());
         }
     }
 }

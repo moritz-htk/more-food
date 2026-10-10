@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "category": "misc",
   "ingredients": [
     "more_food:rice_pudding",
     "minecraft:honey_bottle"
