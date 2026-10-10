@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:diamond_potato"
+        "recipes": "more_food:diamond_potato"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

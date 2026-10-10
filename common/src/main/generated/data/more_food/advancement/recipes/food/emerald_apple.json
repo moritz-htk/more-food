@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:emerald_apple"
+        "recipes": "more_food:emerald_apple"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

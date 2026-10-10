@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:sushi_carrot"
+        "recipes": "more_food:sushi_carrot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

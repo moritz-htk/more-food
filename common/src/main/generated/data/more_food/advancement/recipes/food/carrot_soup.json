@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:carrot_soup"
+        "recipes": "more_food:carrot_soup"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

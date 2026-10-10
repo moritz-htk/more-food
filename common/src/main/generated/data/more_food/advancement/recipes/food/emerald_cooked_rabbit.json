@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:emerald_cooked_rabbit"
+        "recipes": "more_food:emerald_cooked_rabbit"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:apple_bread"
+        "recipes": "more_food:apple_bread"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

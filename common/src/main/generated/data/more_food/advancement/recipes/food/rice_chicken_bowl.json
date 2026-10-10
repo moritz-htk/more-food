@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:rice_chicken_bowl"
+        "recipes": "more_food:rice_chicken_bowl"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

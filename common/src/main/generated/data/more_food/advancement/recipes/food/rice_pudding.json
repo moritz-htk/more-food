@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:rice_pudding"
+        "recipes": "more_food:rice_pudding"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

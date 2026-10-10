@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:sushi_beetroot"
+        "recipes": "more_food:sushi_beetroot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

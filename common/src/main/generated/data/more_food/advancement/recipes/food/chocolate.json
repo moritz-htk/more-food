@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:chocolate"
+        "recipes": "more_food:chocolate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

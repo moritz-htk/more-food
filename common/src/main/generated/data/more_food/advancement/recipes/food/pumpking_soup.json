@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:pumpking_soup"
+        "recipes": "more_food:pumpking_soup"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:raw_bacon"
+        "recipes": "more_food:raw_bacon"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

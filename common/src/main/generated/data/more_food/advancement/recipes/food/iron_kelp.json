@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:iron_kelp"
+        "recipes": "more_food:iron_kelp"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

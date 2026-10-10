@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:cooked_bamboo_smelting"
+        "recipes": "more_food:cooked_bamboo_smelting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

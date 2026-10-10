@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:emerald_kelp"
+        "recipes": "more_food:emerald_kelp"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

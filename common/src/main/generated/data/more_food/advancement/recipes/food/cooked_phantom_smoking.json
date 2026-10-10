@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:cooked_phantom_smoking"
+        "recipes": "more_food:cooked_phantom_smoking"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

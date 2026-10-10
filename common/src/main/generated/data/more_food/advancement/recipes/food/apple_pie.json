@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:apple_pie"
+        "recipes": "more_food:apple_pie"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

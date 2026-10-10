@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:potato_bread"
+        "recipes": "more_food:potato_bread"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

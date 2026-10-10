@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:golden_potato"
+        "recipes": "more_food:golden_potato"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

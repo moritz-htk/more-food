@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:iron_melon_slice"
+        "recipes": "more_food:iron_melon_slice"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:cooked_eggbrown_egg_smelting"
+        "recipes": "more_food:cooked_eggbrown_egg_smelting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

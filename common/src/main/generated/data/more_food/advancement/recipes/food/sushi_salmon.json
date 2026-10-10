@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:sushi_salmon"
+        "recipes": "more_food:sushi_salmon"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

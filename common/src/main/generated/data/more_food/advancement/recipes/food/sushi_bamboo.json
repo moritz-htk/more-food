@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:sushi_bamboo"
+        "recipes": "more_food:sushi_bamboo"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

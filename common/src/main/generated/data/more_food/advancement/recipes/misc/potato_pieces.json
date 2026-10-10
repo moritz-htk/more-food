@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:potato_pieces"
+        "recipes": "more_food:potato_pieces"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

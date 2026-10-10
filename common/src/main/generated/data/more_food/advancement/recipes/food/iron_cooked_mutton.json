@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:iron_cooked_mutton"
+        "recipes": "more_food:iron_cooked_mutton"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

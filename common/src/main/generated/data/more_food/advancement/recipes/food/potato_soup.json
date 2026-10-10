@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:potato_soup"
+        "recipes": "more_food:potato_soup"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

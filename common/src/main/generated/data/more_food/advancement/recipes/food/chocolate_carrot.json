@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:chocolate_carrot"
+        "recipes": "more_food:chocolate_carrot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

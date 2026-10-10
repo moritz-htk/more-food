@@ -25,7 +25,7 @@ public class MFRiceLootModifier implements BalmLootModifier {
 
         if (!context.hasParameter(LootContextParams.BLOCK_STATE)) return;
 
-        BlockState state = context.getOptionalParameter(LootContextParams.BLOCK_STATE);
+        BlockState state = context.getOptional(LootContextParams.BLOCK_STATE);
 
         if (!GRASS_BLOCKS.contains(state.getBlock())) return;
 

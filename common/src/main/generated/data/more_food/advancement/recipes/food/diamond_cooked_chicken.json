@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:diamond_cooked_chicken"
+        "recipes": "more_food:diamond_cooked_chicken"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

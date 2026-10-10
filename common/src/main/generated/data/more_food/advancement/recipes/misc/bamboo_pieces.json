@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "more_food:bamboo_pieces"
+        "recipes": "more_food:bamboo_pieces"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
