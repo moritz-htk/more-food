@@ -8,9 +8,9 @@
     "${mod_author}"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/more-food-xd",
-    "issues": "https://github.com/Volwert123/more-food/issues",
-    "sources": "https://github.com/Volwert123/more-food"
+    "homepage": "${mod_homepage}",
+    "issues": "${mod_github}/issues",
+    "sources": "${mod_github}"
   },
   "license": "${mod_license}",
   "icon": "${mod_icon}",
@@ -19,16 +19,17 @@
     "main": [
       "net.volwert123.more_food.fabric.MFFabric"
     ],
-    "client": [
-      "net.volwert123.more_food.fabric.client.MFFabricClient"
+    "fabric-datagen": [
+      "net.volwert123.more_food.datagen.MFDataGenerators"
     ]
   },
+  "accessWidener": "${mod_id}.classtweaker",
   "depends": {
-    "java": ">=21",
+    "java": ">=${java_version}",
     "minecraft": ">=${minecraft_version}",
     "fabricloader": ">=${fabric_loader_version}",
     "fabric-api": ">=${fabric_api_version}",
-    "balm-fabric": ">=${balm_version}"
+    "balm": ">=${balm_version}"
   },
   "custom": {
     "modmenu": {

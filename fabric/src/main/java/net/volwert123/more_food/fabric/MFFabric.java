@@ -8,6 +8,6 @@ import net.volwert123.more_food.common.MoreFood;
 public class MFFabric implements ModInitializer {
     @Override
     public void onInitialize() {
-        Balm.initializeMod(MoreFood.MOD_ID, FabricLoadContext.INSTANCE, new MoreFood());
+        Balm.initializeMod(MoreFood.MOD_ID, FabricLoadContext.INSTANCE, MoreFood::initialize);
     }
 }

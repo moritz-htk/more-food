@@ -1,70 +1,22 @@
 plugins {
-    id 'com.gradleup.shadow'
+    id 'multiloader-loader'
 }
 
-architectury {
-    platformSetupLoomIde()
-    forge()
+loom {
+    convertAw2At(tasks.named('jar', Jar), ["${project.mod_id}.classtweaker"])
 }
 
-configurations {
-    common {
-        canBeResolved = true
-        canBeConsumed = false
-    }
-
-    shadowCommon
-    compileClasspath.extendsFrom common
-    runtimeClasspath.extendsFrom common
-    developmentForge.extendsFrom common
-
-    shadowBundle {
-        canBeResolved = true
-        canBeConsumed = false
+repositories {
+    maven {
+        name = 'Forge'
+        url = 'https://maven.minecraftforge.net/'
     }
 }
 
 dependencies {
-    forge "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
+    forgeUserdev "net.minecraftforge:forge:${project.forge_version}:userdev"
 
-    modApi "net.blay09.mods:balm-forge:${project.balm_version}"
-
-    common(project(path: ':common', configuration: 'namedElements')) { transitive false }
-    shadowBundle project(path: ':common', configuration: 'transformProductionForge')
-}
-
-configurations.configureEach {
-    exclude group: "remapped.net.sf.jopt-simple", module: "jopt-simple-894d2a32"
-}
-
-processResources {
-    var replaceProperties = [
-            mod_id           : mod_id,
-            mod_version      : mod_version,
-            mod_name         : mod_name,
-            mod_description  : mod_description,
-            mod_author       : mod_author,
-            mod_license      : mod_license,
-            mod_icon         : mod_icon,
-            minecraft_version: minecraft_version,
-            forge_version    : forge_version,
-            balm_version     : balm_version
-    ]
-    inputs.properties replaceProperties
-
-    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
-        expand replaceProperties
+    implementation("net.blay09.mods:balm-forge:${project.balm_version}") {
+        changing = project.balm_version.contains('SNAPSHOT')
     }
-}
-
-shadowJar {
-    exclude '.cache/**'
-    from project(':').file('LICENSE.md')
-
-    configurations = [project.configurations.shadowBundle]
-    archiveClassifier = 'dev-shadow'
-}
-
-remapJar {
-    input.set shadowJar.archiveFile
 }

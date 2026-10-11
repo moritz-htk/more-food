@@ -2,16 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:cooked_porkchop",
-    "*": "minecraft:emerald"
+    "1": "minecraft:cooked_porkchop",
+    "2": "minecraft:emerald"
   },
   "pattern": [
-    "***",
-    "*#*",
-    "***"
+    "222",
+    "212",
+    "222"
   ],
   "result": {
-    "count": 1,
     "id": "more_food:emerald_cooked_porkchop"
   }
 }

@@ -2,17 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:cooked_chicken",
-    "B": "minecraft:bowl",
-    "R": "more_food:rice"
+    "1": "minecraft:bowl",
+    "2": "more_food:rice",
+    "3": "minecraft:cooked_chicken"
   },
   "pattern": [
-    "  #",
-    "RRR",
-    " B "
+    "  3",
+    "222",
+    " 1 "
   ],
   "result": {
-    "count": 1,
     "id": "more_food:rice_chicken_bowl"
   }
 }

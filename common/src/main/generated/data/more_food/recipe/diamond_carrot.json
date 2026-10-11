@@ -2,16 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:carrot",
-    "*": "minecraft:diamond"
+    "1": "minecraft:carrot",
+    "2": "minecraft:diamond"
   },
   "pattern": [
-    "***",
-    "*#*",
-    "***"
+    "222",
+    "212",
+    "222"
   ],
   "result": {
-    "count": 1,
     "id": "more_food:diamond_carrot"
   }
 }

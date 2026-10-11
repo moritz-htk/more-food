@@ -11,7 +11,6 @@ import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.volwert123.more_food.common.registry.MFItems;
-import org.jetbrains.annotations.NotNull;
 
 public class MFRiceCropBlock extends CropBlock {
     public static final int MAX_AGE = 7;
@@ -21,20 +20,23 @@ public class MFRiceCropBlock extends CropBlock {
         super(properties.mapColor(MapColor.PLANT).noCollision().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY).noOcclusion());
     }
 
-    protected @NotNull ItemLike getBaseSeedId() {
+    @Override
+    protected ItemLike getBaseSeedId() {
         return MFItems.RICE.asItem();
     }
 
-    public @NotNull IntegerProperty getAgeProperty() {
+    @Override
+    protected IntegerProperty getAgeProperty() {
         return AGE;
     }
 
+    @Override
     public int getMaxAge() {
         return MAX_AGE;
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(AGE);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> blockStateBuilder) {
+        blockStateBuilder.add(AGE);
     }
 }

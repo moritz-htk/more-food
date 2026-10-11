@@ -1,15 +1,16 @@
 modLoader="javafml"
-loaderVersion="[0,)"
+loaderVersion="${forge_version_range}"
 license="${mod_license}"
-issueTrackerURL="https://github.com/Volwert123/more-food/issues"
+issueTrackerURL="${mod_github}/issues"
 
 [[mods]]
     modId="${mod_id}"
     version="${mod_version}"
     displayName="${mod_name}"
     updateJSONURL="https://api.modrinth.com/updates/more-food-xd/forge_updates.json"
-    displayURL="https://www.curseforge.com/minecraft/mc-mods/more-food-xd"
+    displayURL="${mod_homepage}"
     logoFile="${mod_icon}"
+    credits="${mod_credits}"
     authors="${mod_author}"
     description='''${mod_description}'''
 
@@ -23,7 +24,7 @@ issueTrackerURL="https://github.com/Volwert123/more-food/issues"
 [[dependencies.${mod_id}]]
     modId="minecraft"
     mandatory=true
-    versionRange="[${minecraft_version},)"
+    versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
 
