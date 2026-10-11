@@ -1,5 +1,6 @@
 plugins {
     id 'multiloader-loader'
+    id 'com.hypherionmc.modutils.modpublisher'
 }
 
 fabricApi {
@@ -17,4 +18,30 @@ dependencies {
     implementation("net.blay09.mods:balm-fabric:${project.balm_version}") {
         changing = project.balm_version.contains('SNAPSHOT')
     }
+}
+
+publisher {
+    apiKeys {
+        curseforge System.getenv('CURSEFORGE_TOKEN')
+        modrinth System.getenv('MODRINTH_TOKEN')
+    }
+
+    setDisplayName("[Fabric ${project.minecraft_version}] More Food ${project.version}")
+    setVersion(project.version)
+    setVersionType('release')
+    setGameVersions(project.minecraft_version)
+    setLoaders(project.name)
+
+    setArtifact(tasks.jar)
+
+    curseDepends {
+        required 'balm', 'fabric-api'
+    }
+
+    modrinthDepends {
+        required 'balm', 'fabric-api'
+    }
+
+    setCurseID('874343')
+    setModrinthID('kReQ7M8K')
 }
