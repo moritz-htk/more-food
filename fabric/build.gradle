@@ -31,7 +31,7 @@ publisher {
     setVersionType('release')
     setGameVersions(project.minecraft_version)
     setLoaders(project.name)
-    setChangelog(null)
+    setChangelog("")
 
     setArtifact(tasks.jar)
 
