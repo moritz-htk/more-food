@@ -1,5 +1,6 @@
 plugins {
     id 'multiloader-loader'
+    id 'com.hypherionmc.modutils.modpublisher'
 }
 
 loom {
@@ -19,4 +20,30 @@ dependencies {
     implementation("net.blay09.mods:balm-neoforge:${project.balm_version}") {
         changing = project.balm_version.contains('SNAPSHOT')
     }
+}
+
+publisher {
+    apiKeys {
+        curseforge System.getenv('CURSEFORGE_TOKEN')
+        modrinth System.getenv('MODRINTH_TOKEN')
+    }
+
+    setDisplayName("[NeoForge ${project.minecraft_version}] More Food ${project.version}")
+    setVersion(project.version)
+    setVersionType('release')
+    setGameVersions(project.minecraft_version)
+    setLoaders(project.name)
+
+    setArtifact(tasks.jar)
+
+    curseDepends {
+        required 'balm'
+    }
+
+    modrinthDepends {
+        required 'balm'
+    }
+
+    setCurseID('874343')
+    setModrinthID('kReQ7M8K')
 }

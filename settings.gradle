@@ -10,6 +10,10 @@ pluginManagement {
             name = 'RelativityMC'
             url = 'https://repo.codemc.io/repository/relativitymc/'
         }
+        maven {
+            name = 'First Dark Development'
+            url = 'https://maven.firstdark.dev/releases/'
+        }
     }
 }
 

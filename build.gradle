@@ -1,3 +1,4 @@
 plugins {
     id 'org.relativitymc.neo-loom' version '1.18-SNAPSHOT' apply false
+    id 'com.hypherionmc.modutils.modpublisher' version '2.2.+' apply false
 }
